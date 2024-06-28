@@ -26,18 +26,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Cactus+Classical+Serif&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
- 
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
- 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
- 
- 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
- 
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
   /* font-family: "Open Sans", sans-serif; */
@@ -172,17 +178,16 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
   transition: all 0.5s;
   z-index: 997;
-  padding: 20px 0;
+  /* padding: 20px 0; */
   /* top: 40px; */
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 992px) {
   #header {
-    padding: 15px 0;
+    /* padding: 15px 0; */
   }
 }
 
@@ -205,7 +210,8 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 70px;
+  width: 130px;
+  height: 130px;
 }
 
 /**
@@ -264,7 +270,8 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Roboto Condensed", sans-serif;  font-size: 15px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
   color: #100f0f;
   white-space: nowrap;
   transition: 0.3s;
@@ -650,14 +657,15 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
-  font-family: "Azeret Mono", monospace;
-
+  font-family: "Mukta Vaani";
+  font-size: 39px;
+  font-weight: 800;
+  line-height: 48.36px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  
+  
+  
 }
 
 .section-title h2::after {
@@ -1210,21 +1218,13 @@ section {
   min-height: 320px;
 }
 
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
-  margin: -40px 0 0 40px;
-  position: relative;
-  z-index: 2;
-  border: 6px solid #fff;
-}
 
-.testimonials .testimonial-item h3 {
+/* .testimonials .testimonial-item h3 {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
   color: #111;
-}
+} */
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
@@ -1251,18 +1251,18 @@ section {
   top: 10px;
 }
 
-.testimonials .testimonial-item p {
+/* .testimonials .testimonial-item p {
 
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
-  background: rgb(222 218 218 / 26%);
+  
   position: relative;
   border-radius: 6px;
   position: relative;
   z-index: 1;
   font-family: "Poetsen One", sans-serif;
 
-}
+} */
 
 .testimonials .swiper-pagination {
   margin-top: 20px;
@@ -1713,15 +1713,15 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #01539D;
+  background: white;
   /* padding: 0 0 5px 0; */
   color: #555555;
   font-size: 14px;
 }
 
 #footer .footer-top {
-  background:rgb(229 249 255) !important;
-  padding: 60px 0 30px 0;
+  background:  #F3F9FF!important;
+ 
 }
 
 #footer .footer-top .footer-info {
@@ -1740,19 +1740,21 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Lora", serif;
+  font-family: "Montserrat";
   font-weight: 700;
 }
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #01539D;
+ 
+  background: #0E84D6;
+
   color: #fff;
   line-height: 1;
-  padding: 8px 0;
+  padding: 10px 0;
   margin-right: 4px;
-  border-radius: 4px;
+  border-radius: 50px;
   text-align: center;
   width: 36px;
   height: 36px;
@@ -1760,7 +1762,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #0598d2;
+  /* background: #0598d2; */
   text-decoration: none;
 }
 
@@ -1769,7 +1771,7 @@ section {
   font-weight: 700;
   position: relative;
   padding-bottom: 12px;
-  font-family: "Kanit", sans-serif;
+  font-family: "Montserrat";
 
 }
 
@@ -1805,20 +1807,20 @@ section {
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
-  font-family: "Poppins", sans-serif;
-    font-weight: 500;
+  font-family: "Montserrat";
+  font-weight: 500;
 
 }
 
 .mini_text {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat";
 
   font-weight: 700;
 
 }
 
 .phone_email {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat";
   font-weight: 500;
 
 }
@@ -1854,7 +1856,7 @@ section {
   background: #01a084;
   color: #fff;
   transition: 0.3s;
-  
+
   border-radius: 0 4px 4px 0;
 }
 
@@ -1910,10 +1912,6 @@ section {
 }
 
 
-.poetsen_font {
-  font-family: "Inter", sans-serif;
-  font-weight:1000;
-}
 
 .para_font {
   font-family: "Poppins", sans-serif;
@@ -1925,10 +1923,217 @@ section {
 
 .scrollable-div {
   height: 120vh;
-  
+
   overflow-y: auto;
   padding-right: 15px;
-   
+
 }
 
+.welcome_text {
+  font-family: "Mukta Vaani", sans-serif;
+  font-weight: 800;
+  font-size: 39px;
+}
+
+.welcome_text_oncology {
+  font-family: "Mukta Vaani", sans-serif;
+
+  font-weight: 800;
+  font-size: 35px;
+  color: #A256B0;
+  ;
+}
+
+@media (min-width:992px) {
+
+  .content_padding {
+    padding-left: 100px !important;
+    padding-right: 100px;
+  }
+
+  .img_padding {
+    padding-left: 100px !important;
+  }
+
+  .dr_content_padding {
+    padding-left: 100px !important;
+    padding-right: 100px;
+    margin-top: 100px !important;
+  }
+
+  .dr_welcome_text {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    color: #252B42;
+
+  }
+
+  .border_line_solid {
+
+    width: 94px;
+    height: 7px;
+    top: 2394px;
+    left: 196px;
+    gap: 0px;
+    background: #9943B1;
+
+
+  }
+  .last_padding_text{
+    padding-right: 200px;
+  }
+
+}
+
+.border_line_solid {
+
+  width: 94px;
+  height: 7px;
+  top: 2394px;
+  left: 196px;
+  gap: 0px;
+
+
+  background: #9943B1;
+
+
+}
+
+.dr_welcome_text {
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  color: #252B42;
+
+}
+
+.poetsen_font {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #9A9A9A;
+
+}
+
+.get_in_touch {
+
+  font-family: Mulish;
+  font-size: 17.54px;
+  font-weight: 900;
+  line-height: 22.02px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #A256B0;
+
+}
+
+
+
+.main_images {
+  margin-bottom: -150px
+}
+
+
+
+
+.main_images {
+  background: #E5E5FB;
+}
+
+.last_text {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  color: #737373 !important;
+  
+}
+
+.colr_purple{
+  color: #A256B0;
+}
+
+
+@media (min-width:768px) {   
+.onl_top{
+  padding-top: 80px;
+}
+}
+
+@media (max-width:768px) {   
+  .onl_top{
+    padding-bottom: 40px;
+  }
+  }
+
+
+
+  .blogs_home{
+    font-family: "Mukta Vaani";
+font-size: 39px;
+font-weight: 800;
+line-height: 48.36px;
+letter-spacing: -0.02em;
+text-align: left;
+color: #353535;
+
+  }
+
+  .view_more_btn {
+
+    font-family: "Mulish";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22.59px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    
+    color:  #0E84D6;
+
+  }
+  
+
+  .tetniomial_section_bg{
+    background-color:  #E7F3FE80;
+  }
  
+
+.name_testmonial{
+  font-family: "Montserrat";
+font-size: 14.47px;
+font-weight: 700;
+line-height: 21.7px;
+letter-spacing: 0.09041916579008102px;
+text-align: center;
+color: #252B42;
+
+}
+/* Example of increasing specificity */
+.testimonials .swiper-button-next, 
+.testimonials .swiper-button-prev {
+  color:   #E7F3FE80;
+  ;
+  background: linear-gradient(180deg, #0F88DC 0%, #0E84D6 100%);
+    padding: 3px;  
+    height: 30px; 
+    width: 30px;  
+    font-size:  6px;  
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials .swiper-button-next:hover, 
+.testimonials .swiper-button-prev:hover {
+  background: linear-gradient(180deg, #0E84D6 0%, #0F88DC 100%);
+}
