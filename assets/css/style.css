@@ -44,6 +44,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;700;800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 body {
   /* font-family: "Open Sans", sans-serif; */
@@ -218,16 +219,20 @@ h6 {
 * Appointment Button
 */
 .appointment-btn {
-  margin-left: 25px;
-  background: #01539D;
-  color: #fff;
-  border-radius: 4px;
-  padding: 8px 25px;
-  white-space: nowrap;
-  transition: 0.3s;
-  font-size: 14px;
-  display: inline-block;
-  font-family: "Azeret Mono", monospace;
+  width: Fixed (151px)px;
+  height: Hug (45px)px;
+  top: 68px;
+  left: 1103px;
+  padding: 10px 19px 10px 19px;
+  gap: 10px;
+  border-radius: 22px;
+  opacity: 0px;
+  color: #A256B0;
+  background: #FFFFFF;
+  font-weight: 800;
+  margin-left: 10px;
+
+
 }
 
 .appointment-btn:hover {
@@ -264,19 +269,30 @@ h6 {
   position: relative;
 }
 
+@media (min-width:1200px) {
+
+  .navbar a,
+  .navbar a:focus {
+    padding: 10px 40px 10px 30px !important;
+
+
+  }
+
+}
+
 .navbar a,
 .navbar a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 15px;
   color: #100f0f;
   white-space: nowrap;
   transition: 0.3s;
-  text-transform: uppercase;
   font-weight: 800;
+  padding: 10px 10px 10px 30px;
+
 }
 
 .navbar a i,
@@ -663,12 +679,12 @@ section {
   line-height: 48.36px;
   letter-spacing: -0.02em;
   text-align: center;
-  
-  
-  
+
+
+
 }
 
-.section-title h2::after {
+/* .section-title h2::after {
   content: "";
   position: absolute;
   display: block;
@@ -677,7 +693,7 @@ section {
   background: #0598d2;
   bottom: 0;
   left: calc(50% - 25px);
-}
+} */
 
 .section-title p {
   margin-bottom: 0;
@@ -1084,7 +1100,7 @@ section {
   box-shadow: none;
   font-size: 14px;
   padding: 10px !important;
-  font-family: "Azeret Mono", monospace;
+  font-family: "Mulish", sans-serif;
 
 }
 
@@ -1110,7 +1126,7 @@ section {
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
-  font-family: "Azeret Mono", monospace;
+  font-family: "Mulish", sans-serif;
 
 }
 
@@ -1124,7 +1140,7 @@ section {
 .departments .nav-tabs {
   border: 0;
 }
-
+@media (min-width:768px) {
 .departments .nav-link {
   border: 0;
   padding: 20px;
@@ -1134,13 +1150,34 @@ section {
   cursor: pointer;
 }
 
+
+  
+
 .departments .nav-link h4 {
   font-size: 18px;
   font-weight: 800;
   transition: 0.3s;
   font-family: "Roboto Condensed", sans-serif;
 }
+}
+@media (max-width:768px) {
+  .departments .nav-link {
+    border: 0;
+    
+    color: #555555;
+    border-radius: 0;
+    border-left: 5px solid #fff;
+    cursor: pointer;
+  }
+  
 
+  .departments .nav-link h4 {
+    font-size: 12px;
+    font-weight: 800;
+    transition: 0.3s;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  }
 .departments .nav-link p {
   font-size: 14px;
   margin-bottom: 0;
@@ -1169,31 +1206,52 @@ section {
   max-width: 300px;
   padding: 0 15px 15px 0;
 }
-
-@media (max-width: 768px) {
   .departments .tab-pane img {
     float: none;
     padding: 0 0 15px 0;
     max-width: 100%;
   }
-}
+@media (min-width: 768px) {
+
+
 
 .departments .tab-pane h3 {
-  font-size: 26px;
+  font-family: "Mulish";
+  font-size: 20px;
   font-weight: 800;
-  margin-bottom: 20px;
-  color: #0598d2;
-  font-family: "Roboto Condensed", sans-serif;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #4A4A4A;
 
-}
+}}
+@media (max-width: 768px) {
+
+
+
+  .departments .tab-pane h3 {
+    font-family: "Mulish";
+    font-size: 20px;
+    font-weight: 800;
+     letter-spacing: -0.02em;
+    text-align: left;
+    color: #4A4A4A;
+  
+  }}
 
 .departments .tab-pane p {
   color: #777777;
 }
 
 .departments .tab-pane p:last-child {
-  margin-bottom: 0;
-}
+  font-family: "Mulish" !important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.08px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #9A9A9A;
+  }
 
 @keyframes slide-down {
   0% {
@@ -1667,7 +1725,8 @@ section {
   border-radius: 4px;
   box-shadow: none;
   font-size: 14px;
-  font-family: "Azeret Mono", monospace;
+  font-family:"Mulish", sans-serif !important;
+   
 
 }
 
@@ -1720,8 +1779,8 @@ section {
 }
 
 #footer .footer-top {
-  background:  #F3F9FF!important;
- 
+  background: #F3F9FF !important;
+
 }
 
 #footer .footer-top .footer-info {
@@ -1747,7 +1806,7 @@ section {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
- 
+
   background: #0E84D6;
 
   color: #fff;
@@ -1983,7 +2042,8 @@ section {
 
 
   }
-  .last_padding_text{
+
+  .last_padding_text {
     padding-right: 200px;
   }
 
@@ -2024,7 +2084,7 @@ section {
 
 .get_in_touch {
 
-  font-family: Mulish;
+  font-family: "Mulish", sans-serif;
   font-size: 17.54px;
   font-weight: 900;
   line-height: 22.02px;
@@ -2055,85 +2115,169 @@ section {
   letter-spacing: 0.20000000298023224px;
   text-align: left;
   color: #737373 !important;
-  
+
 }
 
-.colr_purple{
+.colr_purple {
   color: #A256B0;
 }
 
 
-@media (min-width:768px) {   
-.onl_top{
-  padding-top: 80px;
-}
+@media (min-width:768px) {
+  .onl_top {
+    padding-top: 80px;
+  }
 }
 
-@media (max-width:768px) {   
-  .onl_top{
+@media (max-width:768px) {
+  .onl_top {
     padding-bottom: 40px;
   }
-  }
+}
 
 
 
-  .blogs_home{
-    font-family: "Mukta Vaani";
-font-size: 39px;
-font-weight: 800;
-line-height: 48.36px;
-letter-spacing: -0.02em;
-text-align: left;
-color: #353535;
-
-  }
-
-  .view_more_btn {
-
-    font-family: "Mulish";
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 22.59px;
-    letter-spacing: 0.03em;
-    text-align: left;
-    
-    color:  #0E84D6;
-
-  }
-  
-
-  .tetniomial_section_bg{
-    background-color:  #E7F3FE80;
-  }
- 
-
-.name_testmonial{
-  font-family: "Montserrat";
-font-size: 14.47px;
-font-weight: 700;
-line-height: 21.7px;
-letter-spacing: 0.09041916579008102px;
-text-align: center;
-color: #252B42;
+.blogs_home {
+  font-family: "Mukta Vaani";
+  font-size: 39px;
+  font-weight: 800;
+  line-height: 48.36px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #353535;
 
 }
+
+.view_more_btn {
+
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.59px;
+  letter-spacing: 0.03em;
+  text-align: left;
+
+  color: #0E84D6;
+
+}
+
+
+.tetniomial_section_bg {
+  background-color: #E7F3FE80;
+}
+
+
+.name_testmonial {
+  font-family: "Montserrat";
+  font-size: 14.47px;
+  font-weight: 700;
+  line-height: 21.7px;
+  letter-spacing: 0.09041916579008102px;
+  text-align: center;
+  color: #252B42;
+
+}
+
 /* Example of increasing specificity */
-.testimonials .swiper-button-next, 
+.testimonials .swiper-button-next,
 .testimonials .swiper-button-prev {
-  color:   #E7F3FE80;
+  color: #E7F3FE80;
   ;
   background: linear-gradient(180deg, #0F88DC 0%, #0E84D6 100%);
-    padding: 3px;  
-    height: 30px; 
-    width: 30px;  
-    font-size:  6px;  
-  border-radius: 50%; 
+  padding: 3px;
+  height: 30px;
+  width: 30px;
+  font-size: 6px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.testimonials .swiper-button-next:hover, 
+.testimonials .swiper-button-next:hover,
 .testimonials .swiper-button-prev:hover {
   background: linear-gradient(180deg, #0E84D6 0%, #0F88DC 100%);
+}
+
+.service_text {
+ 
+   font-family: "Mulish";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.08px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #9A9A9A;
+  margin-bottom:  220px !important;
+
+}
+@media (min-width:1200px) {
+  .service_text {
+    padding-left: 350px;
+    padding-right: 350px;
+}
+}
+@media (min-width:992px) and (max-width:1200px) {
+  .service_text {
+    padding-left: 250px;
+    padding-right: 250px;
+}
+}
+
+.sevice_bg_color{
+
+  background: #EEF7F9;
+
+}
+
+.contaner_inner{
+  margin-top: -150px;
+}
+
+@media (min-width:1200px) {
+  
+  .only_padding_on_left{
+    padding-left: 150px !important;
+    
+  }
+  .only_padding_on_right{
+    padding-left: 150px !important;
+    padding-right: 150px !important;
+  }
+
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+  
+  .only_padding_on_left{
+    padding-left: 100px !important;
+    
+  }
+  .only_padding_on_right{
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+
+}
+
+@media (min-width:768px) and (max-width:992px) {
+  
+  .only_padding_on_left{
+    padding-left: 50px !important;
+    
+  }
+  .only_padding_on_right{
+    padding-left:80px !important;
+    padding-right: 80px !important;
+  }
+
+}
+ 
+
+.flex-column{
+  background-color: white;
+}
+
+.service_img_radius{
+  border-radius: 12px;
 }

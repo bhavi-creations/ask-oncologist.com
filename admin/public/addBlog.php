@@ -1,6 +1,6 @@
 <?php
 // Database connection (replace with your actual database connection details)
-include '../../db_connection.php';
+include '../../db.connection/db_connection.php';
 
 // Function to generate a unique file name
 function generateUniqueFileName($fileName)
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Handle video upload
     $video_path = "";
     if (!empty($_FILES['video']['name'])) {
-        $video_directory = "uploads/videos/";
+        $video_directory = "uploads/videos/";  //the location path have to be place in the public folder as uploads/videos
         $file_name = generateUniqueFileName($_FILES['video']['name']);
         $file_path = $video_directory . $file_name;
         if (move_uploaded_file($_FILES['video']['tmp_name'], $file_path)) {
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Handle photo uploads
     $photo_paths = [];
     if (!empty($_FILES['photos']['name'][0])) {
-        $photo_directory = "uploads/photos/";
+        $photo_directory = "uploads/photos/";  //the location path have to be place in the public folder as uploads/photos
         foreach ($_FILES['photos']['name'] as $key => $name) {
             if ($_FILES['photos']['error'][$key] === UPLOAD_ERR_OK) {
                 $file_name = generateUniqueFileName($name);

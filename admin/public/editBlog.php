@@ -1,6 +1,6 @@
 <?php
 // Database connection (replace with your actual database connection details)
-include '../../db_connection.php';
+include '../../db.connection/db_connection.php';
 
 // Get blog ID from URL
 $blog_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
@@ -210,7 +210,7 @@ $conn->close();
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+                        <a class="btn btn-primary" href="login.php">Logout</a>
                     </div>
                 </div>
             </div>

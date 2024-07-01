@@ -1,6 +1,6 @@
 <?php
 // Database connection (replace with your actual database connection details)
-include '../../db_connection.php';
+include '../../db.connection/db_connection.php';
 
 // Check if the id is set in the URL
 if (isset($_GET['id'])) {

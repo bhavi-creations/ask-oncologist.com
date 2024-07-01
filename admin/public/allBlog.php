@@ -76,7 +76,8 @@
 
                                 <?php
                                 // Database connection (replace with your actual database connection details)
-                                include '../../db_connection.php';
+                                include '../../db.connection/db_connection.php';
+
                                 // Fetch blog data
                                 $sql = "SELECT id, title, content, video FROM blog";
                                 $result = $conn->query($sql);
@@ -216,7 +217,7 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="login.php">Logout</a>
                 </div>
             </div>
         </div>

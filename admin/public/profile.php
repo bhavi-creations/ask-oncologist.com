@@ -46,7 +46,7 @@
                 ?>
                  <?php
 
-include '../includes/db.php';
+include '../../db.connection/db_connection.php';
    $id=$_SESSION['user_id'];
     $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ? ");
     $stmt->execute([$id]);

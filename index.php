@@ -27,40 +27,49 @@
    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
    <link href="assets/css/style.css" rel="stylesheet">
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+   <!-- Bootstrap CSS -->
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Bootstrap JS and dependencies -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
  </head>
 
  <body>
 
    <!-- ======= Header ======= -->
-   <header id="header" class=" main_images">
+   <header id="header" class="main_images">
      <div class="container d-flex align-items-center">
 
        <a href="index.php" class="logo m-auto" style="z-index: 999;">
          <img src="assets/img/oncoligist/Oncology logo.png" alt="">
        </a>
 
-
-       <nav id="navbar" class="navbar order-lg-0 ">
+       <nav id="navbar" class="navbar order-lg-0">
          <ul>
-           <li><a class="nav-link scrollto " href="#bb">Home</a></li>
-           <li><a class="nav-link scrollto  " href="#about">About</a></li>
-           <li><a class="nav-link scrollto  " href="#facilities">Facilities</a></li>
-           <li><a class="nav-link scrollto  " href="#gallery">Gallery</a></li>
-           <li><a class="nav-link scrollto  " href="blogs.php">Blogs</a></li>
-           <li><a class="nav-link scrollto " href="#contact">Contact</a></li>
-
+           <li><a class="nav-link scrollto" href="#bb">Home</a></li>
+           <li><a class="nav-link scrollto" href="#about">About</a></li>
+           <li><a class="nav-link scrollto" href="#facilities">Facilities</a></li>
+           <!-- <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li> -->
+           <li><a class="nav-link" href="blogs.php">Blogs</a></li>
+           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
          </ul>
          <i class="bi bi-list mobile-nav-toggle"></i>
        </nav><!-- .navbar -->
 
-       <a href="#appointment" class="appointment-btn scrollto" style="z-index: 999;"><span class="d-none d-md-inline">Make an</span>
-         Appointment</a>
+       <a href="#appointment" class="appointment-btn scrollto" style="z-index: 999;">
+         <span class="d-none d-md-inline">Make an</span> Appointment
+       </a>
 
      </div>
-   </header><!-- End Header -->
+   </header>
+
+   <!-- End Header -->
 
    <!-- ======= Hero Section ======= -->
    <!-- <div id="carouselExampleFade" data-bs-interval="3000" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -88,7 +97,8 @@
      </button>
    </div> -->
 
-   <img src="assets/img/oncoligist/wheel_new.png" class="img-fluid ">
+   <img src="assets/img/oncoligist/wheel_new.png" class="img-fluid d-none d-md-block">
+   <img src="assets/img/oncoligist/mb_title.jpg" class="img-fluid  d-md-none  ">
 
    <main id="main">
 
@@ -111,7 +121,7 @@
 
 
              <div class="d-flex flex-row justify-content-end">
-               <p class="get_in_touch">Get In Touch <i class="fa-solid fa-arrow-right"></i></p>
+             <a href="#contact">  <p class="get_in_touch">Get In Touch <i class="fa-solid fa-arrow-right"></i></p></a>
              </div>
 
            </div>
@@ -127,6 +137,398 @@
        </div>
      </section>
      <!-- End About Us Section -->
+
+
+     <section id="facilities" class="departments">
+       <div class="container" data-aos="fade-up">
+
+         <div class="section-title text-center">
+           <h2>Our Services</h2>
+           <p class="  text-center service_text">Dr. K Pradeep Bhaskar offers specialized treatment for a wide range of cancers. Each service is provided with the utmost care and expertise to ensure the best possible outcomes for our patients.
+           </p>
+         </div>
+
+         <div class="container  sevice_bg_color">
+           <div class="row" data-aos="fade-up" data-aos-delay="100">
+             <!-- Carousel for nav-tabs -->
+             <div class="col-4 mb-5 mb-lg-0  contaner_inner only_padding_on_left">
+               <div class="swiper mySwiper">
+                 <div class="swiper-wrapper">
+                   <!-- First Slide -->
+                   <div class="swiper-slide">
+                     <ul class="nav nav-tabs flex-column">
+
+                       <li class="nav-item mt-2">
+                         <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#Brain-Cancer" role="tab">
+                           <h4>Brain Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link " data-bs-toggle="tab" data-bs-target="#Bladder-Cancer" role="tab">
+                           <h4>Bladder Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Cervical-Cancer" role="tab">
+                           <h4>Cervical Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Childhood-Cancer" role="tab">
+                           <h4>Childhood Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Colon-Cancer" role="tab">
+                           <h4>Colon Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Esophageal-Cancer" role="tab">
+                           <h4>Esophageal Cancer</h4>
+                         </a>
+                       </li>
+                       <!-- Add more services here -->
+                     </ul>
+                   </div>
+                   <!-- Second Slide -->
+                   <div class="swiper-slide">
+                     <ul class="nav nav-tabs flex-column">
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Kidney-Cancer" role="tab">
+                           <h4>Kidney Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Leiomyosarcoma-Cancer" role="tab">
+                           <h4>Leiomyosarcoma Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Leukemia-Cancer" role="tab">
+                           <h4>Leukemia Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Liver-Cancer" role="tab">
+                           <h4>Liver Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Lung-Cancer" role="tab">
+                           <h4>Lung Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Lymphoma-Cancer" role="tab">
+                           <h4>Lymphoma Cancer</h4>
+                         </a>
+                       </li>
+                       <!-- Add more services here -->
+                     </ul>
+                   </div>
+                   <!-- third Slide -->
+                   <div class="swiper-slide">
+                     <ul class="nav nav-tabs flex-column">
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Melanoma-Cancer" role="tab">
+                           <h4>Melanoma Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Ovarian-Cancer" role="tab">
+                           <h4>Ovarian Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Pancreatic-Cancer" role="tab">
+                           <h4>Pancreatic Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Prostate-Cancer" role="tab">
+                           <h4>Prostate Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#SarcomaBone-Cancer" role="tab">
+                           <h4>Sarcoma/Bone Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Stomach-Cancer" role="tab">
+                           <h4>Stomach Cancer</h4>
+                         </a>
+                       </li>
+                       <!-- Add more services here -->
+                     </ul>
+                   </div>
+
+                   <div class="swiper-slide">
+                     <ul class="nav nav-tabs flex-column">
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Testicular-Cancer" role="tab">
+                           <h4>Testicular Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Uterine-Cancer" role="tab">
+                           <h4>Uterine Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#HeadNeck-Cancer" role="tab">
+                           <h4>Head & Neck Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Breast-Cancer" role="tab">
+                           <h4>Breast Cancer</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Multiple-Myeloma" role="tab">
+                           <h4>Multiple Myeloma</h4>
+                         </a>
+                       </li>
+                       <li class="nav-item mt-2">
+                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Honors-Caregivers" role="tab">
+                           <h4>Honors Caregivers</h4>
+                         </a>
+                       </li>
+                       <!-- Add more services here -->
+                     </ul>
+                   </div>
+                   <!-- Add more slides as needed -->
+                 </div>
+                 <div class="swiper-pagination swiper_dots " style=" "></div>
+               </div>
+             </div>
+
+             <!-- Tab content -->
+             <div class="col-8 contaner_inner only_padding_on_right ">
+               <div class="tab-content">
+
+                 <div class="tab-pane active show" id="Brain-Cancer">
+                   <img src="assets/img/services/brainnew.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Brain Cancer</h3>
+                   <p class=" ">Treating brain cancer requires precision and expertise. We offer advanced radiation therapy techniques like stereotactic radiosurgery (SRS) and intensity-modulated radiation therapy (IMRT) to target tumors while preserving healthy brain tissue. <br><br> Our team also provides surgical options and chemotherapy, focusing on comprehensive care that addresses the unique challenges of brain cancer.</p>
+
+                 </div>
+                 <div class="tab-pane" id="Bladder-Cancer">
+                   <img src="assets/img/services/bladder.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Bladder Cancer</h3>
+                   <p class=" ">Bladder cancer treatment at our clinic includes options like transurethral resection, radical cystectomy, and bladder-sparing approaches combined with radiation therapy. For advanced stages, we use systemic therapies such as immunotherapy and chemotherapy. <br><br>
+
+                     Our focus is on providing effective treatment while maintaining the highest standards of patient comfort and quality of life. Regular cystoscopic evaluations are part of our follow-up care to monitor for recurrence.</p>
+
+                 </div>
+                 <div class="tab-pane" id="Cervical-Cancer">
+                   <img src="assets/img/services/Cervical.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Cervical Cancer</h3>
+                   <p class=" ">Cervical cancer treatment involves a combination of surgery, radiation therapy, and chemotherapy. We use advanced imaging techniques for accurate diagnosis and treatment planning. <br><br> Our approach is tailored to the stage and specific characteristics of the cancer, with a focus on preserving fertility and minimizing side effects.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Childhood-Cancer">
+                   <img src="assets/img/services/Childhood.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Childhood Cancer</h3>
+                   <p class=" ">Treating childhood cancer requires specialized care and a compassionate approach. Our team offers advanced treatments tailored to the unique needs of children, with a focus on both medical and emotional support.
+                     <br><br> We work closely with families to ensure comprehensive care that addresses all aspects of the child’s well-being.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Colon-Cancer">
+                   <img src="assets/img/services/Colon.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Colon Cancer</h3>
+                   <p class=" ">Colon cancer treatment includes surgical resection, radiation therapy, and chemotherapy. Our team uses advanced techniques to ensure precise treatment and minimize side effects. <br><br>We focus on providing comprehensive care that addresses both the cancer and the patient’s overall health. </p>
+
+                 </div>
+                 <div class="tab-pane" id="Esophageal-Cancer">
+                   <img src="assets/img/services/Esophageal.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Esophageal Cancer</h3>
+                   <p class=" ">Treating esophageal cancer involves a combination of surgery, radiation therapy, and chemotherapy.
+                     <br><br> Our approach is tailored to the stage and specific characteristics of the cancer, with a focus on providing effective treatment and improving patient outcomes.
+                   </p>
+
+                 </div>
+
+                 <div class="tab-pane" id="Kidney-Cancer">
+                   <img src="assets/img/services/kidney.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Kidney Cancer</h3>
+                   <p class=" ">Our treatment for kidney cancer includes advanced surgical techniques such as nephrectomy and minimally invasive procedures. We also utilize targeted therapies and immunotherapy to treat metastatic kidney cancer.
+                     <br><br> Our approach is tailored to the stage and specific characteristics of the cancer, aiming to preserve kidney function and improve patient outcomes. Regular follow-ups and imaging are essential components of our comprehensive care plan to monitor progress and detect any recurrence early.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Leiomyosarcoma-Cancer">
+                   <img src="assets/img/services/Leiomyosarcoma.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Leiomyosarcoma Cancer</h3>
+                   <p class=" ">Treating leiomyosarcoma, a rare type of soft tissue cancer, involves a multidisciplinary approach with surgery as the primary treatment. We also use radiation therapy to manage local control and reduce recurrence.
+                     <br><br>For metastatic cases, chemotherapy and targeted therapies are available. Our personalized care plans focus on the specific needs of each patient, utilizing the latest advancements in cancer treatment.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Leukemia-Cancer">
+                   <img src="assets/img/services/Leukemia.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Leukemia Cancer</h3>
+                   <p class=" "> Leukemia treatment involves a combination of chemotherapy, targeted therapy, and sometimes radiation therapy. Our approach is tailored to the specific type and stage of leukemia, with the goal of achieving remission.
+                     <br><br> We also provide supportive care to manage symptoms and side effects, ensuring a comprehensive treatment plan that addresses both the disease and the patient’s overall well-being.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Liver-Cancer">
+                   <img src="assets/img/services//liver.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Liver Cancer</h3>
+                   <p class=" "> Liver cancer treatment at our clinic includes surgical resection, liver transplantation, and localized treatments such as radiofrequency ablation and transarterial chemoembolization (TACE). <br><br> For advanced cases, we offer systemic therapies like targeted therapy and immunotherapy. Our multidisciplinary team works together to provide personalized care that addresses the specific needs of each patient.</p>
+
+                 </div>
+                 <div class="tab-pane" id="Lung-Cancer">
+                   <img src="assets/img/services/lung.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Lung Cancer</h3>
+                   <p class=" "> Lung cancer services include advanced diagnostic tools, surgical options, radiation therapy, and systemic treatments such as chemotherapy and targeted therapy.
+                     <br><br> We develop personalized treatment plans based on the type and stage of lung cancer, with a focus on improving patient outcomes and quality of life.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Lymphoma-Cancer">
+                   <img src="assets/img/services/Lymphoma.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Lymphoma Cancer</h3>
+                   <p class=" "> Lymphoma treatment involves chemotherapy, radiation therapy, and targeted therapies. <br><br> We develop personalized care plans based on the specific type and stage of lymphoma, with the goal of achieving remission.
+                     Supportive care is also provided to manage symptoms and improve quality of life.</p>
+
+                 </div>
+
+                 <div class="tab-pane" id="Melanoma-Cancer">
+                   <img src="assets/img/services/Melanoma.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Melanoma Cancer</h3>
+                   <p class=" ">Melanoma treatment includes advanced radiation therapy, immunotherapy, and surgical options. Our multidisciplinary team develops personalized care plans that address the unique needs of each patient.
+                     <br><br> We focus on providing effective treatment while minimizing side effects and enhancing quality of life.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Ovarian-Cancer">
+                   <img src="assets/img/services//Ovarian.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Ovarian Cancer</h3>
+                   <p class=" ">Treating ovarian cancer involves a combination of surgery, chemotherapy, and targeted therapies. Our surgical team specializes in debulking surgery, which aims to remove as much of the tumor as possible.
+                     <br><br> Post-surgery, patients typically undergo chemotherapy to eliminate any remaining cancer cells. We also offer targeted therapies based on the molecular characteristics of the tumor, which can improve outcomes and reduce side effects.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Pancreatic-Cancer">
+                   <img src="assets/img/services/Pancreatic.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Pancreatic Cancer</h3>
+                   <p class=" ">Pancreatic cancer treatment includes surgical resection, when possible, combined with chemotherapy and radiation therapy. For inoperable cases, we focus on palliative care and systemic treatments to control symptoms and prolong survival.
+                     <br><br> Our approach is tailored to each patient’s condition, and we utilize advanced imaging techniques for accurate diagnosis and treatment planning.
+                   </p>
+
+                 </div>
+
+                 <div class="tab-pane" id="Prostate-Cancer">
+                   <img src="assets/img/services/Prostate.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Prostate Cancer</h3>
+                   <p class=" ">Prostate cancer care includes advanced radiation therapy options such as brachytherapy and external beam radiation therapy. We also offer minimally invasive surgical procedures and hormone therapy.
+                     <br><br> Our focus is on providing effective treatment while preserving quality of life. Regular monitoring and follow-up care are essential components of our approach to ensure long-term success.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="SarcomaBone-Cancer">
+                   <img src="assets/img/services/bone.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Sarcoma/Bone Cancer</h3>
+                   <p class=" "> Treating sarcoma and bone cancer involves a combination of surgery, radiation therapy, and chemotherapy. <br><br>Our surgical team specializes in limb-sparing procedures to preserve function and quality of life. We also use advanced radiation techniques to target tumors while minimizing damage to surrounding tissues. </p>
+
+                 </div>
+                 <div class="tab-pane" id="Stomach-Cancer">
+                   <img src="assets/img/services/Stomach.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Stomach Cancer</h3>
+                   <p class=" ">Stomach cancer treatment involves a combination of surgery, chemotherapy, and radiation therapy.
+                     <br><br>Our approach is tailored to the stage and specific characteristics of the cancer, aiming to achieve the best possible outcomes. We also provide nutritional support and symptom management to enhance patient comfort and well-being.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Testicular-Cancer">
+                   <img src="assets/img/services/Testicular.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Testicular Cancer</h3>
+                   <p class=" ">Testicular cancer care includes minimally invasive surgery, radiation therapy, and chemotherapy.
+                     <br><br>Our focus is on providing effective treatment while maintaining the highest standards of patient comfort and quality of life. Regular monitoring and follow-up care are essential to ensure long-term success.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Uterine-Cancer">
+                   <img src="assets/img/services/Uterine.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Uterine Cancer</h3>
+                   <p class=" ">Uterine cancer treatment involves a combination of surgery, radiation therapy, and chemotherapy. Our team uses advanced techniques to ensure precise treatment and minimize side effects.
+                     <br><br> We provide comprehensive care that addresses both the cancer and the patient’s overall well-being.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="HeadNeck-Cancer">
+                   <img src="assets/img/services/Head.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Head & Neck Cancer</h3>
+                   <p class=" "> Our expertise in head and neck cancer involves precise radiation therapy techniques, including intensity-modulated radiation therapy (IMRT) and stereotactic radiosurgery (SRS). These advanced methods target tumors while sparing healthy tissue. We also offer comprehensive surgical options and chemotherapy.
+                     <br><br> Our multidisciplinary team works together to develop individualized treatment plans that aim to preserve vital functions such as speech and swallowing.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Breast-Cancer">
+                   <img src="assets/img/services/breast.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Breast Cancer</h3>
+                   <p class=" "> Breast cancer treatment at our clinic involves a comprehensive approach that includes surgery (lumpectomy or mastectomy), radiation therapy, and systemic treatments such as chemotherapy, hormone therapy, and targeted therapy.
+                     <br><br> We tailor treatment plans based on the type and stage of breast cancer, aiming to achieve the best possible outcomes while minimizing side effects. Regular follow-up and support services are integral to our care.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Multiple-Myeloma">
+                   <img src="assets/img/services/Myeloma.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Multiple Myeloma </h3>
+                   <p class=" "> Treatment for multiple myeloma includes chemotherapy, targeted therapy, and stem cell transplantation. Our multidisciplinary team develops personalized care plans that address the unique needs of each patient.
+                     <br><br> We also offer supportive therapies to manage symptoms and improve quality of life, ensuring comprehensive care throughout the treatment journey.
+                   </p>
+
+                 </div>
+                 <div class="tab-pane" id="Honors-Caregivers">
+                   <img src="assets/img/services/Caregivers.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
+
+                   <h3>About the Honors Caregivers</h3>
+                   <p class=" ">We recognize the invaluable role of caregivers in the cancer treatment journey. Our clinic offers support and resources to caregivers, helping them provide the best possible care for their loved ones.
+                     <br><br> We provide education, counseling, and support groups to ensure caregivers have the tools they need to support their patients effectively.
+                   </p>
+
+                 </div>
+                 <!-- Add more tab-panes for other services as needed -->
+               </div>
+             </div>
+           </div>
+         </div>
+
+
+       </div>
+     </section>
+
+
 
 
      <section id="about" class="about">
@@ -185,9 +587,7 @@
                  <img src="assets/img/tripura/profile.png" class="testimonial-img " alt="">
 
                  <p class=poetsen_font>
-                   Excellent consultation
-                   and perfect services. Treatment started showing postive signs within a single day after visit. I
-                   heartfully recommend and I hope one of the best skin and mind hospital in our kakinada......
+                   Dr.K Pradeep Bhaskar] provided outstanding care and unwavering support while treating my sister's breast cancer. Their expertise and compassion made a tremendous difference in her recovery, and we are deeply grateful for their dedication.
 
                  </p>
                  <p class="text-center">⭐⭐⭐⭐⭐</p>
@@ -205,9 +605,7 @@
 
                  <p class=poetsen_font>
 
-                   I recently completed a treatment program at Tripura Mind Wellness for my depression, and I cannot
-                   express enough how transformative the experience has been. From the moment I walked through the doors,
-                   I was met with empathy, professionalism, and a deep commitment to my well-being.
+                   Dr.K Pradeep Bhaskar gave my grandpa outstanding care and support during his battle with bone cancer. We are deeply grateful for their expertise and compassion throughout his treatment.
 
                  </p>
                  <p class="text-center">⭐⭐⭐⭐⭐</p>
@@ -218,32 +616,13 @@
                </div>
              </div><!-- End testimonial item -->
 
-             <div class="swiper-slide px-5">
-               <div class="testimonial-item text-center">
-                 <img src="assets/img/tripura/profile.png" class="testimonial-img " alt="">
 
-                 <p class=poetsen_font>
-                   The program's approach to stress management is comprehensive and highly individualized. The treatment
-                   plan included a mix of Cognitive Behavioral Therapy (CBT), mindfulness practices, and relaxation
-                   techniques. Each session was designed to equip me with practical tools to manage stress in real-time
-                   and to foster long-term resilience. The combination of these techniques helped me to develop a more
-                   balanced and mindful approach to handling stress.
-                 </p>
-                 <p class="text-center">⭐⭐⭐⭐⭐</p>
-                 <h3 class="name_testmonial">Ramana</h3>
-                 <p class=poetsen_font>Kakinada</p>
-                 <!-- <h4>Store Owner</h4> -->
-               </div>
-             </div><!-- End testimonial item -->
 
              <div class="swiper-slide px-5">
                <div class="testimonial-item  text-center">
                  <img src="assets/img/tripura/profile.png" class="testimonial-img " alt="">
                  <p class=poetsen_font>
-                   As a parent, it's been heart-wrenching to see my child struggle with attention and focus issues.
-                   Finding the right support was crucial, and I am incredibly grateful for the remarkable transformation
-                   we experienced at Tripura Minds Care. Their specialized program for children who are easily distracted
-                   has made a profound difference in our lives.
+                   Dr. K Pradeep Bhaskar showed incredible expertise and compassion in treating my brother's childhood cancer. Thanks to their exceptional care, my brother is now in remission, and we couldn't be more grateful.
                  </p>
                  <p class="text-center">⭐⭐⭐⭐⭐</p>
                  <h3 class="name_testmonial">Sirisha</h3>
@@ -257,10 +636,7 @@
                  <img src="assets/img/tripura/profile.png" class="testimonial-img " alt="">
                  <p class=poetsen_font>
 
-                   From our initial visit, the staff at Ask-Oncologist demonstrated exceptional expertise and genuine
-                   empathy. The therapists, counselors, and educators are highly skilled in helping children cope with
-                   exam stress. Their understanding and supportive approach made my child feel at ease and understood
-                   from the start.
+                   Dr. K Pradeep Bhaskar provided exceptional care and expertise in treating my friend's colon cancer, showing compassion and dedication throughout the process. We are incredibly grateful for the successful outcome and highly recommend Dr. K Pradeep Bhaskar.
                  </p>
                  <p class="text-center">⭐⭐⭐⭐⭐</p>
                  <h3 class="name_testmonial">Ramesh</h3>
@@ -309,79 +685,64 @@
      </script>
 
 
+
      <section>
        <div class="container">
-         <div class="row   ">
+         <div class="row">
 
-
-           <div class="col-6 d-none d-md-block ">
-             <h3 class="blogs_home  mb-5  ">Our Latest Blogs</h3>
-
+           <div class="col-6 d-none d-md-block">
+             <h3 class="blogs_home mb-5">Our Latest Blogs</h3>
            </div>
-           <div class="col-6 d-none d-md-block ">
-
-             <p class="view_more_btn mb-5  d-flex flex-row justify-content-end ">View More<i class="fa-solid fa-arrow-right"></i></p>
-
+           <div class="col-6 d-none d-md-block">
+             <a href="blogs.php">
+               <p class="view_more_btn mb-5 d-flex flex-row justify-content-end">View More<i class="fa-solid fa-arrow-right"></i></p>
+             </a>
            </div>
-
 
            <h3 class="blogs_home text-center mb-5 d-md-none">Our Latest Blogs</h3>
 
-           <!-- <div class="row row-cols-1 row-cols-md-3 g-4 "> -->
+           <?php
+            include './db.connection/db_connection.php';
+            // Fetch latest 3 blogs
+            $sql = "SELECT * FROM blog ORDER BY time DESC LIMIT 3";
+            $result = $conn->query($sql);
+            ?>
+
+           <?php while ($row = $result->fetch_assoc()) : ?>
+             <div class="col px-5 py-2">
+               <div class="card h-100">
+                 <video class="custom-video" autoplay muted controls style="width: 100%; height: auto;">
+                   <source src="admin/public/uploads/videos/<?php echo $row['video']; ?>" type="video/mp4">
+                   Your browser does not support the video tag.
+                 </video>
+                 <div class="card-body">
 
 
-           <div class="col px-5 py-2">
-             <div class="card h-100">
-               <img src="assets/img/oncoligist/300.png" class="card-img-top  " alt="...">
-               <div class="card-body">
-                 <h5 class="card-title">Card title</h5>
-                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-               </div>
-               <div class="card-footer">
-                 <small class="text-muted">Last updated 3 mins ago</small>
+                   <h5 class="card-title"><?php echo $row['title']; ?></h5>
+
+                 </div>
+
+
+                 <div class="card-footer">
+                   <small class="text-muted">Posted On: <?php echo date("F j, Y, g:i a", strtotime($row['time'])); ?></small>
+                 </div>
                </div>
              </div>
-           </div>
-
-           <div class="col px-5 py-2">
-             <div class="card h-100">
-               <img src="assets/img/oncoligist/can3.png" class="card-img-top" alt="...">
-               <div class="card-body">
-                 <h5 class="card-title">Card title</h5>
-                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-               </div>
-               <div class="card-footer">
-                 <small class="text-muted">Last updated 3 mins ago</small>
-               </div>
-             </div>
-           </div>
-
-           <div class="col px-5 py-2">
-             <div class="card h-100">
-               <img src="assets/img/oncoligist/can1.png" class="card-img-top" alt="...">
-               <div class="card-body">
-                 <h5 class="card-title">Card title</h5>
-                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-               </div>
-               <div class="card-footer">
-                 <small class="text-muted">Last updated 3 mins ago</small>
-               </div>
-             </div>
-           </div>
+           <?php endwhile; ?>
 
            <div class="d-flex flex-row justify-content-center mt-4">
-             <p class="view_more_btn  d-md-none">View More<i class="fa-solid fa-arrow-right"></i></p>
+             <a href="blogs.php">
+               <p class="view_more_btn d-md-none">View More<i class="fa-solid fa-arrow-right"></i></p>
+             </a>
            </div>
-           <!-- </div> -->
 
          </div>
        </div>
      </section>
 
-
      <!-- End Testimonials Section -->
 
-     <section class="ftco-section   new_resp  " id="facilities">
+     <!-- <section class="ftco-section   new_resp  " id="facilities">
        <div class="container">
          <div class="section-title">
            <h2 style="font-size:x-large;">Facilities For Adults</h2>
@@ -389,7 +750,7 @@
          <div class="ftco-departments">
            <div class="col-md-12 nav-link-wrap" style="background-color: rgb(236, 234, 234); padding-top: 10px; padding-bottom: 10px; border-radius: 8px; margin-bottom: 50px;">
              <div class="nav d-flex justify-content-between nav-pills" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
-               <a class="line_lemon may nav-link ftco-animate active" id="v-pills-a-tab" data-bs-toggle="pill" href="#v-pills-a" role="tab" aria-controls="v-pills-1" aria-selected="true">Depression</a>
+               <a class="  may nav-link ftco-animate active" id="v-pills-a-tab" data-bs-toggle="pill" href="#v-pills-a" role="tab" aria-controls="v-pills-1" aria-selected="true">Depression</a>
                <a class="orange nav-link ftco-animate" id="v-pills-b-tab" data-bs-toggle="pill" href="#v-pills-b" role="tab" aria-controls="v-pills-b" aria-selected="false">Anxiety</a>
                <a class="blue_berry nav-link ftco-animate" id="v-pills-c-tab" data-bs-toggle="pill" href="#v-pills-c" role="tab" aria-controls="v-pills-c" aria-selected="false">Fear</a>
                <a class="pineapple nav-link ftco-animate" id="v-pills-d-tab" data-bs-toggle="pill" href="#v-pills-d" role="tab" aria-controls="v-pills-d" aria-selected="false">Anger</a>
@@ -412,43 +773,7 @@
 
                <div class="tab-pane fade show active" id="v-pills-a" role="tabpanel" aria-labelledby="v-pills-a-tab">
                  <div class="row col-lg-12">
-                   <div class="col-12  ">
-
-                     <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                       <div class="swiper-wrapper">
-
-                         <div class="swiper-slide">
-                           <div class="testimonial-item">
-                             <img src="assets/img/memory_loss/dp-1 (1).webp" class="img-fluid">
-                           </div>
-                         </div>
-
-
-                         <div class="swiper-slide">
-                           <div class="testimonial-item">
-                             <img src="assets/img/memory_loss/dp-1 (2).webp" class="img-fluid">
-                           </div>
-                         </div>
-
-
-                         <div class="swiper-slide">
-                           <div class="testimonial-item">
-                             <img src="assets/img/memory_loss/dp-1 (3).webp" class="img-fluid">
-                           </div>
-                         </div>
-
-
-                         <div class="swiper-slide">
-                           <div class="testimonial-item">
-                             <img src="assets/img/memory_loss/dp-1 (4).webp" class="img-fluid">
-                           </div>
-                         </div>
-
-                       </div>
-                     </div>
-
-
-                   </div>
+                  
                    <div class="col-12 mt-5">
 
                      <p class=para_font>At Tripura Mind Care, we understand that depression is a complex, individualized condition that requires personalized treatment. Our expert team of mental health professionals provides comprehensive and tailored plans, combining therapy, medication management, lifestyle modifications, and holistic approaches to promote well-being. </p>
@@ -870,7 +1195,7 @@
            </div>
          </div>
        </div>
-     </section>
+     </section> -->
 
 
 
@@ -879,73 +1204,88 @@
 
      <!-- ======= Appointment Section ======= -->
 
-     <section id="appointment" class="appointment section-bg">
-       <div class="container" data-aos="fade-up">
+     <section id="appointment" class="appointment ">
+       <div class="container appointment_bg" style="  background-color: #E7F3FE80;" data-aos="fade-up">
 
          <div class="section-title">
-           <h2>Make an Appointment</h2>
+           <h2 class=" pt-5">Make an Appointment</h2>
          </div>
 
-         <form action="appointmentform.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
-           <div class="row">
-             <div class="col-md-4 form-group">
-               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-             </div>
-             <div class="col-md-4 form-group mt-3 mt-md-0">
-               <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-             </div>
-             <div class="col-md-4 form-group mt-3 mt-md-0">
-               <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
-             </div>
-           </div>
-           <div class="row">
-             <div class="col-md-4 form-group mt-3">
-               <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required>
-             </div>
-             <div class="col-md-4 form-group mt-3">
-               <select name="department" id="department" class="form-select" required>
-                 <option value="">Select Service</option>
-                 <option value="Depression">Depression</option>
-                 <option value="Anxiety">Anxiety</option>
-                 <option value="Fear Anger">Fear Anger</option>
-                 <option value="Nerve Weakness">Nerve Weakness</option>
-                 <option value="Sleep Problems">Sleep Problems</option>
-                 <option value="Migraine">Migraine</option>
-                 <option value="Stress (Adult)">Stress (Adult)</option>
-                 <option value="Memory Loss">Memory Loss</option>
 
-                 <option value="Stress  (Child)">Stress (Child)</option>
-                 <option value="Exam Stress for Children">Exam Stress for Children</option>
-                 <option value="Lagging Behind in Studies">Lagging Behind in Studies</option>
-                 <option value="Easily Distracted">Easily Distracted</option>
-                 <option value="Excessive Mischievousnes"> Excessive Mischievousness</option>
-                 <option value="Losing Concentration Easily">Losing Concentration Easily</option>
-                 <option value="Headache">Headache</option>
-
-
-               </select>
-             </div>
-             <div class="col-md-4 form-group mt-3">
-               <select name="doctor" id="doctor" class="form-select">
-                 <option value="">Select Doctor</option>
-                 <option value="Dr. S. Akhikla MD(PSY)">Dr. S. Akhikla MD(PSY)</option>
-                 <option value="Dr. K. Hemalatha BA(PSY)">Dr. K. Hemalatha BA(PSY)</option>
-               </select>
-               <!-- <input type="text" name="doctor" class="form-select" id=" " placeholder="Doctor" required> -->
-             </div>
+         <div class="row">
+           <div class="col-md-6 d-none d-md-block">
+             <img src="assets/img/oncoligist/appointmentpic.webp" class="img-fluid">
            </div>
 
-           <div class="form-group mt-3">
-             <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-           </div>
-           <div class="my-3">
-             <div class="loading">Loading</div>
-             <!-- <div class="error-message"></div> -->
-             <!-- <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div> -->
-           </div>
-           <div class="text-center"><button type="submit">Make an Appointment</button></div>
-         </form>
 
+           <div class="col-md-6">
+             <form action="appointmentform.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+               <div class="row">
+                 <div class="col-md-6 form-group">
+                   <input type="text" name="name" class="form-control  " id="name" style="border-radius: 23px; " placeholder="Your Name" required>
+                 </div>
+                 <div class="col-md-6 form-group mt-3 mt-md-0">
+                   <input type="email" class="form-control  " name="email" id="email" style="border-radius: 23px;" placeholder="Your Email" required>
+                 </div>
+                 <div class="col-md-6 form-group mt-3 mt-md-0">
+                   <input type="tel" class="form-control  " name="phone" id="phone" style="border-radius: 23px;" placeholder="Your Phone" required>
+                 </div>
+                 <div class="col-md-6 form-group mt-3  mt-md-0">
+                   <input type="date" name="date" class="form-control datepicker  " style="border-radius: 23px;" id="date" placeholder="Appointment Date" required>
+                 </div>
+               </div>
+               <div class="row">
+
+                 <div class="  form-group mt-3">
+                   <select name="department" id="department" style="border-radius: 23px;" class="form-select" required>
+                     <option value="">Select Service</option>
+                     <option value="Bladder  Cancer"> Bladder Cancer</option>
+                     <option value="Brain  Cancer">Brain Cancer</option>
+                     <option value="Cervical  Cancer">Cervical Cancer</option>
+                     <option value="Childhood  Cancer">Childhood Cancer</option>
+                     <option value="Colon  Cancer">Colon Cancer</option>
+                     <option value="Esophageal  Cancer">Esophageal Cancer</option>
+                     <option value="Kidney  Cancer">Kidney Cancer</option>
+                     <option value="Leiomyosarcoma  Cancer">Leiomyosarcoma Cancer</option>
+                     <option value="Leukemia  Cancer">Leukemia Cancer</option>
+                     <option value="Liver Cancer">Liver Cancer</option>
+                     <option value="Lung Cancer"> Lung Cancer</option>
+                     <option value="Lymphoma Cancer">Lymphoma Cancer</option>
+                     <option value="Melanoma  Cancer">Melanoma Cancer</option>
+                     <option value="Ovarian  Cancer">Ovarian Cancer</option>
+                     <option value="Pancreatic Cancer">Pancreatic Cancer</option>
+                     <option value="Prostate  Cancer">Prostate Cancer</option>
+                     <option value="Sarcoma/Bone Cancer">Sarcoma/Bone Cancer</option>
+                     <option value="Stomach Cancer">Stomach Cancer</option>
+                     <option value="Testicular Cancer"> Testicular Cancer</option>
+                     <option value="Uterine Cancer"> Uterine Cancer</option>
+                     <option value="Head & Neck Cancer">Head & Neck Cancer</option>
+                     <option value="Breast Cancer">Breast Cancer</option>
+                     <option value="Multiple Myeloma">Multiple Cancer</option>
+                     <option value="Honors Caregivers">Honors Cancer</option>
+
+
+
+                   </select>
+                 </div>
+
+               </div>
+
+               <div class="form-group mt-3">
+                 <textarea class="form-control" name="message" style="border-radius: 23px;" rows="5" placeholder="Message (Optional)"></textarea>
+               </div>
+               <div class="my-3">
+                 <div class="loading">Loading</div>
+                 <!-- <div class="error-message"></div> -->
+                 <!-- <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div> -->
+               </div>
+               <div class="text-center"><button type="submit">Make an Appointment</button></div>
+             </form>
+           </div>
+
+
+
+         </div>
        </div>
      </section>
 
@@ -953,7 +1293,7 @@
 
 
 
-   
+
 
 
 
@@ -968,11 +1308,7 @@
 
        </div>
 
-       <div>
-         <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d122116.09461375879!2d82.15936822732989!3d16.968255159899414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3a382971e3b046d5%3A0x8d13ea9e32b82856!2sRainbow%20%2F%20Dr.AKR%20Tripura%20skin%20and%20cosmetology%20clinic%2C%20100%20building%2C%202-56-5%20Opposite%20Christian%20community%20hall%20Road%20no%201%2C%20centre%2C%20Shanti%20Nagar%2C%20Kakinada%2C%20Andhra%20Pradesh%20533003!3m2!1d16.9682717!2d82.24177!5e0!3m2!1sen!2sin!4v1716983106035!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-
-       </div>
 
        <div class="container">
 
@@ -980,8 +1316,8 @@
 
            <div class="col-lg-6">
 
-             <div class="row">
-               <div class="col-md-12">
+             <div class="row d-flex flex-row justify-content-center">
+               <!-- <div class="col-md-12">
                  <div class="info-box">
                    <i class="bx bx-map"></i>
                    <h3>Our Address</h3>
@@ -996,19 +1332,19 @@
                      <br><br>
                    </p>
                  </div>
-               </div>
-               <div class="col-md-6">
+               </div> -->
+               <div class="col-md-7">
                  <div class="info-box mt-4">
                    <i class="bx bx-envelope"></i>
-                   <h3>Email Us</h3>
-                   <p> tripuramindcare@gmail.com </p>
+                   <h3 style="font-family:Mulish;">Email Us</h3>
+                   <p style="font-family:Mulish;"> prabhaleo2003@gmail.com </p>
                  </div>
                </div>
-               <div class="col-md-6">
+               <div class="col-md-7">
                  <div class="info-box mt-4">
                    <i class="bx bx-phone-call"></i>
-                   <h3>Call Us</h3>
-                   <p>+91 9493066633</p>
+                   <h3 style="font-family:Mulish;">Call Us</h3>
+                   <p style="font-family:Mulish;"> +91 84069 07980 </p>
                  </div>
                </div>
              </div>
@@ -1019,21 +1355,21 @@
              <form action="contactform .php" method="post" role="form" class="php-email-form">
                <div class="row">
                  <div class="col-md-6 form-group">
-                   <input type="text" name="contactname" class="form-control" id="name" placeholder="Your Name" required="">
+                   <input type="text" name="contactname" class="form-control" id="name" placeholder="Your Name" required="" style="font-family:Mulish;">
                  </div>
                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                   <input type="email" class="form-control" name="contactemail" id="email" placeholder="Your Email" required="">
+                   <input type="email" class="form-control just_font" name="contactemail" id="email" placeholder="Your Email" style="font-family:Mulish;" required="">
                  </div>
 
                  <div class="col-md-6 form-group mt-3">
-                   <input type="text" class="form-control" name="contactsubject" id="subject" placeholder="Subject">
+                   <input type="text" class="form-control" name="contactsubject" id="subject" placeholder="Subject" style="font-family:Mulish;">
                  </div>
                  <div class="col-md-6 form-group mt-3">
-                   <input type="text" class="form-control" name="contactnumber" id="number" placeholder="Phone" required="">
+                   <input type="text" class="form-control" name="contactnumber" id="number" placeholder="Phone" required="" style="font-family:Mulish;">
                  </div>
                </div>
                <div class="form-group mt-3">
-                 <textarea class="form-control" name="contactmessage" rows="7" placeholder="Message" required=""></textarea>
+                 <textarea class="form-control" name="contactmessage" rows="7" placeholder="Message" required=" " style="font-family:Mulish;"></textarea>
                </div>
                <div class="my-3">
                  <div class="loading">Loading</div>
@@ -1078,7 +1414,7 @@
            <div class=" col-md-6 footer-newsletter  onl_top">
 
              <p class="mt-2">
-               <span class="phone_email"> <strong><i class="fa-solid fa-phone colr_purple"> &nbsp;</i></strong></span> <span class="mini_text">+91 9493066633 </span>
+               <span class="phone_email"> <strong><i class="fa-solid fa-phone colr_purple"> &nbsp;</i></strong></span> <span class="mini_text"> +91 84069 07980 </span>
                <br>
                <span class="phone_email"> <strong><i class="fa-solid fa-envelope colr_purple"></i> &nbsp;</strong></span> <span class="mini_text">
                  prabhaleo2003@gmail.com</span> <br>
@@ -1087,10 +1423,11 @@
                Get the latest updates on cancer treatments, research, and patient care. Our blog helps patients and families navigate cancer diagnosis and treatment.
              </p>
              <div class="social-links mt-3">
-               <a href="#" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-               <a href="#" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+               <a href="https://www.facebook.com/askoncologist" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+               <a href="https://www.instagram.com/ask_oncologist/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+               <a href="https://in.pinterest.com/askoncologist/" target="_blank" class="pinterest"><i class="bx bxl-pinterest"></i></a>
 
-               <a href="#" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+               <a href="https://www.youtube.com/@askoncologist" target="_blank" class="twitter"><i class="bx bxl-youtube"></i></a>
 
              </div>
 
@@ -1176,8 +1513,7 @@
      }
    </style>
 
-
-   <a href="https://api.whatsapp.com/send?phone=919493066633" style="color: #fff;" class="whatsapp-link" target="_blank">
+   <a href="https://api.whatsapp.com/send?phone=8406907980" style="color: #fff;" class="whatsapp-link" target="_blank">
      <i class="fab fa-whatsapp"></i>
    </a>
 
@@ -1195,6 +1531,37 @@
 
    <!-- Template Main JS File -->
    <script src="assets/js/main.js"></script>
+
+   <script>
+     document.addEventListener('DOMContentLoaded', function() {
+       var swiper = new Swiper('.mySwiper', {
+         pagination: {
+           el: '.swiper-pagination',
+           clickable: true,
+         },
+         slidesPerView: 1,
+         spaceBetween: 30,
+         loop: false,
+         autoplay: false,
+       });
+
+       // Add event listener to nav-links
+       document.querySelectorAll('.nav-link').forEach(function(navLink) {
+         navLink.addEventListener('click', function(event) {
+           // Check if the link is not the "Blogs" link
+           if (!navLink.href.includes('blogs.php')) {
+             event.preventDefault();
+             const target = navLink.getAttribute('data-bs-target');
+             document.querySelectorAll('.tab-pane').forEach(function(tabPane) {
+               tabPane.classList.remove('active', 'show');
+             });
+             document.querySelector(target).classList.add('active', 'show');
+           }
+         });
+       });
+     });
+   </script>
+
 
  </body>
 

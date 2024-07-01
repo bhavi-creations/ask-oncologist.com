@@ -24,14 +24,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'bhaviwebdevelopment@gmail.com'; // Your Gmail email address
-        $mail->Password = 'ipotpfyrqocuxjld'; // Your Gmail password
+        $mail->Username = 'oncologyask@gmail.com'; // Your Gmail email address
+        $mail->Password = 'bixkgpnhcjyspthj'; // Your Gmail password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('bhaviwebdevelopment@gmail.com', 'Ask-Oncologist.com'); // Your Gmail email and name
-        $mail->addAddress('bhaviwebdevelopment@gmail.com', 'Ask-Oncologist.com'); // Recipient's email and name
+        $mail->setFrom('oncologyask@gmail.com', 'Ask-Oncologist.com'); // Your Gmail email and name
+        $mail->addAddress('oncologyask@gmail.com', 'Ask-Oncologist.com'); // Recipient's email and name
 
         // Content
         $mail->isHTML(true);
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p><strong>Email:</strong> $contactemail</p>
             <p><strong>Subject:</strong> $contactsubject</p>
             <p><strong>Phone:</strong> $contactnumber</p>
-            <p><strong>Message:</strong><br>$contactmessage</p>
+            <p><strong>Message:</strong>$contactmessage</p>
         ";
 
         $mail->send();
