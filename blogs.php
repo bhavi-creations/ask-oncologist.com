@@ -321,6 +321,7 @@ $result = $conn->query($sql);
              <a href="https://www.facebook.com/askoncologist" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
                <a href="https://www.instagram.com/ask_oncologist/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
                <a href="https://in.pinterest.com/askoncologist/" target="_blank" class="pinterest"><i class="bx bxl-pinterest"></i></a>
+               <a href="https://www.youtube.com/@askoncologist" target="_blank" class="twitter"><i class="bx bxl-youtube"></i></a>
 
              </div>
 
@@ -407,7 +408,7 @@ $result = $conn->query($sql);
    </style>
 
 
-   <a href="https://api.whatsapp.com/send?phone=8406907980" style="color: #fff;" class="whatsapp-link" target="_blank">
+   <a href="https://api.whatsapp.com/send?phone=918406907980" style="color: #fff;" class="whatsapp-link" target="_blank">
      <i class="fab fa-whatsapp"></i>
    </a>
 

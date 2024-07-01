@@ -1513,9 +1513,9 @@
      }
    </style>
 
-   <a href="https://api.whatsapp.com/send?phone=8406907980" style="color: #fff;" class="whatsapp-link" target="_blank">
+   <a href="https://api.whatsapp.com/send?phone=918406907980" style="color: #fff;" class="whatsapp-link" target="_blank">
      <i class="fab fa-whatsapp"></i>
-   </a>
+   </a> 
 
 
    <div id="preloader"></div>
