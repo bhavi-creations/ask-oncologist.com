@@ -303,7 +303,7 @@
                    </div>
                    <!-- Add more slides as needed -->
                  </div>
-                 <div class="swiper-pagination swiper_dots " style=" "></div>
+                 <div class="swiper-pagination swiper_dots " ></div>
                </div>
              </div>
 
