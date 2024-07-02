@@ -303,7 +303,7 @@
                    </div>
                    <!-- Add more slides as needed -->
                  </div>
-                 <div class="swiper-pagination swiper_dots " ></div>
+                 <div class="swiper-pagination swiper_dots "></div>
                </div>
              </div>
 
@@ -315,32 +315,35 @@
                    <img src="assets/img/services/brainnew.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Brain Cancer</h3>
-                   <p class=" ">Treating brain cancer requires precision and expertise. We offer advanced radiation therapy techniques like stereotactic radiosurgery (SRS) and intensity-modulated radiation therapy (IMRT) to target tumors while preserving healthy brain tissue. <br><br> Our team also provides surgical options and chemotherapy, focusing on comprehensive care that addresses the unique challenges of brain cancer.</p>
+                   <p class=" "> Treating brain cancer requires precision and expertise. We offer advanced radiation therapy techniques like stereotactic radiosurgery (SRS) and intensity-modulated radiation therapy (IMRT) to target tumors while preserving healthy brain tissue.<br><br>Our team also provides chemotherapy, focusing on comprehensive care that addresses the unique challenges of brain cancer.
+                   </p>
+
 
                  </div>
                  <div class="tab-pane" id="Bladder-Cancer">
                    <img src="assets/img/services/bladder.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Bladder Cancer</h3>
-                   <p class=" ">Bladder cancer treatment at our clinic includes options like transurethral resection, radical cystectomy, and bladder-sparing approaches combined with radiation therapy. For advanced stages, we use systemic therapies such as immunotherapy and chemotherapy. <br><br>
+                   <p class=" ">Bladder cancer treatment at our clinic includes bladder-sparing approaches combined with radiation therapy. For advanced stages, we use systemic therapies such as immunotherapy and chemotherapy. <br><br> Regular cystoscopic evaluations are part of our follow-up care to monitor for recurrence.
+                   </p>
 
-                     Our focus is on providing effective treatment while maintaining the highest standards of patient comfort and quality of life. Regular cystoscopic evaluations are part of our follow-up care to monitor for recurrence.</p>
+
 
                  </div>
                  <div class="tab-pane" id="Cervical-Cancer">
                    <img src="assets/img/services/Cervical.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Cervical Cancer</h3>
-                   <p class=" ">Cervical cancer treatment involves a combination of surgery, radiation therapy, and chemotherapy. We use advanced imaging techniques for accurate diagnosis and treatment planning. <br><br> Our approach is tailored to the stage and specific characteristics of the cancer, with a focus on preserving fertility and minimizing side effects.
+                   <p class=" ">
+                     Cervical cancer treatment involves a combination of radiation therapy and chemotherapy. We use advanced imaging techniques for accurate diagnosis and treatment planning. <br><br> Our approach is tailored to the stage and specific characteristics of the cancer, with a focus on preserving fertility and minimizing side effects.
                    </p>
-
                  </div>
                  <div class="tab-pane" id="Childhood-Cancer">
                    <img src="assets/img/services/Childhood.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Childhood Cancer</h3>
-                   <p class=" ">Treating childhood cancer requires specialized care and a compassionate approach. Our team offers advanced treatments tailored to the unique needs of children, with a focus on both medical and emotional support.
-                     <br><br> We work closely with families to ensure comprehensive care that addresses all aspects of the child’s well-being.
+                   <p class=" "> Treating childhood cancer requires specialized care and a compassionate approach. Our team offers advanced treatments tailored to the unique needs of children, with a focus on both medical and emotional support.<br><br> We work closely with families to ensure comprehensive care that addresses all aspects of the child’s well-being.
+
                    </p>
 
                  </div>
@@ -348,15 +351,17 @@
                    <img src="assets/img/services/Colon.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Colon Cancer</h3>
-                   <p class=" ">Colon cancer treatment includes surgical resection, radiation therapy, and chemotherapy. Our team uses advanced techniques to ensure precise treatment and minimize side effects. <br><br>We focus on providing comprehensive care that addresses both the cancer and the patient’s overall health. </p>
+                   <p class=" ">
+                     Colon cancer treatment includes radiation therapy and chemotherapy. Our team uses advanced techniques to ensure precise treatment and minimize side effects. <br><br> We focus on providing comprehensive care that addresses both the cancer and the patient’s overall health. </p>
 
                  </div>
                  <div class="tab-pane" id="Esophageal-Cancer">
                    <img src="assets/img/services/Esophageal.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Esophageal Cancer</h3>
-                   <p class=" ">Treating esophageal cancer involves a combination of surgery, radiation therapy, and chemotherapy.
-                     <br><br> Our approach is tailored to the stage and specific characteristics of the cancer, with a focus on providing effective treatment and improving patient outcomes.
+                   <p class=" ">
+                     Treating esophageal cancer involves a combination of radiation therapy and chemotherapy.<br><br> Our approach is tailored to the stage and specific characteristics of the cancer, with a focus on providing effective treatment and improving patient outcomes.
+
                    </p>
 
                  </div>
@@ -365,8 +370,8 @@
                    <img src="assets/img/services/kidney.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Kidney Cancer</h3>
-                   <p class=" ">Our treatment for kidney cancer includes advanced surgical techniques such as nephrectomy and minimally invasive procedures. We also utilize targeted therapies and immunotherapy to treat metastatic kidney cancer.
-                     <br><br> Our approach is tailored to the stage and specific characteristics of the cancer, aiming to preserve kidney function and improve patient outcomes. Regular follow-ups and imaging are essential components of our comprehensive care plan to monitor progress and detect any recurrence early.
+                   <p class=" ">Our treatment for kidney cancer includes targeted therapies and immunotherapy to treat metastatic kidney cancer. Our approach is tailored to the stage and specific characteristics of the cancer, aiming to preserve kidney function and improve patient outcomes. <br><br> Regular follow-ups and imaging are essential components of our comprehensive care plan to monitor progress and detect any recurrence early.
+
                    </p>
 
                  </div>
@@ -374,8 +379,8 @@
                    <img src="assets/img/services/Leiomyosarcoma.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Leiomyosarcoma Cancer</h3>
-                   <p class=" ">Treating leiomyosarcoma, a rare type of soft tissue cancer, involves a multidisciplinary approach with surgery as the primary treatment. We also use radiation therapy to manage local control and reduce recurrence.
-                     <br><br>For metastatic cases, chemotherapy and targeted therapies are available. Our personalized care plans focus on the specific needs of each patient, utilizing the latest advancements in cancer treatment.
+                   <p class=" ">Treating leiomyosarcoma, a rare type of soft tissue cancer, involves radiation therapy to manage local control and reduce recurrence. <br><br> For metastatic cases, chemotherapy and targeted therapies are available. Our personalized care plans focus on the specific needs of each patient, utilizing the latest advancements in cancer treatment.
+
                    </p>
 
                  </div>
@@ -383,8 +388,8 @@
                    <img src="assets/img/services/Leukemia.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Leukemia Cancer</h3>
-                   <p class=" "> Leukemia treatment involves a combination of chemotherapy, targeted therapy, and sometimes radiation therapy. Our approach is tailored to the specific type and stage of leukemia, with the goal of achieving remission.
-                     <br><br> We also provide supportive care to manage symptoms and side effects, ensuring a comprehensive treatment plan that addresses both the disease and the patient’s overall well-being.
+                   <p class=" "> Leukemia treatment involves a combination of chemotherapy, targeted therapy, and sometimes radiation therapy. Our approach is tailored to the specific type and stage of leukemia, with the goal of achieving remission. <br><br>We also provide supportive care to manage symptoms and side effects, ensuring a comprehensive treatment plan that addresses both the disease and the patient’s overall well-being.
+
                    </p>
 
                  </div>
@@ -392,15 +397,17 @@
                    <img src="assets/img/services//liver.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Liver Cancer</h3>
-                   <p class=" "> Liver cancer treatment at our clinic includes surgical resection, liver transplantation, and localized treatments such as radiofrequency ablation and transarterial chemoembolization (TACE). <br><br> For advanced cases, we offer systemic therapies like targeted therapy and immunotherapy. Our multidisciplinary team works together to provide personalized care that addresses the specific needs of each patient.</p>
+                   <p class=" ">Liver cancer treatment at our clinic includes localized treatments such as radiofrequency ablation and transarterial chemoembolization (TACE). <br><br> For advanced cases, we offer systemic therapies like targeted therapy and immunotherapy. Our multidisciplinary team works together to provide personalized care that addresses the specific needs of each patient.
+                   </p>
 
                  </div>
                  <div class="tab-pane" id="Lung-Cancer">
                    <img src="assets/img/services/lung.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Lung Cancer</h3>
-                   <p class=" "> Lung cancer services include advanced diagnostic tools, surgical options, radiation therapy, and systemic treatments such as chemotherapy and targeted therapy.
-                     <br><br> We develop personalized treatment plans based on the type and stage of lung cancer, with a focus on improving patient outcomes and quality of life.
+                   <p class=" ">
+                     Lung cancer services include advanced diagnostic tools, radiation therapy, and systemic treatments such as chemotherapy and targeted therapy. <br><br> We develop personalized treatment plans based on the type and stage of lung cancer, with a focus on improving patient outcomes and quality of life.
+
                    </p>
 
                  </div>
@@ -408,8 +415,8 @@
                    <img src="assets/img/services/Lymphoma.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Lymphoma Cancer</h3>
-                   <p class=" "> Lymphoma treatment involves chemotherapy, radiation therapy, and targeted therapies. <br><br> We develop personalized care plans based on the specific type and stage of lymphoma, with the goal of achieving remission.
-                     Supportive care is also provided to manage symptoms and improve quality of life.</p>
+                   <p class=" ">   Lymphoma treatment involves chemotherapy, radiation therapy, and targeted therapies.<br><br>  We develop personalized care plans based on the specific type and stage of lymphoma, with the goal of achieving remission. Supportive care is also provided to manage symptoms and improve quality of life.
+                   </p>
 
                  </div>
 
@@ -417,17 +424,16 @@
                    <img src="assets/img/services/Melanoma.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Melanoma Cancer</h3>
-                   <p class=" ">Melanoma treatment includes advanced radiation therapy, immunotherapy, and surgical options. Our multidisciplinary team develops personalized care plans that address the unique needs of each patient.
-                     <br><br> We focus on providing effective treatment while minimizing side effects and enhancing quality of life.
-                   </p>
-
+                   <p class=" "> 
+                  
+                   Melanoma treatment includes advanced radiation therapy, immunotherapy, and systemic options. Our multidisciplinary team develops personalized care plans that address the unique needs of each patient.  <br><br>  We focus on providing effective treatment while minimizing side effects and enhancing quality of life. </p>
                  </div>
                  <div class="tab-pane" id="Ovarian-Cancer">
                    <img src="assets/img/services//Ovarian.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Ovarian Cancer</h3>
-                   <p class=" ">Treating ovarian cancer involves a combination of surgery, chemotherapy, and targeted therapies. Our surgical team specializes in debulking surgery, which aims to remove as much of the tumor as possible.
-                     <br><br> Post-surgery, patients typically undergo chemotherapy to eliminate any remaining cancer cells. We also offer targeted therapies based on the molecular characteristics of the tumor, which can improve outcomes and reduce side effects.
+                   <p class=" "> 
+                    Treating ovarian cancer involves a combination of chemotherapy and targeted therapies.   <br><br>We offer targeted therapies based on the molecular characteristics of the tumor, which can improve outcomes and reduce side effects.
                    </p>
 
                  </div>
@@ -435,8 +441,9 @@
                    <img src="assets/img/services/Pancreatic.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Pancreatic Cancer</h3>
-                   <p class=" ">Pancreatic cancer treatment includes surgical resection, when possible, combined with chemotherapy and radiation therapy. For inoperable cases, we focus on palliative care and systemic treatments to control symptoms and prolong survival.
-                     <br><br> Our approach is tailored to each patient’s condition, and we utilize advanced imaging techniques for accurate diagnosis and treatment planning.
+                   <p class=" "> 
+                  Pancreatic cancer treatment includes chemotherapy and radiation therapy. For inoperable cases, we focus on palliative care and systemic treatments to control symptoms and prolong survival.   <br><br> Our approach is tailored to each patient’s condition, and we utilize advanced imaging techniques for accurate diagnosis and treatment planning.
+
                    </p>
 
                  </div>
@@ -445,42 +452,42 @@
                    <img src="assets/img/services/Prostate.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Prostate Cancer</h3>
-                   <p class=" ">Prostate cancer care includes advanced radiation therapy options such as brachytherapy and external beam radiation therapy. We also offer minimally invasive surgical procedures and hormone therapy.
-                     <br><br> Our focus is on providing effective treatment while preserving quality of life. Regular monitoring and follow-up care are essential components of our approach to ensure long-term success.
-                   </p>
+                   <p class=" ">Prostate cancer care includes advanced radiation therapy options such as brachytherapy and external beam radiation therapy.  <br><br>  We also offer hormone therapy. Our focus is on providing effective treatment while preserving quality of life. Regular monitoring and follow-up care are essential components of our approach to ensure long-term success.
+                     </p>
 
                  </div>
                  <div class="tab-pane" id="SarcomaBone-Cancer">
                    <img src="assets/img/services/bone.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Sarcoma/Bone Cancer</h3>
-                   <p class=" "> Treating sarcoma and bone cancer involves a combination of surgery, radiation therapy, and chemotherapy. <br><br>Our surgical team specializes in limb-sparing procedures to preserve function and quality of life. We also use advanced radiation techniques to target tumors while minimizing damage to surrounding tissues. </p>
+                   <p class=" "> Treating sarcoma and bone cancer involves a combination of radiation therapy and chemotherapy. We use advanced radiation techniques to target tumors while minimizing damage to surrounding tissues.
+                   </p>
 
                  </div>
                  <div class="tab-pane" id="Stomach-Cancer">
                    <img src="assets/img/services/Stomach.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Stomach Cancer</h3>
-                   <p class=" ">Stomach cancer treatment involves a combination of surgery, chemotherapy, and radiation therapy.
-                     <br><br>Our approach is tailored to the stage and specific characteristics of the cancer, aiming to achieve the best possible outcomes. We also provide nutritional support and symptom management to enhance patient comfort and well-being.
-                   </p>
+                   <p class=" "> 
+                   Stomach cancer treatment involves a combination of chemotherapy and radiation therapy. Our approach is tailored to the stage and specific characteristics of the cancer, aiming to achieve the best possible outcomes.   <br><br>We also provide nutritional support and symptom management to enhance patient comfort and well-being.
+                     </p>
 
                  </div>
                  <div class="tab-pane" id="Testicular-Cancer">
                    <img src="assets/img/services/Testicular.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Testicular Cancer</h3>
-                   <p class=" ">Testicular cancer care includes minimally invasive surgery, radiation therapy, and chemotherapy.
-                     <br><br>Our focus is on providing effective treatment while maintaining the highest standards of patient comfort and quality of life. Regular monitoring and follow-up care are essential to ensure long-term success.
-                   </p>
+                   <p class=" "> 
+                    Testicular cancer care includes radiation therapy and chemotherapy. Our focus is on providing effective treatment while maintaining the highest standards of patient comfort and quality of life. <br><br> Regular monitoring and follow-up care are essential to ensure long-term success.     </p>
 
                  </div>
                  <div class="tab-pane" id="Uterine-Cancer">
                    <img src="assets/img/services/Uterine.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Uterine Cancer</h3>
-                   <p class=" ">Uterine cancer treatment involves a combination of surgery, radiation therapy, and chemotherapy. Our team uses advanced techniques to ensure precise treatment and minimize side effects.
-                     <br><br> We provide comprehensive care that addresses both the cancer and the patient’s overall well-being.
+                   <p class=" ">Uterine cancer treatment involves a combination of radiation therapy and chemotherapy. Our team uses advanced techniques to ensure precise treatment and minimize side effects. <br><br>  We provide comprehensive care that addresses both the cancer and the patient’s overall well-being.
+
+                     
                    </p>
 
                  </div>
@@ -488,8 +495,8 @@
                    <img src="assets/img/services/Head.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Head & Neck Cancer</h3>
-                   <p class=" "> Our expertise in head and neck cancer involves precise radiation therapy techniques, including intensity-modulated radiation therapy (IMRT) and stereotactic radiosurgery (SRS). These advanced methods target tumors while sparing healthy tissue. We also offer comprehensive surgical options and chemotherapy.
-                     <br><br> Our multidisciplinary team works together to develop individualized treatment plans that aim to preserve vital functions such as speech and swallowing.
+                   <p class=" "> Our expertise in head and neck cancer involves precise radiation therapy techniques, including intensity-modulated radiation therapy (IMRT) and stereotactic radiosurgery (SRS).                   <br><br>  
+                   These advanced methods target tumors while sparing healthy tissue. We also provide chemotherapy as part of our comprehensive treatment plans.
                    </p>
 
                  </div>
@@ -497,27 +504,24 @@
                    <img src="assets/img/services/breast.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Breast Cancer</h3>
-                   <p class=" "> Breast cancer treatment at our clinic involves a comprehensive approach that includes surgery (lumpectomy or mastectomy), radiation therapy, and systemic treatments such as chemotherapy, hormone therapy, and targeted therapy.
-                     <br><br> We tailor treatment plans based on the type and stage of breast cancer, aiming to achieve the best possible outcomes while minimizing side effects. Regular follow-up and support services are integral to our care.
-                   </p>
+                   <p class=" "> Breast cancer treatment at our clinic involves a comprehensive approach that includes radiation therapy, systemic treatments such as chemotherapy, hormone therapy, and targeted therapy.  <br><br> We tailor treatment plans based on the type and stage of breast cancer, aiming to achieve the best possible outcomes while minimizing side effects. Regular follow-up and support services are integral to our care.
+                     </p>
 
                  </div>
                  <div class="tab-pane" id="Multiple-Myeloma">
                    <img src="assets/img/services/Myeloma.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Multiple Myeloma </h3>
-                   <p class=" "> Treatment for multiple myeloma includes chemotherapy, targeted therapy, and stem cell transplantation. Our multidisciplinary team develops personalized care plans that address the unique needs of each patient.
-                     <br><br> We also offer supportive therapies to manage symptoms and improve quality of life, ensuring comprehensive care throughout the treatment journey.
-                   </p>
+                   <p class=" ">Treatment for multiple myeloma includes chemotherapy, targeted therapy, and stem cell transplantation. Our multidisciplinary team develops personalized care plans that address the unique needs of each patient.   <br><br>  We also offer supportive therapies to manage symptoms and improve quality of life, ensuring comprehensive care throughout the treatment journey.
+                     </p>
 
                  </div>
                  <div class="tab-pane" id="Honors-Caregivers">
                    <img src="assets/img/services/Caregivers.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Honors Caregivers</h3>
-                   <p class=" ">We recognize the invaluable role of caregivers in the cancer treatment journey. Our clinic offers support and resources to caregivers, helping them provide the best possible care for their loved ones.
-                     <br><br> We provide education, counseling, and support groups to ensure caregivers have the tools they need to support their patients effectively.
-                   </p>
+                   <p class=" ">  We recognize the invaluable role of caregivers in the cancer treatment journey. Our clinic offers support and resources to caregivers, helping them provide the best possible care for their loved ones.    <br><br>  We provide education, counseling, and support groups to ensure caregivers have the tools they need to support their patients effectively.
+                     </p>
 
                  </div>
                  <!-- Add more tab-panes for other services as needed -->
