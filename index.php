@@ -40,6 +40,15 @@
 
  </head>
 
+ <style>
+   @media (min-width:992px) {
+
+     .showthisdiv {
+       padding-left: 100px !important;
+     }
+   }
+ </style>
+
  <body>
 
    <!-- ======= Header ======= -->
@@ -415,7 +424,7 @@
                    <img src="assets/img/services/Lymphoma.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Lymphoma Cancer</h3>
-                   <p class=" ">   Lymphoma treatment involves chemotherapy, radiation therapy, and targeted therapies.<br><br>  We develop personalized care plans based on the specific type and stage of lymphoma, with the goal of achieving remission. Supportive care is also provided to manage symptoms and improve quality of life.
+                   <p class=" "> Lymphoma treatment involves chemotherapy, radiation therapy, and targeted therapies.<br><br> We develop personalized care plans based on the specific type and stage of lymphoma, with the goal of achieving remission. Supportive care is also provided to manage symptoms and improve quality of life.
                    </p>
 
                  </div>
@@ -424,16 +433,16 @@
                    <img src="assets/img/services/Melanoma.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Melanoma Cancer</h3>
-                   <p class=" "> 
-                  
-                   Melanoma treatment includes advanced radiation therapy, immunotherapy, and systemic options. Our multidisciplinary team develops personalized care plans that address the unique needs of each patient.  <br><br>  We focus on providing effective treatment while minimizing side effects and enhancing quality of life. </p>
+                   <p class=" ">
+
+                     Melanoma treatment includes advanced radiation therapy, immunotherapy, and systemic options. Our multidisciplinary team develops personalized care plans that address the unique needs of each patient. <br><br> We focus on providing effective treatment while minimizing side effects and enhancing quality of life. </p>
                  </div>
                  <div class="tab-pane" id="Ovarian-Cancer">
                    <img src="assets/img/services//Ovarian.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Ovarian Cancer</h3>
-                   <p class=" "> 
-                    Treating ovarian cancer involves a combination of chemotherapy and targeted therapies.   <br><br>We offer targeted therapies based on the molecular characteristics of the tumor, which can improve outcomes and reduce side effects.
+                   <p class=" ">
+                     Treating ovarian cancer involves a combination of chemotherapy and targeted therapies. <br><br>We offer targeted therapies based on the molecular characteristics of the tumor, which can improve outcomes and reduce side effects.
                    </p>
 
                  </div>
@@ -441,8 +450,8 @@
                    <img src="assets/img/services/Pancreatic.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Pancreatic Cancer</h3>
-                   <p class=" "> 
-                  Pancreatic cancer treatment includes chemotherapy and radiation therapy. For inoperable cases, we focus on palliative care and systemic treatments to control symptoms and prolong survival.   <br><br> Our approach is tailored to each patient’s condition, and we utilize advanced imaging techniques for accurate diagnosis and treatment planning.
+                   <p class=" ">
+                     Pancreatic cancer treatment includes chemotherapy and radiation therapy. For inoperable cases, we focus on palliative care and systemic treatments to control symptoms and prolong survival. <br><br> Our approach is tailored to each patient’s condition, and we utilize advanced imaging techniques for accurate diagnosis and treatment planning.
 
                    </p>
 
@@ -452,8 +461,8 @@
                    <img src="assets/img/services/Prostate.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Prostate Cancer</h3>
-                   <p class=" ">Prostate cancer care includes advanced radiation therapy options such as brachytherapy and external beam radiation therapy.  <br><br>  We also offer hormone therapy. Our focus is on providing effective treatment while preserving quality of life. Regular monitoring and follow-up care are essential components of our approach to ensure long-term success.
-                     </p>
+                   <p class=" ">Prostate cancer care includes advanced radiation therapy options such as brachytherapy and external beam radiation therapy. <br><br> We also offer hormone therapy. Our focus is on providing effective treatment while preserving quality of life. Regular monitoring and follow-up care are essential components of our approach to ensure long-term success.
+                   </p>
 
                  </div>
                  <div class="tab-pane" id="SarcomaBone-Cancer">
@@ -468,26 +477,26 @@
                    <img src="assets/img/services/Stomach.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Stomach Cancer</h3>
-                   <p class=" "> 
-                   Stomach cancer treatment involves a combination of chemotherapy and radiation therapy. Our approach is tailored to the stage and specific characteristics of the cancer, aiming to achieve the best possible outcomes.   <br><br>We also provide nutritional support and symptom management to enhance patient comfort and well-being.
-                     </p>
+                   <p class=" ">
+                     Stomach cancer treatment involves a combination of chemotherapy and radiation therapy. Our approach is tailored to the stage and specific characteristics of the cancer, aiming to achieve the best possible outcomes. <br><br>We also provide nutritional support and symptom management to enhance patient comfort and well-being.
+                   </p>
 
                  </div>
                  <div class="tab-pane" id="Testicular-Cancer">
                    <img src="assets/img/services/Testicular.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Testicular Cancer</h3>
-                   <p class=" "> 
-                    Testicular cancer care includes radiation therapy and chemotherapy. Our focus is on providing effective treatment while maintaining the highest standards of patient comfort and quality of life. <br><br> Regular monitoring and follow-up care are essential to ensure long-term success.     </p>
+                   <p class=" ">
+                     Testicular cancer care includes radiation therapy and chemotherapy. Our focus is on providing effective treatment while maintaining the highest standards of patient comfort and quality of life. <br><br> Regular monitoring and follow-up care are essential to ensure long-term success. </p>
 
                  </div>
                  <div class="tab-pane" id="Uterine-Cancer">
                    <img src="assets/img/services/Uterine.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Uterine Cancer</h3>
-                   <p class=" ">Uterine cancer treatment involves a combination of radiation therapy and chemotherapy. Our team uses advanced techniques to ensure precise treatment and minimize side effects. <br><br>  We provide comprehensive care that addresses both the cancer and the patient’s overall well-being.
+                   <p class=" ">Uterine cancer treatment involves a combination of radiation therapy and chemotherapy. Our team uses advanced techniques to ensure precise treatment and minimize side effects. <br><br> We provide comprehensive care that addresses both the cancer and the patient’s overall well-being.
 
-                     
+
                    </p>
 
                  </div>
@@ -495,8 +504,8 @@
                    <img src="assets/img/services/Head.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Head & Neck Cancer</h3>
-                   <p class=" "> Our expertise in head and neck cancer involves precise radiation therapy techniques, including intensity-modulated radiation therapy (IMRT) and stereotactic radiosurgery (SRS).                   <br><br>  
-                   These advanced methods target tumors while sparing healthy tissue. We also provide chemotherapy as part of our comprehensive treatment plans.
+                   <p class=" "> Our expertise in head and neck cancer involves precise radiation therapy techniques, including intensity-modulated radiation therapy (IMRT) and stereotactic radiosurgery (SRS). <br><br>
+                     These advanced methods target tumors while sparing healthy tissue. We also provide chemotherapy as part of our comprehensive treatment plans.
                    </p>
 
                  </div>
@@ -504,24 +513,24 @@
                    <img src="assets/img/services/breast.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Breast Cancer</h3>
-                   <p class=" "> Breast cancer treatment at our clinic involves a comprehensive approach that includes radiation therapy, systemic treatments such as chemotherapy, hormone therapy, and targeted therapy.  <br><br> We tailor treatment plans based on the type and stage of breast cancer, aiming to achieve the best possible outcomes while minimizing side effects. Regular follow-up and support services are integral to our care.
-                     </p>
+                   <p class=" "> Breast cancer treatment at our clinic involves a comprehensive approach that includes radiation therapy, systemic treatments such as chemotherapy, hormone therapy, and targeted therapy. <br><br> We tailor treatment plans based on the type and stage of breast cancer, aiming to achieve the best possible outcomes while minimizing side effects. Regular follow-up and support services are integral to our care.
+                   </p>
 
                  </div>
                  <div class="tab-pane" id="Multiple-Myeloma">
                    <img src="assets/img/services/Myeloma.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Multiple Myeloma </h3>
-                   <p class=" ">Treatment for multiple myeloma includes chemotherapy, targeted therapy, and stem cell transplantation. Our multidisciplinary team develops personalized care plans that address the unique needs of each patient.   <br><br>  We also offer supportive therapies to manage symptoms and improve quality of life, ensuring comprehensive care throughout the treatment journey.
-                     </p>
+                   <p class=" ">Treatment for multiple myeloma includes chemotherapy, targeted therapy, and stem cell transplantation. Our multidisciplinary team develops personalized care plans that address the unique needs of each patient. <br><br> We also offer supportive therapies to manage symptoms and improve quality of life, ensuring comprehensive care throughout the treatment journey.
+                   </p>
 
                  </div>
                  <div class="tab-pane" id="Honors-Caregivers">
                    <img src="assets/img/services/Caregivers.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Honors Caregivers</h3>
-                   <p class=" ">  We recognize the invaluable role of caregivers in the cancer treatment journey. Our clinic offers support and resources to caregivers, helping them provide the best possible care for their loved ones.    <br><br>  We provide education, counseling, and support groups to ensure caregivers have the tools they need to support their patients effectively.
-                     </p>
+                   <p class=" "> We recognize the invaluable role of caregivers in the cancer treatment journey. Our clinic offers support and resources to caregivers, helping them provide the best possible care for their loved ones. <br><br> We provide education, counseling, and support groups to ensure caregivers have the tools they need to support their patients effectively.
+                   </p>
 
                  </div>
                  <!-- Add more tab-panes for other services as needed -->
@@ -542,38 +551,109 @@
 
 
          <div class="row">
-
-           <div class="col-md-6   dr_content_padding" data-aos="fade-left">
-
-
+           <div class="col-md-6 dr_content_padding  order-1 order-md-1" data-aos="fade-left">
              <hr class="border_line_solid">
-             <h2 class="dr_welcome_text">Dr. K Pradeep Bhaskar </h2>
-             <p class=poetsen_font>
+             <h2 class="dr_welcome_text">Dr. K Pradeep Bhaskar</h2>
+             <p class="poetsen_font">
                Dr. K Pradeep Bhaskar is a highly respected consultant radiation oncologist with an impressive academic and professional background.
                <br><br>
-               Holding an MBBS degree, a DNB in Radiation Oncology, and a FIGRS (Fellowship in Stereotactic Radiosurgery), Dr. Bhaskar is dedicated to advancing cancer treatment and improving patient outcomes.
+               Holding an MBBS degree, a DNB in Radiation Oncology, and a FIGRS (Fellowship in Stereotactic Radiosurgery), Dr. Bhaskar is dedicated to advancing cancer treatment and improving patient outcomes. With over 8 years of experience in the field, he has developed extensive expertise and a deep commitment to patient care.
              </p>
 
              <div class="d-flex flex-row justify-content-start">
-               <p class="get_in_touch" style="color: #474FA0;">Read More <i class="fa-solid fa-arrow-right"></i></p>
+               <p class="get_in_touch" style="color: #474FA0; cursor: pointer;" onclick="toggleReadMore()">Read More <i class="fa-solid fa-arrow-right"></i></p>
              </div>
-
            </div>
 
-           <div class="col-md-6   " data-aos="fade-right" class="">
+           <div class="col-md-6 order-3  order-md-2" data-aos="fade-right">
              <img src="assets/img/oncoligist/dr_profile.png" class="img-fluid dr_img_padding" alt="">
+           </div>
+
+           <div class="showthisdiv order-2  order-md-3" style="display:none ">
+             <h4>- Expertise:</h4>
+             <ul class="poetsen_font">
+               <li> IMRT, IGRT, VMAT, SRS
+               </li>
+               <li> Stereotactic radiosurgery (SRS, SBRT), pain and palliative care
+               </li>
+               <li>Treatment Techniques: VMAT, IGRT, IMRT, 3DCRT, Conventional Radiotherapy
+               </li>
+               <li>Radiotherapy Treatment Planning System: Xio, Plato, Oncentra, Eclipse, Monaco
+               </li>
+               <li>  Contouring System: Oncentra, Plato, Eclipse, Xio, Monaco, Somavision
+               </li>
+               <li>CT, MRI, PET CT based contouring and planning with Image Registration </li>
+               <li> Simulator: Nucleotron and Siemens CTSIM
+               </li>
+               <li> Worked with Varian True Beam, Elekta Versa HD, Varian Clinic iX Linear Accelerator, Elekta Synergy Linear Accelerator, Varian Unique Performance Cobalt60
+               </li>
+               <li>HDR Brachytherapy
+               </li>
+               
+
+             </ul>
+
+             <h4>- Past Experience:</h4>
+             <ul class="poetsen_font">
+               <li> Consultant Radiation Oncologist (June 2022 - Present) HCG Cancer Centre, Visakhapatnam, India
+                 </li>
+               <li>Fellowship in Image Guided Radiosurgery (Aug 2018 – Apr 2019) HCG Cancer Centre, Mumbai, India </li>
+               <li>Consultant Radiation Oncologist (Sep 2017 – Jul 2018) Surya Global Hospital, Kakinada, Andhra Pradesh, India
+               </li>
+               <li> Senior Resident in Department of Radiation Oncology (Jan 2016 - Aug 2017) King George Hospital & Queen’s NRI Hospital, Visakhapatnam, Andhra Pradesh, India
+               </li>
+
+             </ul>
+
+             <h4>- Publications:</h4>
+             <ul class="poetsen_font">
+               <li>Great Vessel Motion Mapping from 4D MRI to 3D CT – Implications for Oligo Metastatic Spinal SBRT Vessel Constraint. Bhaskar, P. et al. International Journal of Radiation Oncology, Biology, Physics
+               </li>
+               <li>B Ravi Shankar, B V Madhavi, Suman Das, K Pradeep Bhaskar, Yogiraj, Anandkrishnanelal. Role of PET-CT in Modern Radiotherapy Planning Process of Solid Tumors
+               </li>
+               <li>B V Madhavi, B Ravishankar, K Pradeep Bhaskar, G Santarao, SKE Apparao, G Ravindrababu. Extra Nodal Lymphomas – An Experience in Tertiary Care Hospital
+               </li>
+               <li>B Ravi Shankar, B.V. Madhavi, Pradeep Bhaskar, B. Prithviraj. P53 Negative Pediatrics GBM
+               </li>
+               <li> B Ravi Shankar, B V Madhavi, Sarat Chandu T, Pradeep Bhaskar. A Rare Case of Oligometastatic Endometrial Carcinoma</li>
+               <li> Ravi Shankar B, Madhavi BV, Pradeep Bhaskar, Prithviraj B. Extra Medullary Multiple Myeloma in Breast. JOJ Case Stud
+               </li>
+
+             </ul>
+
+             <h4>- Professional Memberships:</h4>
+             <ul class="poetsen_font">
+               <li> Association Of Radiation Oncologists of India (AROI) Life Member
+               </li>
+               <li> Indian Society Of Oncology (ISO) Life Member</li>
+               <li> Indian Medical Association Life Member
+               </li>
+                
+
+             </ul>
+
+             <p class="poetsen_font"> Dr. Bhaskar’s extensive expertise, along with his dedication to research and professional development, underscores his commitment to providing the highest quality of care to his patients.</p>
            </div>
          </div>
 
-
-
-
-
-
+ 
 
        </div>
      </section>
+     <script>
+       function toggleReadMore() {
+         var showThisDiv = document.querySelector('.showthisdiv');
+         var readMoreText = document.querySelector('.get_in_touch');
 
+         if (showThisDiv.style.display === "none") {
+           showThisDiv.style.display = "block";
+           readMoreText.innerHTML = 'Read Less <i class="fa-solid fa-arrow-up"></i>';
+         } else {
+           showThisDiv.style.display = "none";
+           readMoreText.innerHTML = 'Read More <i class="fa-solid fa-arrow-right"></i>';
+         }
+       }
+     </script>
 
      <!-- End Departments Section -->
 
