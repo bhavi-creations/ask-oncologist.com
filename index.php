@@ -164,7 +164,7 @@
              <!-- Carousel for nav-tabs -->
              <div class="col-4 mb-5 mb-lg-0  contaner_inner only_padding_on_left">
                <div class="swiper mySwiper">
-                 <div class="swiper-wrapper">
+                 <div class="swiper-wrapper"  style="padding-bottom: 70px;">
                    <!-- First Slide -->
                    <div class="swiper-slide">
                      <ul class="nav nav-tabs flex-column">
@@ -330,7 +330,7 @@
 
                  </div>
                  <div class="tab-pane" id="Bladder-Cancer">
-                   <img src="assets/img/services/bladder.webp" alt="CT Scanner Image" class="img-fluid service_img_radius">
+                   <img src="assets/img/services/bladder.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                    <h3>About the Bladder Cancer</h3>
                    <p class=" ">Bladder cancer treatment at our clinic includes bladder-sparing approaches combined with radiation therapy. For advanced stages, we use systemic therapies such as immunotherapy and chemotherapy. <br><br> Regular cystoscopic evaluations are part of our follow-up care to monitor for recurrence.
