@@ -47,6 +47,9 @@
        padding-left: 100px !important;
      }
    }
+
+ 
+
  </style>
 
  <body>
@@ -55,11 +58,20 @@
    <header id="header" class="main_images">
      <div class="container d-flex align-items-center">
 
-       <a href="index.php" class="logo m-auto" style="z-index: 999;">
-         <img src="assets/img/oncoligist/Oncology logo.png" alt="">
-       </a>
+       <div class="logo-text-container d-flex align-items-center" style="z-index: 999;">
+         <a href="index.php" class="logo" style="margin-right: 10px;">
+           <img src="assets/img/oncoligist/Oncology logo.png" alt="">
+         </a>
+         <div class="logo-text  side_logo_text">
+           <p class="img_icon_logo" >Dr. K Pradeep Bhaskar</p>
+           <p class="degrees_logo_txt">MBBS,DNB(Rad Onc)</p>
+           <p class="degrees_logo_txt">FIGRS(Fellowship in Stereotactic Radiosurgery)</p>
+           <p class="degrees_logo_txt">consultant Radiation Oncologist</p>
 
-       <nav id="navbar" class="navbar order-lg-0">
+         </div>
+       </div>
+
+       <nav id="navbar" class="navbar order-lg-0 ">
          <ul>
            <li><a class="nav-link scrollto" href="#bb">Home</a></li>
            <li><a class="nav-link scrollto" href="#about">About</a></li>
@@ -77,6 +89,7 @@
 
      </div>
    </header>
+
 
    <!-- End Header -->
 
@@ -164,7 +177,7 @@
              <!-- Carousel for nav-tabs -->
              <div class="col-4 mb-5 mb-lg-0  contaner_inner only_padding_on_left">
                <div class="swiper mySwiper">
-                 <div class="swiper-wrapper"  style="padding-bottom: 70px;">
+                 <div class="swiper-wrapper" style="padding-bottom: 70px;">
                    <!-- First Slide -->
                    <div class="swiper-slide">
                      <ul class="nav nav-tabs flex-column">
@@ -580,7 +593,7 @@
                </li>
                <li>Radiotherapy Treatment Planning System: Xio, Plato, Oncentra, Eclipse, Monaco
                </li>
-               <li>  Contouring System: Oncentra, Plato, Eclipse, Xio, Monaco, Somavision
+               <li> Contouring System: Oncentra, Plato, Eclipse, Xio, Monaco, Somavision
                </li>
                <li>CT, MRI, PET CT based contouring and planning with Image Registration </li>
                <li> Simulator: Nucleotron and Siemens CTSIM
@@ -589,14 +602,14 @@
                </li>
                <li>HDR Brachytherapy
                </li>
-               
+
 
              </ul>
 
              <h4>- Past Experience:</h4>
              <ul class="poetsen_font">
                <li> Consultant Radiation Oncologist (June 2022 - Present) HCG Cancer Centre, Visakhapatnam, India
-                 </li>
+               </li>
                <li>Fellowship in Image Guided Radiosurgery (Aug 2018 – Apr 2019) HCG Cancer Centre, Mumbai, India </li>
                <li>Consultant Radiation Oncologist (Sep 2017 – Jul 2018) Surya Global Hospital, Kakinada, Andhra Pradesh, India
                </li>
@@ -628,7 +641,7 @@
                <li> Indian Society Of Oncology (ISO) Life Member</li>
                <li> Indian Medical Association Life Member
                </li>
-                
+
 
              </ul>
 
@@ -636,7 +649,7 @@
            </div>
          </div>
 
- 
+
 
        </div>
      </section>

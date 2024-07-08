@@ -53,7 +53,7 @@
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
                     </div>
 
-             
+
                     <!-- Content Row -->
                     <style>
                         .card-custom {
@@ -71,114 +71,114 @@
                                 </div>
                                 <div class='row row-custom no-gutters'>
 
-                                <?php
-                                // Database connection (replace with your actual database connection details)
-                                include '../../db.connection/db_connection.php';
+                                    <?php
+                                    // Database connection (replace with your actual database connection details)
+                                    include '../../db.connection/db_connection.php';
 
 
-                                // Fetch blog data
-                                $sql = "SELECT id, title, content, video FROM blog";
-                                $result = $conn->query($sql);
+                                    // Fetch blog data
+                                    $sql = "SELECT id, title, content, video FROM blog";
+                                    $result = $conn->query($sql);
 
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        // $photos = json_decode($row['photos'], true);
-                                        // $first_photo = isset($photos[0]) ? $photos[0] : "https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png";
-                                        echo "
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            // $photos = json_decode($row['photos'], true);
+                                            // $first_photo = isset($photos[0]) ? $photos[0] : "https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png";
+                                            echo "
                                             <div class='col-12 col-md-4 col-custom'>
-            <div class='card card-custom'>
-            <video src='./uploads/videos/{$row['video']}' class='card-img-top' autoplay muted controls>
-    Your browser does not support the video tag.
-</video>
+                                            <div class='card card-custom'>
+                                            <video src='./uploads/videos/{$row['video']}' class='card-img-top' autoplay muted controls>
+                                                Your browser does not support the video tag.
+                                            </video>
 
-            <div class='card-body'>
-            <h5 class='card-title' style='color:black;'>{$row['title']}</h5>
-            <p class='card-text'>" . substr(strip_tags($row['content']), 0, 100) . "...</p>
-            <div class='row'>
-            <a href='editBlog.php?id={$row['id']}' class='btn btn-warning col-xl-4 mx-3 my-2'>Edit Blog</a>
-            <a href='deleteBlog.php?id={$row['id']}' class='col-xl-4 btn btn-danger mx-3 my-2'>Delete</a>
-            </div>
-                </div>
-                </div>
-                </div>
+                                            <div class='card-body'>
+                                            <h5 class='card-title' style='color:black;'>{$row['title']}</h5>
+                                            <p class='card-text'>" . substr(strip_tags($row['content']), 0, 100) . "...</p>
+                                            <div class='row'>
+                                            <a href='editBlog.php?id={$row['id']}' class='btn btn-warning col-xl-4 mx-3 my-2'>Edit Blog</a>
+                                            <a href='deleteBlog.php?id={$row['id']}' class='col-xl-4 btn btn-danger mx-3 my-2'>Delete</a>
+                                            </div>
+                                                </div>
+                                                </div>
+                                                </div>
 
-        ";
+                                        ";
+                                        }
+                                    } else {
+                                        echo "<p>No blog posts found.</p>";
                                     }
-                                } else {
-                                    echo "<p>No blog posts found.</p>";
-                                }
 
-                                $conn->close();
-                                ?>
-                            </div>
-                        </div>         <!-- Pie Chart -->
+                                    $conn->close();
+                                    ?>
+                                </div>
+                            </div> <!-- Pie Chart -->
+
+                        </div>
+                        <!-- /.container-fluid -->
 
                 </div>
-                <!-- /.container-fluid -->
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <div class="footer-widget__copyright">
+                                <p class="mini_text" style="color:black"> ©2024 Ask-Oncologist . All Rights Reserved. Designed &
+                                    Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:black">Bhavi
+                                        Creations</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
 
             </div>
-            <!-- End of Main Content -->
+            <!-- End of Content Wrapper -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                    <div class="footer-widget__copyright">
-              <p class="mini_text" style="color:black"> ©2024 Ask-Oncologist . All Rights Reserved. Designed &
-                Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:black">Bhavi
-                  Creations</a></p>
-            </div>
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="logout.php">Logout</a>
                     </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
