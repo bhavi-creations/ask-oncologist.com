@@ -52,9 +52,18 @@ $result = $conn->query($sql);
   <header id="header" class="main_images">
     <div class="container d-flex align-items-center">
 
-      <a href="index.php" class="logo m-auto" style="z-index: 999;">
-        <img src="assets/img/oncoligist/Oncology logo.png" alt="">
-      </a>
+    <div class="logo-text-container d-flex align-items-center" style="z-index: 999;">
+         <a href="index.php" class="logo" style="margin-right: 10px;">
+           <img src="assets/img/oncoligist/Oncology logo.png" alt="">
+         </a>
+         <div class="logo-text  side_logo_text">
+           <p class="img_icon_logo" >Dr. K Pradeep Bhaskar</p>
+           <p class="degrees_logo_txt">MBBS,DNB(Rad Onc)</p>
+           <p class="degrees_logo_txt">FIGRS(Fellowship in Stereotactic Radiosurgery)</p>
+           <p class="degrees_logo_txt">consultant Radiation Oncologist</p>
+
+         </div>
+       </div>
 
       <nav id="navbar" class="navbar order-lg-0">
         <ul>
