@@ -2053,7 +2053,7 @@ section {
   }
 
   .last_padding_text {
-    padding-right: 200px;
+    /* padding-right: 200px; */
   }
 
 }
@@ -2348,4 +2348,9 @@ section {
     text-align: center;
     margin-top: -20px;
   }
+}
+
+  
+.txt_ask{
+  margin-left: -60px;
 }
