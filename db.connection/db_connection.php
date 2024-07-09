@@ -7,9 +7,9 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $password = "";
     $dbname = "oncologist";
 } else {
-    $username = "ask-oncologist";
-    $password = "B0qVsBYudThOSF4";
-    $dbname = "ask_oncologist";
+    $username = "askoncologist";
+    $password = "DEWzGnaO8rMVX3p";
+    $dbname = "askoncologist";
 }
 
 // Create connection
