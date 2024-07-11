@@ -120,7 +120,7 @@
      </button>
    </div> -->
 
-   <img src="assets/img/oncoligist/wheel_new.png" class="img-fluid d-none d-md-block">
+   <img src="assets/img/oncoligist/Banner.png" class="img-fluid d-none d-md-block">
    <img src="assets/img/oncoligist/mb_title.jpg" class="img-fluid  d-md-none  ">
 
    <main id="main">
