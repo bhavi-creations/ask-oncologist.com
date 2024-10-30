@@ -78,7 +78,7 @@ $result = $conn->query($sql);
       </nav><!-- .navbar -->
 
       <a href="index.php#appointment" class="appointment-btn scrollto" style="z-index: 999;">
-      <span class="d-none d-md-inline">Ask</span> Oncoogist
+      <span class="d-none d-md-inline">Ask</span> Oncologist
 
       </a>
 
