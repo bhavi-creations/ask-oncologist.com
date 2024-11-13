@@ -2123,7 +2123,7 @@ section {
   line-height: 24px;
   letter-spacing: 0.20000000298023224px;
   text-align: left;
-  color: #737373 !important;
+  color: #ffffff !important;
 
 }
 
@@ -2474,4 +2474,10 @@ margin-top: 190px !important;
 .logo img{
   width: 50px ;
   height: 50px;
+}
+
+
+.shadow_box{
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  
 }

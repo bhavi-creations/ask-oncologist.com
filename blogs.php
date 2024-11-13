@@ -1,3 +1,36 @@
+
+<?php
+include './db.connection/db_connection.php'; // Include your database connection file
+
+// Retrieve service filter from GET request
+$service = isset($_GET['service']) ? $_GET['service'] : '';
+
+// Prepare SQL query with optional service filter
+$sql = "SELECT id, title, main_content, main_image, created_at FROM blogs";
+if (!empty($service)) {
+    $sql .= " WHERE service = ?";
+}
+$sql .= " ORDER BY created_at DESC";
+
+// Initialize statement
+$stmt = $conn->prepare($sql);
+
+// Bind parameters if service is set
+if (!empty($service)) {
+    $stmt->bind_param("s", $service);
+}
+
+// Execute the statement
+$stmt->execute();
+
+// Get the result
+$result = $stmt->get_result();
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -152,37 +185,37 @@
 
         <!-- Blogs Section -->
         <div class="container blog-sidebar-list" style="padding-top: 20px; padding-bottom: 20px;">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="grid row">
-                        <?php
-                        if ($result->num_rows > 0) {
-                            while ($row = $result->fetch_assoc()) {
-                              $image_path = !empty($row['main_image']) ? "admin/uploads/photos/{$row['main_image']}" : "default_image.png";
-                                echo "
-                                    <div class='grid-item col-sm-12 col-lg-4 mb-5'>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="grid row">
+            <?php
+            if ($result->num_rows > 0) {
+              while ($row = $result->fetch_assoc()) {
+                $image_path = !empty($row['main_image']) ? "admin/uploads/photos/{$row['main_image']}" : "default_image.png";
+                echo "
+                                    <div class='grid-item col-sm-12 col-md-6 col-lg-4 mb-5 shadow_box'>
                                         <div class='post-box card_bg_div_box'>
                                             <figure>
-                                                <a href='fullblog.php?id={$row['id']}'>
+                                                <a href='fullblogs.php?id={$row['id']}'>
                                                     <img src='{$image_path}' alt='Blog Image' class='img-fluid blog_box_image'>
                                                 </a>
                                             </figure>
                                             <div class='box-content'>
-                                                <h5 class='box-title'><a  class='box-title' href='fullblog.php?id={$row['id']}'>" . htmlspecialchars($row['title']) . "</a></h5>
+                                                <h5 class='box-title'><a  class='box-title' href='fullblogs.php?id={$row['id']}'>" . htmlspecialchars($row['title']) . "</a></h5>
                                                 <p class='post-desc  mt-5' style='text-align: justify;'>" . substr(strip_tags($row['main_content']), 0, 90) . "...</p>
                                                 <a href='fullblog.php?id={$row['id']}'><button class='blog_main_btn'>Read More..</button></a>
                                             </div>
                                         </div>
                                     </div>";
-                            }
-                        } else {
-                            echo "<p>No blog posts found.</p>";
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
+              }
+            } else {
+              echo "<p>No blog posts found.</p>";
+            }
+            ?>
+          </div>
         </div>
+      </div>
+    </div>
     </main>
     <!-- End #main -->
 
@@ -296,43 +329,96 @@
         </div>
       </div>
 
-      <div class="footer-area-bottom theme-bg">
-        <div class="container">
-        <div class="row pt-4">
-           
-            <div class="col-xl-8 col-lg-9 col-md-12 col-12">
-              <div class="footer-widget__copyright-info info-direction">
-                <p class="mini_text last_text">
-                  <a
-                    href="terms.html"
-                    style="text-decoration: none; color: #737373"
-                    >Terms & conditions
-                  </a>
-                  <a
-                    href="privacy.html"
-                    style="text-decoration: none; color: #737373"
-                  >
-                    Privacy & policy</a
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="    col-xl-4 col-lg-3 col-md-12 col-12">
-              <div class="footer-widget__copyright">
-                <p class="mini_text last_text" style="color: #737373">
-                
-                  <a
-                    href="https://bhavicreations.com/"
-                    target="_blank" class="logo"
-                    style="text-decoration: none; color: #737373"
-                    >Branded By @ <img src="assets\img\bhavi_logo\Bhavi_Branding_Stamp.png" alt=""></a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div
+       class="footer-area-bottom theme-bg"
+       style="background-color: #000a2d">
+       <div class="container">
+         <div class="row pt-4">
+
+           <div class="  col-md-6 col-12">
+             <div class="footer-widget__copyright-info info-direction">
+               <p class="  last_text">
+                 <a
+                   href="terms.php"
+                   style="text-decoration: none; color: #ffffff">Terms & conditions
+                 </a>
+                 <a
+                   href="privacy.php"
+                   style="text-decoration: none; color: #ffffff">
+                   Privacy & policy</a>
+               </p>
+             </div>
+           </div>
+
+           <div class="col-md-6 col-12 second_divv_end_brand">
+             <div class="footer-widget__copyright-info info-direction d-flex flex-row justify-content-end align-items-center">
+               <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none; color: #ffffff; display: flex; align-items: center;">
+                 <p class="mini_text last_text mb-0">
+                   Branding By @
+                 </p>
+                 <img src="assets/img/bhavi_logo/Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt="">
+               </a>
+             </div>
+           </div>
+
+         </div>
+       </div>
+     </div>
+
+     <style>
+       @media (min-width: 1200px) {
+         .second_divv_end_brand {
+           padding-left: 35%;
+           margin-top: -10px;
+         }
+
+         .brand_image {
+           width: 23%;
+           margin-top: 0%;
+           margin-left: 5px;
+         }
+       }
+
+       @media (min-width: 992px) and (max-width: 1200px) {
+         .second_divv_end_brand {
+           padding-left: 32%;
+           margin-top: -10px;
+         }
+
+         .brand_image {
+           width: 23%;
+           margin-top: 0%;
+           margin-left: 5px;
+         }
+       }
+
+       @media (max-width: 768px) {
+         .second_divv_end_brand {
+           padding-left: 4%;
+           margin-top: 0px;
+         }
+
+         .brand_image {
+           width: 12%;
+           margin-top: 0%;
+           margin-left: 5px;
+         }
+       }
+
+       @media (min-width: 768px) and (max-width: 992px) {
+         .second_divv_end_brand {
+           padding-left: 23%;
+           margin-top: -10px;
+         }
+
+         .brand_image {
+           width: 23%;
+           margin-top: 0%;
+           margin-left: 5px;
+         }
+       }
+     </style>
+
     </footer>
 
 
