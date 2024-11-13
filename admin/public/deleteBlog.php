@@ -7,7 +7,7 @@ if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
     
     // Prepare and bind the delete statement
-    $stmt = $conn->prepare("DELETE FROM blog WHERE id = ?");
+    $stmt = $conn->prepare("DELETE FROM blogs WHERE id = ?");
     $stmt->bind_param("i", $id);
     
     // Execute the statement

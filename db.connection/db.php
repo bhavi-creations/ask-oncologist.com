@@ -6,19 +6,16 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $pass = "";
     $db = "oncologist";
 } else {
-    $user = "askoncologist";
-    $pass = "DEWzGnaO8rMVX3p";
-    $db = "askoncologist";
+    $user = "srinivasadentalkakinada";
+    $pass = "sTNcxCDh5cdERAZ";
+    $db = "srinivasadentalkakinada";
 }
 
 
- 
+
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Could not connect to the database $db :" . $e->getMessage());
 }
-?>
-
-

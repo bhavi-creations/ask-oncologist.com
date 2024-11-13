@@ -1,303 +1,192 @@
-<?php
-include './db.connection/db_connection.php';
-// Fetch blog data
-$sql = "SELECT * FROM blog";
-$result = $conn->query($sql);
-?>
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Ask-Oncologist</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>Ask-Oncologist</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/oncoligist//Oncology logo.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/oncoligist//Oncology logo.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
 
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="main_images">
-    <div class="container d-flex align-items-center">
-
-    <div class="logo-text-container d-flex align-items-center" style="z-index: 999;">
-         <a href="index.php" class="logo" style="margin-right: 10px;">
-           <img src="assets/img/oncoligist/Oncology logo.png" alt="">
-         </a>
-         <div class="logo-text  side_logo_text">
-           <p class="img_icon_logo" >Dr. K Pradeep Bhaskar</p>
-           <p class="degrees_logo_txt">MBBS,DNB(Rad Onc)</p>
-           <p class="degrees_logo_txt">FIGRS(Fellowship in Stereotactic Radiosurgery)</p>
-           <p class="degrees_logo_txt">consultant Radiation Oncologist</p>
-
-         </div>
-       </div>
-
-      <nav id="navbar" class="navbar order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto" href="index.php">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.php#facilities">Facilities</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li> -->
-          <li><a class="nav-link" href="blogs.php">Blogs</a></li>
-          <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <a href="index.php#appointment" class="appointment-btn scrollto" style="z-index: 999;">
-      <span class="d-none d-md-inline">Ask</span> Oncologist
-
-      </a>
-
-    </div>
-  </header>
-
-
-  <main>
-    <!-- ======= Blogs Section ======= -->
-    <section id="blogs">
-      <div class="container">
-        <div class="section-title" style="margin-top: 100px;">
-          <h2>Blogs</h2>
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="main_images">
+      <div class="container d-flex align-items-center">
+        <div
+          class="logo-text-container d-flex align-items-center"
+          style="z-index: 999"
+        >
+          <a href="index.php" class="logo" style="margin-right: 10px">
+            <img src="assets/img/oncoligist/Oncology logo.png" alt="" />
+          </a>
+          <div class="logo-text side_logo_text">
+            <p class="img_icon_logo">Dr. K Pradeep Bhaskar</p>
+            <p class="degrees_logo_txt">MBBS,DNB(Rad Onc)</p>
+            <p class="degrees_logo_txt">
+              FIGRS(Fellowship in Stereotactic Radiosurgery)
+            </p>
+            <p class="degrees_logo_txt">consultant Radiation Oncologist</p>
+          </div>
         </div>
 
-        <div class="row" id="blogRow">
-          <?php
-          $counter = 0;
-          if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-              if ($counter === 0) {
-                echo '
-                                    <div class="col-md-9  order-1 order-md-1" id="selectedblog">
-                                    <div id="selectedBlogId" style="display: none">' . $counter . '</div>
-                                    <h2 class="mb-3">' . $row['title'] . '</h2>
-                                    <video class="custom-video" muted  autoplay    controls style="width: 100%; height: auto;">
-                                    <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                    </video>
-                                    <p>Published On  ';
-          ?>
+        <nav id="navbar" class="navbar order-lg-0">
+          <ul>
+            <li><a class="nav-link scrollto" href="index.php">Home</a></li>
+            <li>
+              <a class="nav-link scrollto" href="index.php#about">About</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="index.php#facilities"
+                >Facilities</a
+              >
+            </li>
+            <!-- <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li> -->
+            <li><a class="nav-link" href="blogs.php">Blogs</a></li>
+            <li>
+              <a class="nav-link scrollto" href="index.php#contact">Contact</a>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
 
-
-
-
-                <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
-                echo '</p>
-                                    
-                                    <div class="row d-flex my-3">';
-
-
-
-                echo '<div>';
-                ?>
-                <?php if (!empty($row['photos'])) : ?>
-                  <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper row"> <!-- Added 'row' class for Bootstrap grid -->
-
-                      <?php foreach (json_decode($row['photos']) as $photo) : ?>
-                        <div class="testimonial-item col-6 col-md-4 col-lg-3"> <!-- Added Bootstrap grid classes -->
-                          <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo" class="img-fluid my-2">
-                        </div>
-                      <?php endforeach; ?>
-
-                    </div>
-                  </div>
-                <?php else : ?>
-                  <p>No photos available.</p>
-                <?php endif; ?>
-                <?php echo '</div>';
-
-                echo '
-                                        </div>';
-                echo $row['content'];
-                echo '
-                                            <div style="display: none" id="lastchild">
-                                                    <video onclick="swapDivs(`' . $counter . '`)"
-                                                        class="custom-video" controls muted autoplay style="width: 100%; height: auto;">
-                                                        <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                                                        Your browser does not support the video tag.
-                                                    </video>
-                                                    <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6>
-                                            </div>';
-                echo '</div>';
-
-
-
-
-
-                if ($result->num_rows > 1) {
-                  echo '<div class="col-md-3  order-2 order-md-2 scrollable-div">';
-                }
-              } else {
-                echo '<div id="sidebardiv' . $counter . '""><video
-                                            class="custom-video" autoplay muted controls style="width: 100%; height: auto;" onclick="swapDivs(`' . $counter . '`)">
-                                            <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                        <h6 class="mb-3" onclick="swapDivs(`' . $counter . '`)">' . $row['title'] . '</h6>';
-                echo '<div class="col-md-9  order-2 order-md-1" id="lastchild" style="display: none">
-                                        <h2 class="mb-3" >' . $row['title'] . '</h2>
-                                        <video class="custom-video" autoplay muted controls style="width: 100%; height: auto;" onclick="swapDivs(`' . $counter . '`)">
-                                            <source src="admin/public/uploads/videos/' . $row['video'] . '" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                        <p>Published On ';
-                ?>
-                <?php echo date("Y-m-d H:i:s", strtotime($row['time']));
-
-                echo '</p>
-                                         <div class="row d-flex my-3">
-                                         <div class="row">
-                                         <div class="col-9"></div>
-                                         <button onclick="hideDiv()" class="btn btn-primary col-3 readmore_btn" id="read">Read More</button>
-                                         
-                                           </div>
-                                         ';
-
-
-                echo '<div id="images" style="display:none;">'; ?>
-                <?php if (!empty($row['photos'])) : ?>
-                  <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper row"> <!-- Added 'row' class for Bootstrap grid -->
-
-                      <?php foreach (json_decode($row['photos']) as $photo) : ?>
-                        <div class="testimonial-item col-6 col-md-4 col-lg-3"> <!-- Added Bootstrap grid classes -->
-                          <img src="admin/public/uploads/photos/<?php echo htmlspecialchars($photo); ?>" alt="Blog Photo" class="img-fluid my-2">
-                        </div>
-                      <?php endforeach; ?>
-
-                    </div>
-                  </div>
-                <?php else : ?>
-                  <p>No photos available.</p>
-                <?php endif;
-                echo $row['content'];
-                ?>
-          <?php echo '</div>';
-
-
-
-
-                echo '
-                                        </div>';
-                echo '</div></div>';
-              }
-              $counter++;
-            }
-            if ($result->num_rows > 1) {
-              echo '</div>';
-            }
-          }
-          ?>
-        </div>
+        <a
+          href="index.php#appointment"
+          class="appointment-btn scrollto"
+          style="z-index: 999"
+        >
+          <span class="d-none d-md-inline">Ask</span> Oncologist
+        </a>
       </div>
-    </section>
+    </header>
 
-
-    <script>
-      state = 1;
-
-      function hideDiv() {
-
-        if (state == 0) {
-          var div = document.getElementById('images');
-          document.getElementById('read').innerHTML = "Read More";
-          div.style.display = 'none';
-          state = 1;
-        } else {
-          var div = document.getElementById('images');
-          div.style.display = 'block';
-          document.getElementById('read').innerHTML = "Read less";
-          state = 0;
-        }
-
-      }
-
-
-      function swapDivs(currentDivId) {
-        var currentDiv = document.getElementById('sidebardiv' + currentDivId);
-        currentDiv.setAttribute('id', 'sidebardiv' + document.getElementById('selectedBlogId').innerText);
-        console.log(document.getElementById('selectedBlogId').innerText);
-        let selectedBlog = document.getElementById('selectedblog');
-        let currentDivLastChild = currentDiv.querySelector('#lastchild');
-        let selectedDivLastChild = selectedBlog.querySelector('#lastchild');
-        var currentDivNewDiv = document.createElement('div');
-        currentDivNewDiv.innerHTML = selectedBlog.querySelector('#lastchild').innerHTML;
-        let currentDivNewDivLastChild = document.createElement('div');
-        currentDivNewDivLastChild.id = 'lastchild';
-        currentDivNewDivLastChild.style.display = 'none';
-        selectedBlog.removeChild(selectedDivLastChild);
-        selectedBlog.removeChild(document.getElementById('selectedBlogId'));
-        currentDivNewDivLastChild.innerHTML = selectedBlog.innerHTML;
-        currentDivNewDiv.appendChild(currentDivNewDivLastChild);
-        let selectedBlogNewDiv = document.createElement('div');
-        selectedBlogNewDiv.innerHTML = currentDiv.querySelector('#lastchild').innerHTML;
-        let selectedBlogIDNewDiv = document.createElement('div');
-        selectedBlogIDNewDiv.id = 'selectedBlogId';
-        selectedBlogIDNewDiv.innerText = currentDivId;
-        let selectedBlogNewDivLastChild = document.createElement('div');
-        selectedBlogNewDivLastChild.id = 'lastchild';
-        selectedBlogNewDivLastChild.style.display = 'none';
-        currentDiv.removeChild(currentDivLastChild);
-        selectedBlogNewDivLastChild.innerHTML = currentDiv.innerHTML;
-        selectedBlogNewDiv.appendChild(selectedBlogIDNewDiv);
-        selectedBlogNewDiv.appendChild(selectedBlogNewDivLastChild);
-        currentDiv.innerHTML = currentDivNewDiv.innerHTML;
-        selectedBlog.innerHTML = selectedBlogNewDiv.innerHTML;
-
-        // Manage volume
-        let currentDivVideo = currentDiv.querySelector('video');
-        let selectedBlogVideo = selectedBlog.querySelector('video');
-        if (currentDivVideo) currentDivVideo.muted = true; // Mute the sidebar video
-        if (selectedBlogVideo) selectedBlogVideo.muted = false; // Unmute the main video
-
-        // Scroll to main video section
-        selectedBlog.scrollIntoView({
-          behavior: 'smooth'
-        });
+    <!-- End Header -->
+    <main>
+        <!-- Filter Buttons -->
+        <div class="container new_space">
+            <div class="filter_buttons redirect_section mt-4">
+                <a href="blogs.php?service="><button class="redirect_blog_srivice">All</button></a>
+                <a href="blogs.php?service=Bladder Cancer"><button class="redirect_blog_srivice">Bladder Cancer</button></a>
+                <a href="blogs.php?service=Brain Cancer"><button class="redirect_blog_srivice">Brain Cancer</button></a>
+                <a href="blogs.php?service=Cervical Cancer"><button class="redirect_blog_srivice">Cervical Cancer</button></a>
+                <a href="blogs.php?service=Childhood Cancer"><button class="redirect_blog_srivice">Childhood Cancer</button></a>
+                <a href="blogs.php?service=Colon Cancer"><button class="redirect_blog_srivice">Colon Cancer</button></a>
+                <a href="blogs.php?service=Esophageal Cancer"><button class="redirect_blog_srivice">Esophageal Cancer</button></a>
+                <a href="blogs.php?service=Kidney Cancer"><button class="redirect_blog_srivice">Kidney Cancer</button></a>
+                <a href="blogs.php?service=Leiomyosarcoma Cancer"><button class="redirect_blog_srivice">Leiomyosarcoma Cancer</button></a>
+                <a href="blogs.php?service=Leukemia Cancer"><button class="redirect_blog_srivice">Leukemia Cancer</button></a>
+                <a href="blogs.php?service=Liver Cancer"><button class="redirect_blog_srivice">Liver Cancer</button></a>
+                <a href="blogs.php?service=Lung Cancer"><button class="redirect_blog_srivice">Lung Cancer</button></a>
+                <a href="blogs.php?service=Lymphoma Cancer"><button class="redirect_blog_srivice">Lymphoma Cancer</button></a>
+                <a href="blogs.php?service=Melanoma Cancer"><button class="redirect_blog_srivice">Melanoma Cancer</button></a>
+                <a href="blogs.php?service=Ovarian Cancer"><button class="redirect_blog_srivice">Ovarian Cancer</button></a>
+                <a href="blogs.php?service=Pancreatic Cancer"><button class="redirect_blog_srivice">Pancreatic Cancer</button></a>
+                <a href="blogs.php?service=Prostate Cancer"><button class="redirect_blog_srivice">Prostate Cancer</button></a>
+                <a href="blogs.php?service=Sarcoma/Bone Cancer"><button class="redirect_blog_srivice">Sarcoma/Bone Cancer</button></a>
+                <a href="blogs.php?service=Stomach Cancer"><button class="redirect_blog_srivice">Stomach Cancer</button></a>
+                <a href="blogs.php?service=Testicular Cancer"><button class="redirect_blog_srivice">Testicular Cancer</button></a>
+                <a href="blogs.php?service=Uterine Cancer"><button class="redirect_blog_srivice">Uterine Cancer</button></a>
+                <a href="blogs.php?service=Head Neck Cancer"><button class="redirect_blog_srivice">Head & Neck Cancer</button></a>
+                <a href="blogs.php?service=Breast Cancer"><button class="redirect_blog_srivice">Breast Cancer</button></a>
+                <a href="blogs.php?service=Multiple Cancer"><button class="redirect_blog_srivice">Multiple Cancer</button></a>
+                <a href="blogs.php?service=Honors Cancer"><button class="redirect_blog_srivice">Honors Cancer</button></a>
 
 
 
+            </div>
+        </div>
 
-      }
-    </script>
+        <!-- Blogs Section -->
+        <div class="container blog-sidebar-list" style="padding-top: 20px; padding-bottom: 20px;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="grid row">
+                        <?php
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                              $image_path = !empty($row['main_image']) ? "admin/uploads/photos/{$row['main_image']}" : "default_image.png";
+                                echo "
+                                    <div class='grid-item col-sm-12 col-lg-4 mb-5'>
+                                        <div class='post-box card_bg_div_box'>
+                                            <figure>
+                                                <a href='fullblog.php?id={$row['id']}'>
+                                                    <img src='{$image_path}' alt='Blog Image' class='img-fluid blog_box_image'>
+                                                </a>
+                                            </figure>
+                                            <div class='box-content'>
+                                                <h5 class='box-title'><a  class='box-title' href='fullblog.php?id={$row['id']}'>" . htmlspecialchars($row['title']) . "</a></h5>
+                                                <p class='post-desc  mt-5' style='text-align: justify;'>" . substr(strip_tags($row['main_content']), 0, 90) . "...</p>
+                                                <a href='fullblog.php?id={$row['id']}'><button class='blog_main_btn'>Read More..</button></a>
+                                            </div>
+                                        </div>
+                                    </div>";
+                            }
+                        } else {
+                            echo "<p>No blog posts found.</p>";
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End #main -->
 
-  </main>
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+    <footer id="footer">
       <div class="footer-top">
         <div class="container">
           <div class="row">
@@ -409,22 +298,9 @@ $result = $conn->query($sql);
 
       <div class="footer-area-bottom theme-bg">
         <div class="container">
-          <div class="row pt-4">
+        <div class="row pt-4">
+           
             <div class="col-xl-8 col-lg-9 col-md-12 col-12">
-              <div class="footer-widget__copyright">
-                <p class="mini_text last_text" style="color: #737373">
-                  ©2024 Ask-Oncologist . All Rights Reserved. Designed &
-                  Developed by
-                  <a
-                    href="https://bhavicreations.com/"
-                    target="_blank"
-                    style="text-decoration: none; color: #737373"
-                    >Bhavi Creations</a
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-3 col-md-12 col-12">
               <div class="footer-widget__copyright-info info-direction">
                 <p class="mini_text last_text">
                   <a
@@ -441,88 +317,102 @@ $result = $conn->query($sql);
                 </p>
               </div>
             </div>
+            <div class="    col-xl-4 col-lg-3 col-md-12 col-12">
+              <div class="footer-widget__copyright">
+                <p class="mini_text last_text" style="color: #737373">
+                
+                  <a
+                    href="https://bhavicreations.com/"
+                    target="_blank" class="logo"
+                    style="text-decoration: none; color: #737373"
+                    >Branded By @ <img src="assets\img\bhavi_logo\Bhavi_Branding_Stamp.png" alt=""></a
+                  >
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </footer>
 
 
-  <!-- End Footer -->
+    <!-- End Footer -->
 
-  <!-- WhatsApp link -->
+    <!-- WhatsApp link -->
 
+    <!-- Scroll Up Button  -->
+    <button id="scrollBtn" onclick="scrollToTop()">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-  <!-- Scroll Up Button  -->
-  <button id="scrollBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up "></i></button>
-
-  <script>
-    // Function to scroll to the top of the page
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Optional, smooth scrolling animation
-      });
-    }
-
-    // Show scroll button when scrolling down
-    window.onscroll = function() {
-      scrollFunction()
-    };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("scrollBtn").style.display = "block";
-      } else {
-        document.getElementById("scrollBtn").style.display = "none";
+    <script>
+      // Function to scroll to the top of the page
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // Optional, smooth scrolling animation
+        });
       }
-    }
-  </script>
 
-  <style>
-    #scrollBtn {
-      display: none;
-      /* Initially hide the button */
-      position: fixed;
-      /* Fix the position of the button */
-      bottom: 20px;
-      /* Adjust the bottom distance */
-      right: 20px;
-      /* Adjust the right distance */
-      z-index: 999;
-      /* Set a high z-index to ensure the button is on top */
-      padding: 10px 15px;
-      background-color: #01539D;
-      ;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-  </style>
+      // Show scroll button when scrolling down
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("scrollBtn").style.display = "block";
+        } else {
+          document.getElementById("scrollBtn").style.display = "none";
+        }
+      }
+    </script>
 
-  <a href="https://api.whatsapp.com/send?phone=918406907980" style="color: #fff;" class="whatsapp-link" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+    <style>
+      #scrollBtn {
+        display: none;
+        /* Initially hide the button */
+        position: fixed;
+        /* Fix the position of the button */
+        bottom: 20px;
+        /* Adjust the bottom distance */
+        right: 20px;
+        /* Adjust the right distance */
+        z-index: 999;
+        /* Set a high z-index to ensure the button is on top */
+        padding: 10px 15px;
+        background-color: #01539d;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
 
+    <a
+      href="https://api.whatsapp.com/send?phone=918406907980"
+      style="color: #fff"
+      class="whatsapp-link"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
-  <div id="preloader"></div>
-  <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+    <div id="preloader"></div>
+    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-
-
-
-</body>
-
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

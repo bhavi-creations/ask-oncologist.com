@@ -3,103 +3,85 @@
 include '../../db.connection/db_connection.php';
 
 // Function to generate a unique file name
-function generateUniqueFileName($fileName)
-{
+function generateUniqueFileName($fileName) {
     $ext = pathinfo($fileName, PATHINFO_EXTENSION);
     return uniqid() . '_' . time() . '.' . $ext;
 }
 
 // Check if the form was submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Check for existence of $_POST keys to avoid undefined index warnings
     $blog_id = isset($_POST['id']) ? intval($_POST['id']) : 0;
-    $title = $_POST['title'];
-    $content = $_POST['content'];
+    $title = isset($_POST['title']) ? $_POST['title'] : '';
+    $main_content = isset($_POST['main_content']) ? $_POST['main_content'] : '';
+    $full_content = isset($_POST['full_content']) ? $_POST['full_content'] : '';
+    $service = isset($_POST['service']) ? $_POST['service'] : '';  // Capture selected service
+
+    // Ensure required fields are not empty
+    if (empty($title) || empty($main_content) || empty($full_content) || empty($service)) {
+        die("Error: Title, Main Content, Full Content, and Service cannot be empty.");
+    }
+
+    // Handle file uploads for title image and main image
+    $title_image_path = '';
+    if (!empty($_FILES['title_image']['name'])) {
+        $title_image_directory = __DIR__ . "/../uploads/photos/";
+        $title_image_name = generateUniqueFileName($_FILES['title_image']['name']);
+        $title_image_path = $title_image_name;
+
+        if (!move_uploaded_file($_FILES['title_image']['tmp_name'], $title_image_directory . $title_image_name)) {
+            die("Error uploading title image.");
+        }
+    }
+
+    $main_image_path = '';
+    if (!empty($_FILES['main_image']['name'])) {
+        $main_image_directory = __DIR__ . "/../uploads/photos/";
+        $main_image_name = generateUniqueFileName($_FILES['main_image']['name']);
+        $main_image_path = $main_image_name;
+
+        if (!move_uploaded_file($_FILES['main_image']['tmp_name'], $main_image_directory . $main_image_name)) {
+            die("Error uploading main image.");
+        }
+    }
 
     // Handle video upload
-    $video_path = "";
+    $video_path = '';
     if (!empty($_FILES['video']['name'])) {
-        $video_directory = "uploads/videos/";  //the location path have to be place in the public folder as uploads/videos
-        $file_name = generateUniqueFileName($_FILES['video']['name']);
-        $file_path = $video_directory . $file_name;
-        if (move_uploaded_file($_FILES['video']['tmp_name'], $file_path)) {
-            $video_path = basename($file_path);
+        $video_directory = __DIR__ . "/../uploads/videos/";  // Adjust the upload directory path for videos
+        $video_name = generateUniqueFileName($_FILES['video']['name']);
+        $video_path = $video_name;  // Store only the filename
+
+        // Ensure the video upload directory exists
+        if (!is_dir($video_directory)) {
+            mkdir($video_directory, 0777, true);
+        }
+
+        if (!move_uploaded_file($_FILES['video']['tmp_name'], $video_directory . $video_name)) {
+            die("Error uploading video.");
         }
     }
 
-    // Handle photo uploads
-    $photo_paths = [];
-    if (!empty($_FILES['photos']['name'][0])) {
-        $photo_directory = "uploads/photos/";  //the location path have to be place in the public folder as uploads/photos
-        foreach ($_FILES['photos']['name'] as $key => $name) {
-            if ($_FILES['photos']['error'][$key] === UPLOAD_ERR_OK) {
-                $file_name = generateUniqueFileName($name);
-                $file_path = $photo_directory . $file_name;
-                if (move_uploaded_file($_FILES['photos']['tmp_name'][$key], $file_path)) {
-                    $photo_paths[] = basename($file_path);
-                }
-            } else {
-                echo "Error uploading photo: " . $_FILES['photos']['error'][$key];
-            }
-        }
-    }
-    $photos_json = json_encode($photo_paths);
-
-    if ($blog_id) {
-        // Fetch existing data
-        $stmt = $conn->prepare("SELECT video, photos FROM blog WHERE id = ?");
-        $stmt->bind_param("i", $blog_id);
-        $stmt->execute();
-        $stmt->bind_result($existing_video, $existing_photos);
-        $stmt->fetch();
-        $stmt->close();
-
-        // Ensure $existing_photos is decoded as an array
-        $existing_photos = json_decode($existing_photos, true);
-        if (!is_array($existing_photos)) {
-            $existing_photos = [];
-        }
-
-        // If a new video is uploaded, remove the old one
-        if (!empty($_FILES['video']['name']) && file_exists("uploads/videos/" . $existing_video)) {
-            unlink("uploads/videos/" . $existing_video);
-        }
-
-        // If no new video is uploaded, keep the existing one
-        if (empty($video_path)) {
-            $video_path = $existing_video;
-        }
-
-        // Merge existing and new photos
-        $merged_photos = array_merge($existing_photos, $photo_paths);
-        $photos_json = json_encode($merged_photos);
-
-        // Update the blog post in the database
-        $stmt = $conn->prepare("UPDATE blog SET title = ?, content = ?, video = ?, photos = ? WHERE id = ?");
-        $stmt->bind_param("ssssi", $title, $content, $video_path, $photos_json, $blog_id);
-
-        if ($stmt->execute()) {
-            echo "Blog post updated successfully!";
-            header("Location: allBlog.php");
-            exit();
-        } else {
-            echo "Error: " . $stmt->error;
-            header("Location: editBlog.php?id=$blog_id");
-            exit();
-        }
+    // Prepare SQL statement based on whether it's an insert or update
+    if ($blog_id > 0) {
+        // Update existing blog post
+        $stmt = $conn->prepare("UPDATE blogs SET title = ?, main_content = ?, full_content = ?, title_image = ?, main_image = ?, video = ?, service = ? WHERE id = ?");
+        $stmt->bind_param("sssssssi", $title, $main_content, $full_content, $title_image_path, $main_image_path, $video_path, $service, $blog_id);
     } else {
-        // Save the new blog post to the database
-        $stmt = $conn->prepare("INSERT INTO blog (title, content, video, photos) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $title, $content, $video_path, $photos_json);
+        // Insert new blog post
+        $stmt = $conn->prepare("INSERT INTO blogs (title, main_content, full_content, title_image, main_image, video, service, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())");
+        $stmt->bind_param("sssssss", $title, $main_content, $full_content, $title_image_path, $main_image_path, $video_path, $service);
+    }
 
-        if ($stmt->execute()) {
-            echo "Blog post published successfully!";
-            header("Location: allBlog.php");
-            exit();
-        } else {
-            echo "Error: " . $stmt->error;
-            header("Location: newBlog.php");
-            exit();
-        }
+    // Execute the SQL statement
+    if ($stmt->execute()) {
+        echo "Blog post published/updated successfully!";
+        header("Location: allBlog.php");  // Redirect after successful submission
+        exit();
+    } else {
+        echo "Error: " . $stmt->error;
+        header("Location: newBlog.php");
+        exit();
     }
 
     $stmt->close();

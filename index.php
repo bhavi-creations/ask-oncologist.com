@@ -47,9 +47,6 @@
        padding-left: 100px !important;
      }
    }
-
- 
-
  </style>
 
  <body>
@@ -63,7 +60,7 @@
            <img src="assets/img/oncoligist/Oncology logo.png" alt="">
          </a>
          <div class="logo-text  side_logo_text">
-           <p class="img_icon_logo" >Dr. K Pradeep Bhaskar</p>
+           <p class="img_icon_logo">Dr. K Pradeep Bhaskar</p>
            <p class="degrees_logo_txt">MBBS,DNB(Rad Onc)</p>
            <p class="degrees_logo_txt">FIGRS(Fellowship in Stereotactic Radiosurgery)</p>
            <p class="degrees_logo_txt">consultant Radiation Oncologist</p>
@@ -84,7 +81,7 @@
        </nav><!-- .navbar -->
 
        <a href="#appointment" class="appointment-btn scrollto" style="z-index: 999;">
-       <span class="d-none d-md-inline">Ask</span> Oncologist
+         <span class="d-none d-md-inline">Ask</span> Oncologist
 
        </a>
 
@@ -782,186 +779,233 @@
            }
          });
        });
-     </script>
+     </script> 
+<section>
+             <div class="container">
+                 <div class="section-title text-center">
+                     <p class="our_blogs my-2">Our Blogs</p>
+                     <h2 class="apporach">Blogs & articles </h2>
 
 
 
-     <section>
-       <div class="container">
-         <div class="row">
+                     <p class="mb-5  text-center service_text">General and cosmetic dentistry can give you a smile you’re proud to show off. Modern cosmetic dentistry techniques make it easier than ever to achieve a bright, even smile. Visit Srinivasa Dental Clinic in Kakinada.
 
-           <div class="col-6 d-none d-md-block">
-             <h3 class="blogs_home mb-5">Our Latest Blogs</h3>
-           </div>
-           <div class="col-6 d-none d-md-block">
-             <a href="blogs.php">
-               <p class="view_more_btn mb-5 d-flex flex-row justify-content-end">View More<i class="fa-solid fa-arrow-right"></i></p>
-             </a>
-           </div>
-
-           <h3 class="blogs_home text-center mb-5 d-md-none">Our Latest Blogs</h3>
-
-           <?php
-            include './db.connection/db_connection.php';
-            // Fetch latest 3 blogs
-            $sql = "SELECT * FROM blog ORDER BY time DESC LIMIT 3";
-            $result = $conn->query($sql);
-            ?>
-
-           <?php while ($row = $result->fetch_assoc()) : ?>
-             <div class="col px-5 py-2">
-               <div class="card h-100">
-                 <video class="custom-video" autoplay muted controls style="width: 100%; height: auto;">
-                   <source src="admin/public/uploads/videos/<?php echo $row['video']; ?>" type="video/mp4">
-                   Your browser does not support the video tag.
-                 </video>
-                 <div class="card-body">
-
-
-                   <h5 class="card-title"><?php echo $row['title']; ?></h5>
-
+                     </p>
                  </div>
-
-
-                 <div class="card-footer">
-                   <small class="text-muted">Posted On: <?php echo date("F j, Y, g:i a", strtotime($row['time'])); ?></small>
-                 </div>
-               </div>
              </div>
-           <?php endwhile; ?>
+             <div class="container">
+                 <div class="row">
 
-           <div class="d-flex flex-row justify-content-center mt-4">
-             <a href="blogs.php">
-               <p class="view_more_btn d-md-none">View More<i class="fa-solid fa-arrow-right"></i></p>
-             </a>
-           </div>
+                     <?php
+                        include './db.connection/db_connection.php';
 
-         </div>
-       </div>
-     </section>
+                        // Fetch latest 3 blogs with video
+                        $sql = "SELECT id, title, main_content, main_image, video FROM blogs ORDER BY created_at DESC LIMIT 3";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            echo "<div class='row'>"; // Start row for card layout
+
+                            while ($row = $result->fetch_assoc()) {
+                                $blog_id = $row['id'];
+                                $title = $row['title'];
+                                $main_content = $row['main_content'];
+                                $main_image = $row['main_image'];
+                                $video = $row['video'];
+
+                                echo "<div class='col-md-4 mb-4'>"; // Create 3 equal-width columns for medium devices
+                                echo "<div class='card h-100'>"; // Start card
+
+                                // Display the blog title
+                                echo "<div class='card-body'>";
+
+
+                                // Display video if available
+                                if (!empty($video)) {
+                                    $video_path = "./admin/uploads/videos/{$video}";
+                                    echo "<video class='main-video img-fluid' controls>
+                    <source src='{$video_path}' type='video/mp4'>
+                    Your browser does not support the video tag.
+                  </video>";
+                                }
+                                // If no video, display main image
+                                elseif (!empty($main_image)) {
+                                    $main_image_path = "./admin/uploads/photos/{$main_image}";
+                                    echo "<img class='card-img-top img-fluid' src='{$main_image_path}' alt='Blog Image'>";
+                                }
+                                echo "<h5 class='card-title my-3'>" . htmlspecialchars($title) . "</h5>";
+                                // Display a short portion of the blog content
+                                echo "<p class='card-text'>" . substr($main_content, 0, 90) . "...</p>";
+
+                                // Link to full blog post
+                                echo "<a href='fullblog.php?id={$blog_id}' class='btn btn-primary'>Read more</a>";
+
+                                echo "</div>"; // End card body
+                                echo "</div>"; // End card
+                                echo "</div>"; // End column
+                            }
+
+                            echo "</div>"; // End row
+                        } else {
+                            echo "No blog posts found.";
+                        }
+
+                        $conn->close();
+                        ?>
+
+
+
+
+
+
+
+
+
+
+                     <div class="mt-5 d-none d-md-block">
+                         <a href="blogs.php" style="text-decoration: none;">
+                             <p class="view_more_btn mb-5 d-flex flex-row justify-content-start">View More<i
+                                     class="fa-solid fa-arrow-right mt-1"></i></p>
+                         </a>
+                     </div>
+ 
+                      <div class="d-flex flex-row justify-content-center mt-4">
+                         <a href="blogs.php" style="text-decoration: none;">
+                             <p class="view_more_btn d-md-none">View More<i class="fa-solid fa-arrow-right"></i></p>
+                         </a>
+                     </div> 
+
+                 </div>
+             </div>
+         </section>
 
      <!-- End Testimonials Section -->
 
 
 
+       <!-- End Testimonials Section -->
 
 
-     <!-- ======= Appointment Section ======= -->
-
-     <section id="appointment" class="appointment ">
-       <div class="container appointment_bg" style="  background-color: #E7F3FE80;" data-aos="fade-up">
-
-         <div class="section-title">
-           <h2 class=" pt-5">Make an Appointment</h2>
-         </div>
 
 
-         <div class="row">
-           <div class="col-md-6 d-none d-md-block">
-             <img src="assets/img/oncoligist/BOOK APOINTMENT.png" class="img-fluid">
+
+       <!-- ======= Appointment Section ======= -->
+
+       <section id="appointment" class="appointment ">
+         <div class="container appointment_bg" style="  background-color: #E7F3FE80;" data-aos="fade-up">
+
+           <div class="section-title">
+             <h2 class=" pt-5">Make an Appointment</h2>
            </div>
 
 
-           <div class="col-md-6">
-             <form action="appointmentform.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
-               <div class="row">
-                 <div class="col-md-6 form-group">
-                   <input type="text" name="name" class="form-control  " id="name" style="border-radius: 23px; " placeholder="Your Name" required>
+           <div class="row">
+             <div class="col-md-6 d-none d-md-block">
+               <img src="assets/img/oncoligist/BOOK APOINTMENT.png" class="img-fluid">
+             </div>
+
+
+             <div class="col-md-6">
+               <form action="appointmentform.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+                 <div class="row">
+                   <div class="col-md-6 form-group">
+                     <input type="text" name="name" class="form-control  " id="name" style="border-radius: 23px; " placeholder="Your Name" required>
+                   </div>
+                   <div class="col-md-6 form-group mt-3 mt-md-0">
+                     <input type="email" class="form-control  " name="email" id="email" style="border-radius: 23px;" placeholder="Your Email" required>
+                   </div>
+                   <div class="col-md-6 form-group mt-3 mt-md-0">
+                     <input type="tel" class="form-control  " name="phone" id="phone" style="border-radius: 23px;" placeholder="Your Phone" required>
+                   </div>
+                   <div class="col-md-6 form-group mt-3  mt-md-0">
+                     <input type="date" name="date" class="form-control datepicker  " style="border-radius: 23px;" id="date" placeholder="Appointment Date" required>
+                   </div>
                  </div>
-                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                   <input type="email" class="form-control  " name="email" id="email" style="border-radius: 23px;" placeholder="Your Email" required>
-                 </div>
-                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                   <input type="tel" class="form-control  " name="phone" id="phone" style="border-radius: 23px;" placeholder="Your Phone" required>
-                 </div>
-                 <div class="col-md-6 form-group mt-3  mt-md-0">
-                   <input type="date" name="date" class="form-control datepicker  " style="border-radius: 23px;" id="date" placeholder="Appointment Date" required>
-                 </div>
-               </div>
-               <div class="row">
+                 <div class="row">
 
-                 <div class="  form-group mt-3">
-                   <select name="department" id="department" style="border-radius: 23px;" class="form-select" required>
-                     <option value="">Select Service</option>
-                     <option value="Bladder  Cancer"> Bladder Cancer</option>
-                     <option value="Brain  Cancer">Brain Cancer</option>
-                     <option value="Cervical  Cancer">Cervical Cancer</option>
-                     <option value="Childhood  Cancer">Childhood Cancer</option>
-                     <option value="Colon  Cancer">Colon Cancer</option>
-                     <option value="Esophageal  Cancer">Esophageal Cancer</option>
-                     <option value="Kidney  Cancer">Kidney Cancer</option>
-                     <option value="Leiomyosarcoma  Cancer">Leiomyosarcoma Cancer</option>
-                     <option value="Leukemia  Cancer">Leukemia Cancer</option>
-                     <option value="Liver Cancer">Liver Cancer</option>
-                     <option value="Lung Cancer"> Lung Cancer</option>
-                     <option value="Lymphoma Cancer">Lymphoma Cancer</option>
-                     <option value="Melanoma  Cancer">Melanoma Cancer</option>
-                     <option value="Ovarian  Cancer">Ovarian Cancer</option>
-                     <option value="Pancreatic Cancer">Pancreatic Cancer</option>
-                     <option value="Prostate  Cancer">Prostate Cancer</option>
-                     <option value="Sarcoma/Bone Cancer">Sarcoma/Bone Cancer</option>
-                     <option value="Stomach Cancer">Stomach Cancer</option>
-                     <option value="Testicular Cancer"> Testicular Cancer</option>
-                     <option value="Uterine Cancer"> Uterine Cancer</option>
-                     <option value="Head & Neck Cancer">Head & Neck Cancer</option>
-                     <option value="Breast Cancer">Breast Cancer</option>
-                     <option value="Multiple Myeloma">Multiple Cancer</option>
-                     <option value="Honors Caregivers">Honors Cancer</option>
+                   <div class="  form-group mt-3">
+                     <select name="department" id="department" style="border-radius: 23px;" class="form-select" required>
+                       <option value="">Select Service</option>
+                       <option value="Bladder  Cancer"> Bladder Cancer</option>
+                       <option value="Brain  Cancer">Brain Cancer</option>
+                       <option value="Cervical  Cancer">Cervical Cancer</option>
+                       <option value="Childhood  Cancer">Childhood Cancer</option>
+                       <option value="Colon  Cancer">Colon Cancer</option>
+                       <option value="Esophageal  Cancer">Esophageal Cancer</option>
+                       <option value="Kidney  Cancer">Kidney Cancer</option>
+                       <option value="Leiomyosarcoma  Cancer">Leiomyosarcoma Cancer</option>
+                       <option value="Leukemia  Cancer">Leukemia Cancer</option>
+                       <option value="Liver Cancer">Liver Cancer</option>
+                       <option value="Lung Cancer"> Lung Cancer</option>
+                       <option value="Lymphoma Cancer">Lymphoma Cancer</option>
+                       <option value="Melanoma  Cancer">Melanoma Cancer</option>
+                       <option value="Ovarian  Cancer">Ovarian Cancer</option>
+                       <option value="Pancreatic Cancer">Pancreatic Cancer</option>
+                       <option value="Prostate  Cancer">Prostate Cancer</option>
+                       <option value="Sarcoma/Bone Cancer">Sarcoma/Bone Cancer</option>
+                       <option value="Stomach Cancer">Stomach Cancer</option>
+                       <option value="Testicular Cancer"> Testicular Cancer</option>
+                       <option value="Uterine Cancer"> Uterine Cancer</option>
+                       <option value="Head & Neck Cancer">Head & Neck Cancer</option>
+                       <option value="Breast Cancer">Breast Cancer</option>
+                       <option value="Multiple Myeloma">Multiple Cancer</option>
+                       <option value="Honors Caregivers">Honors Cancer</option>
 
 
 
-                   </select>
+
+                     </select>
+                   </div>
+
                  </div>
 
-               </div>
+                 <div class="form-group mt-3">
+                   <textarea class="form-control" name="message" style="border-radius: 23px;" rows="5" placeholder="Message (Optional)"></textarea>
+                 </div>
+                 <div class="my-3">
+                   <div class="loading">Loading</div>
+                   <!-- <div class="error-message"></div> -->
+                   <!-- <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div> -->
+                 </div>
+                 <div class="text-center"><button type="submit">Make an Appointment</button></div>
+               </form>
+             </div>
 
-               <div class="form-group mt-3">
-                 <textarea class="form-control" name="message" style="border-radius: 23px;" rows="5" placeholder="Message (Optional)"></textarea>
-               </div>
-               <div class="my-3">
-                 <div class="loading">Loading</div>
-                 <!-- <div class="error-message"></div> -->
-                 <!-- <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div> -->
-               </div>
-               <div class="text-center"><button type="submit">Make an Appointment</button></div>
-             </form>
+
+
+           </div>
+         </div>
+       </section>
+
+       <!-- End Appointment Section -->
+
+
+
+
+
+
+
+       <!-- ======= Contact Section ======= -->
+
+       <section id="contact" class="contact">
+         <div class="container">
+
+           <div class="section-title">
+             <h2>Contact</h2>
            </div>
 
-
-
-         </div>
-       </div>
-     </section>
-
-     <!-- End Appointment Section -->
-
-
-
-
-
-
-
-     <!-- ======= Contact Section ======= -->
-
-     <section id="contact" class="contact">
-       <div class="container">
-
-         <div class="section-title">
-           <h2>Contact</h2>
          </div>
 
-       </div>
 
 
+         <div class="container">
 
-       <div class="container">
+           <div class="row mt-5">
 
-         <div class="row mt-5">
+             <div class="col-lg-6">
 
-           <div class="col-lg-6">
-
-             <div class="row d-flex flex-row justify-content-center">
-               <!-- <div class="col-md-12">
+               <div class="row d-flex flex-row justify-content-center">
+                 <!-- <div class="col-md-12">
                  <div class="info-box">
                    <i class="bx bx-map"></i>
                    <h3>Our Address</h3>
@@ -977,193 +1021,159 @@
                    </p>
                  </div>
                </div> -->
-               <div class="col-md-7">
-                 <div class="info-box mt-4">
-                   <i class="bx bx-envelope"></i>
-                   <h3 style="font-family:Mulish;">Email Us</h3>
-                   <p style="font-family:Mulish;"> prabhaleo2003@gmail.com </p>
+                 <div class="col-md-7">
+                   <div class="info-box mt-4">
+                     <i class="bx bx-envelope"></i>
+                     <h3 style="font-family:Mulish;">Email Us</h3>
+                     <p style="font-family:Mulish;"> prabhaleo2003@gmail.com </p>
+                   </div>
+                 </div>
+                 <div class="col-md-7">
+                   <div class="info-box mt-4">
+                     <i class="bx bx-phone-call"></i>
+                     <h3 style="font-family:Mulish;">Call Us</h3>
+                     <p style="font-family:Mulish;"> +91 84069 07980 </p>
+                   </div>
                  </div>
                </div>
-               <div class="col-md-7">
-                 <div class="info-box mt-4">
-                   <i class="bx bx-phone-call"></i>
-                   <h3 style="font-family:Mulish;">Call Us</h3>
-                   <p style="font-family:Mulish;"> +91 84069 07980 </p>
-                 </div>
-               </div>
+
              </div>
 
+             <div class="col-lg-6">
+               <form action="contactform .php" method="post" role="form" class="php-email-form">
+                 <div class="row">
+                   <div class="col-md-6 form-group">
+                     <input type="text" name="contactname" class="form-control" id="name" placeholder="Your Name" required="" style="font-family:Mulish;">
+                   </div>
+                   <div class="col-md-6 form-group mt-3 mt-md-0">
+                     <input type="email" class="form-control just_font" name="contactemail" id="email" placeholder="Your Email" style="font-family:Mulish;" required="">
+                   </div>
+
+                   <div class="col-md-6 form-group mt-3">
+                     <input type="text" class="form-control" name="contactsubject" id="subject" placeholder="Subject" style="font-family:Mulish;">
+                   </div>
+                   <div class="col-md-6 form-group mt-3">
+                     <input type="text" class="form-control" name="contactnumber" id="number" placeholder="Phone" required="" style="font-family:Mulish;">
+                   </div>
+                 </div>
+                 <div class="form-group mt-3">
+                   <textarea class="form-control" name="contactmessage" rows="7" placeholder="Message" required=" " style="font-family:Mulish;"></textarea>
+                 </div>
+                 <div class="my-3">
+                   <div class="loading">Loading</div>
+                   <div class="error-message"></div>
+                   <div class="sent-message">Your message has been sent. Thank you!</div>
+                 </div>
+                 <div class="text-center"><button type="submit">Send Message</button></div>
+               </form>
+             </div>
+
+
+
            </div>
-
-           <div class="col-lg-6">
-             <form action="contactform .php" method="post" role="form" class="php-email-form">
-               <div class="row">
-                 <div class="col-md-6 form-group">
-                   <input type="text" name="contactname" class="form-control" id="name" placeholder="Your Name" required="" style="font-family:Mulish;">
-                 </div>
-                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                   <input type="email" class="form-control just_font" name="contactemail" id="email" placeholder="Your Email" style="font-family:Mulish;" required="">
-                 </div>
-
-                 <div class="col-md-6 form-group mt-3">
-                   <input type="text" class="form-control" name="contactsubject" id="subject" placeholder="Subject" style="font-family:Mulish;">
-                 </div>
-                 <div class="col-md-6 form-group mt-3">
-                   <input type="text" class="form-control" name="contactnumber" id="number" placeholder="Phone" required="" style="font-family:Mulish;">
-                 </div>
-               </div>
-               <div class="form-group mt-3">
-                 <textarea class="form-control" name="contactmessage" rows="7" placeholder="Message" required=" " style="font-family:Mulish;"></textarea>
-               </div>
-               <div class="my-3">
-                 <div class="loading">Loading</div>
-                 <div class="error-message"></div>
-                 <div class="sent-message">Your message has been sent. Thank you!</div>
-               </div>
-               <div class="text-center"><button type="submit">Send Message</button></div>
-             </form>
-           </div>
-
-
 
          </div>
+       </section>
 
-       </div>
-     </section>
-
-     <!-- End Contact Section -->
+       <!-- End Contact Section -->
 
    </main><!-- End #main -->
 
    <!-- ======= Footer ======= -->
    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 d-flex flex-row justify-content-center">
-              <div class="footer-info">
-                <!-- <a href="index.php" class="logo me-auto "><img src="assets/img/oncoligist/Oncology logo.png" style="height:350px;" alt=""></a> -->
-                <a href="index.php" class="img-fluid">
-                  <img
-                    src="assets/img/oncoligist/Oncology logo.png"
-                    style="height: 350px"
-                    alt=""
-                /></a>
-              </div>
-              <!-- <div class="footer-info d-block d-xl-none">
+     <div class="footer-top">
+       <div class="container">
+         <div class="row">
+           <div class="col-md-4 d-flex flex-row justify-content-center">
+             <div class="footer-info">
+               <!-- <a href="index.php" class="logo me-auto "><img src="assets/img/oncoligist/Oncology logo.png" style="height:350px;" alt=""></a> -->
+               <a href="index.php" class="img-fluid">
+                 <img
+                   src="assets/img/oncoligist/Oncology logo.png"
+                   style="height: 350px"
+                   alt="" /></a>
+             </div>
+             <!-- <div class="footer-info d-block d-xl-none">
               <a href="index.php" class="logo me-auto "><img src="assets/img/oncoligist/Oncology logo.png" class="img-fluid" alt=""></a>
 
             </div> -->
-            </div>
+           </div>
 
-            <div class="col-md-4 d-flex flex-row justify-content-center" >
-              <div class="footer-info  d-none d-lg-block">
-    
-                <a href="index.php" class="img-fluid" >
-                  <img
-                    src="assets/img/oncoligist/ask_text.png"
-                    style="height: 350px;"
-                    alt=""
-                    class="txt_ask"
-                /></a>
-              </div>
-              <div class="footer-info  d-none d-md-block d-lg-none">
-    
-                <a href="index.php" class="img-fluid" >
-                  <img
-                    src="assets/img/oncoligist/ask_text.png"
-                    style="height: 250px;margin-top: 50px;"
-                    alt=""
-               
-                /></a>
-              </div>
-              <div class="footer-info   d-md-none ">
-    
-                <a href="index.php" class="img-fluid" >
-                  <img
-                    src="assets/img/oncoligist/ask_text.png"
-                    style="height: 250px;margin-top: -190px;margin-bottom: -100px; "
-                    alt=""
-               
-                /></a>
-              </div>
-     
-            </div>
+           <div class="col-md-4 d-flex flex-row justify-content-center">
+             <div class="footer-info  d-none d-lg-block">
 
-            <div class="col-md-4 footer-newsletter  onl_top"   >
-              <p class="mt-2">
-                <span class="phone_email">
-                  <strong
-                    ><i class="fa-solid fa-phone colr_purple">
-                      &nbsp;</i
-                    ></strong
-                  ></span
-                >
-                <span class="mini_text"> +91 84069 07980 </span>
-                <br />
-                <span class="phone_email">
-                  <strong
-                    ><i class="fa-solid fa-envelope colr_purple"></i>
-                    &nbsp;</strong
-                  ></span
-                >
-                <span class="mini_text"> prabhaleo2003@gmail.com</span> <br />
-              </p>
-              <p class="mt-4 mini_text last_padding_text">
-                Get the latest updates on cancer treatments, research, and
-                patient care. Our blog helps patients and families navigate
-                cancer diagnosis and treatment.
-              </p>
-              <div class="social-links mt-3">
-                <a
-                  href="https://www.facebook.com/askoncologist"
-                  target="_blank"
-                  class="facebook"
-                  ><i class="bx bxl-facebook"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/ask_oncologist/"
-                  target="_blank"
-                  class="instagram"
-                  ><i class="bx bxl-instagram"></i
-                ></a>
-                <a
-                  href="https://in.pinterest.com/askoncologist/"
-                  target="_blank"
-                  class="pinterest"
-                  ><i class="bx bxl-pinterest"></i
-                ></a>
-                <a
-                  href="https://www.youtube.com/@askoncologist"
-                  target="_blank"
-                  class="twitter"
-                  ><i class="bx bxl-youtube"></i
-                ></a>
-              </div>
-            </div>
+               <a href="index.php" class="img-fluid">
+                 <img
+                   src="assets/img/oncoligist/ask_text.png"
+                   style="height: 350px;"
+                   alt=""
+                   class="txt_ask" /></a>
+             </div>
+             <div class="footer-info  d-none d-md-block d-lg-none">
 
-          </div>
-        </div>
-      </div>
+               <a href="index.php" class="img-fluid">
+                 <img
+                   src="assets/img/oncoligist/ask_text.png"
+                   style="height: 250px;margin-top: 50px;"
+                   alt="" /></a>
+             </div>
+             <div class="footer-info   d-md-none ">
 
-      <div class="footer-area-bottom theme-bg">
+               <a href="index.php" class="img-fluid">
+                 <img
+                   src="assets/img/oncoligist/ask_text.png"
+                   style="height: 250px;margin-top: -190px;margin-bottom: -100px; "
+                   alt="" /></a>
+             </div>
+
+           </div>
+
+           <div class="col-md-4 footer-newsletter  onl_top">
+             <p class="mt-2">
+               <span class="phone_email">
+                 <strong><i class="fa-solid fa-phone colr_purple">
+                     &nbsp;</i></strong></span>
+               <span class="mini_text"> +91 84069 07980 </span>
+               <br />
+               <span class="phone_email">
+                 <strong><i class="fa-solid fa-envelope colr_purple"></i>
+                   &nbsp;</strong></span>
+               <span class="mini_text"> prabhaleo2003@gmail.com</span> <br />
+             </p>
+             <p class="mt-4 mini_text last_padding_text">
+               Get the latest updates on cancer treatments, research, and
+               patient care. Our blog helps patients and families navigate
+               cancer diagnosis and treatment.
+             </p>
+             <div class="social-links mt-3">
+               <a
+                 href="https://www.facebook.com/askoncologist"
+                 target="_blank"
+                 class="facebook"><i class="bx bxl-facebook"></i></a>
+               <a
+                 href="https://www.instagram.com/ask_oncologist/"
+                 target="_blank"
+                 class="instagram"><i class="bx bxl-instagram"></i></a>
+               <a
+                 href="https://in.pinterest.com/askoncologist/"
+                 target="_blank"
+                 class="pinterest"><i class="bx bxl-pinterest"></i></a>
+               <a
+                 href="https://www.youtube.com/@askoncologist"
+                 target="_blank"
+                 class="twitter"><i class="bx bxl-youtube"></i></a>
+             </div>
+           </div>
+
+         </div>
+       </div>
+     </div>
+
+     <div class="footer-area-bottom theme-bg">
         <div class="container">
-          <div class="row pt-4">
+        <div class="row pt-4">
+           
             <div class="col-xl-8 col-lg-9 col-md-12 col-12">
-              <div class="footer-widget__copyright">
-                <p class="mini_text last_text" style="color: #737373">
-                  ©2024 Ask-Oncologist . All Rights Reserved. Designed &
-                  Developed by
-                  <a
-                    href="https://bhavicreations.com/"
-                    target="_blank"
-                    style="text-decoration: none; color: #737373"
-                    >Bhavi Creations</a
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-3 col-md-12 col-12">
               <div class="footer-widget__copyright-info info-direction">
                 <p class="mini_text last_text">
                   <a
@@ -1180,10 +1190,24 @@
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+            <div class="    col-xl-4 col-lg-3 col-md-12 col-12">
+              <div class="footer-widget__copyright">
+                <p class="mini_text last_text" style="color: #737373">
+                
+                  <a
+                    href="https://bhavicreations.com/"
+                    target="_blank" class="logo"
+                    style="text-decoration: none; color: #737373"
+                    >Branded By @ <img src="assets\img\bhavi_logo\Bhavi_Branding_Stamp.png" alt=" "></a
+                    
+                  >
+               </p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </footer>
 
 
    <!-- End Footer -->

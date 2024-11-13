@@ -1,13 +1,11 @@
-<ul class="navbar-nav   sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #A9A8D4;
-;
-;">
+<ul class="navbar-nav   sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #A9A8D4;">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center  bg-light text-primary" href="./index.php">
         <div class="sidebar-brand-icon  ">
             <i class="fas fa-stethoscope"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Ask-Oncologist</div>
+        <div class="sidebar-brand-text mx-3">Srinivasa Dental</div>
     </a>
  
     <!-- Divider -->
