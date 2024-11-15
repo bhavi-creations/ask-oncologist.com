@@ -253,6 +253,7 @@ h6 {
 */
 .navbar {
   padding: 0;
+
 }
 
 .navbar ul {
@@ -2480,4 +2481,6 @@ margin-top: 190px !important;
 .shadow_box{
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   
+}.pan{
+  margin-top: 150px;
 }

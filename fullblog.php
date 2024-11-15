@@ -140,8 +140,8 @@ $conn->close();
             ?>
         </div> -->
 
-    <div class="container blog-detailed blog-detailed-sidebar" style="padding-bottom: 0px;padding-top: 50px;">
-      <div class="row">
+    <div class="container blog-detailed blog-detailed-sidebar " style="padding-bottom: 0px;padding-top: 50px;">
+      <div class="row pan">
         <div class="col-lg-8 offset-lg-0 col-sm-8 offset-sm-2 col-10 offset-1 order-lg-1">
           <div class="blog-content">
             <h4 class="blog-title tittle ls-n-20" style="color: #283779; font-weight:800"><?php echo htmlspecialchars($title); ?></h4>
