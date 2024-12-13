@@ -6,8 +6,32 @@
    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
    <title>Ask-Oncologist</title>
-   <meta content="" name="description">
-   <meta content="" name="keywords">
+   <meta content="Oncology Care by Dr. K Pradeep Bhaskar | Cancer Treatments & Support in Kakinada" name="title">
+
+   <meta content="Dr. K Pradeep Bhaskar is a leading consultant radiation oncologist offering advanced cancer treatments including radiation therapy, chemotherapy, and immunotherapy in Kakinada. Personalized care for all types of cancer" name="description">
+   <meta content="
+   Cancer treatment in Kakinada
+Oncology services Kakinada
+Radiation therapy in Kakinada
+Chemotherapy consultation Kakinada
+Best oncologist in Kakinada
+Cancer diagnosis Kakinada
+Immunotherapy Kakinada
+Palliative care for cancer Kakinada
+Oncology consultation in Kakinada
+Affordable cancer treatment in Kakinada
+Radiation oncologist in Kakinada
+Best cancer specialist Kakinada
+Advanced cancer care in Kakinada
+Chemotherapy treatment Kakinada
+Cancer surgery Kakinada
+Best oncology treatment in Kakinada
+Kakinada radiation therapy services
+Cancer clinic Kakinada
+Cancer care specialists in Kakinada
+Immunotherapy treatment in Kakinada
+" name="keywords">
+<link rel="canonical" href="https://www.askoncologist.com/" />
 
    <!-- Favicons -->
    <link href="assets/img/oncoligist//Oncology logo.png" rel="icon">
@@ -37,7 +61,34 @@
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+   <script>
+     {
+       "@context": "http://schema.org",
+       "@type": "Organization",
+       "name": "Ask Oncologist",
+       "url": "https://www.askoncologist.com/",
+       "logo": "https://www.askoncologist.com/logo.png",
+       "sameAs": [
+         "https://www.facebook.com/AskOncologist",
+         "https://twitter.com/AskOncologist",
+         "https://www.linkedin.com/company/askoncologist"
+       ],
+       "contactPoint": {
+         "@type": "ContactPoint",
+         "telephone": "+91 84069 07980",
+         "contactType": "Customer Service"
+       },
+       "address": {
+         "@type": "PostalAddress",
+         "streetAddress": " Sivani clinic, Beside HP Petrol bunk Ashok Nagar,Kakinada ",
+         "addressLocality": "Kakinada",
+         "addressRegion": "Andhra Pradesh",
+         "postalCode": "533001",
+         "addressCountry": "IN"
+       },
+       "sameAs": "https://www.askoncologist.com"
+     }
+   </script>
  </head>
 
  <style>
