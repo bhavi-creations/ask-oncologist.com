@@ -8,6 +8,8 @@
    <title>Ask-Oncologist</title>
    <meta content="Oncology Care by Dr. K Pradeep Bhaskar | Cancer Treatments & Support in Kakinada" name="title">
 
+   <meta name="google-site-verification" content="qdY0oI-yDJKjRA9l8tRRIoFw-t1fznn2iIs5MtCrCks" />
+
    <meta content="Dr. K Pradeep Bhaskar is a leading consultant radiation oncologist offering advanced cancer treatments including radiation therapy, chemotherapy, and immunotherapy in Kakinada. Personalized care for all types of cancer" name="description">
    <meta content="
    Cancer treatment in Kakinada
