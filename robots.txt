@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+# Block specific sensitive directories (if applicable)
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cgi-bin/
+
+# Block search pages and login pages
+Disallow: /search
+Disallow: /login
+Disallow: /register
+
+# Allow search engines to index important pages
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.askoncologist.com/sitemap.xml
