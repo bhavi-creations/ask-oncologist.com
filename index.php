@@ -91,6 +91,11 @@ Immunotherapy treatment in Kakinada
        "sameAs": "https://www.askoncologist.com"
      }
    </script>
+
+
+
+
+<meta name="google-site-verification" content="TNukof2gIxf81Bbiwqnjhj9-2jdli6VZ69NreoaN9bA" />
  </head>
 
  <style>
