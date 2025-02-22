@@ -13,27 +13,27 @@
    <meta content="Dr. K Pradeep Bhaskar is a leading consultant radiation oncologist offering advanced cancer treatments including radiation therapy, chemotherapy, and immunotherapy in Kakinada. Personalized care for all types of cancer" name="description">
    <meta content="
    Cancer treatment in Kakinada
-Oncology services Kakinada
-Radiation therapy in Kakinada
-Chemotherapy consultation Kakinada
-Best oncologist in Kakinada
-Cancer diagnosis Kakinada
-Immunotherapy Kakinada
-Palliative care for cancer Kakinada
-Oncology consultation in Kakinada
-Affordable cancer treatment in Kakinada
-Radiation oncologist in Kakinada
-Best cancer specialist Kakinada
-Advanced cancer care in Kakinada
-Chemotherapy treatment Kakinada
-Cancer surgery Kakinada
-Best oncology treatment in Kakinada
-Kakinada radiation therapy services
-Cancer clinic Kakinada
-Cancer care specialists in Kakinada
-Immunotherapy treatment in Kakinada
-" name="keywords">
-<link rel="canonical" href="https://www.askoncologist.com/" />
+    Oncology services Kakinada
+    Radiation therapy in Kakinada
+    Chemotherapy consultation Kakinada
+    Best oncologist in Kakinada
+    Cancer diagnosis Kakinada
+    Immunotherapy Kakinada
+    Palliative care for cancer Kakinada
+    Oncology consultation in Kakinada
+    Affordable cancer treatment in Kakinada
+    Radiation oncologist in Kakinada
+    Best cancer specialist Kakinada
+    Advanced cancer care in Kakinada
+    Chemotherapy treatment Kakinada
+    Cancer surgery Kakinada
+    Best oncology treatment in Kakinada
+    Kakinada radiation therapy services
+    Cancer clinic Kakinada
+    Cancer care specialists in Kakinada
+    Immunotherapy treatment in Kakinada
+    " name="keywords">
+    <link rel="canonical" href="https://www.askoncologist.com/" />
 
    <!-- Favicons -->
    <link href="assets/img/oncoligist//Oncology logo.png" rel="icon">
@@ -63,39 +63,84 @@ Immunotherapy treatment in Kakinada
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-   <script>
-     {
-       "@context": "http://schema.org",
-       "@type": "Organization",
-       "name": "Ask Oncologist",
-       "url": "https://www.askoncologist.com/",
-       "logo": "https://www.askoncologist.com/logo.png",
-       "sameAs": [
-         "https://www.facebook.com/AskOncologist",
-         "https://twitter.com/AskOncologist",
-         "https://www.linkedin.com/company/askoncologist"
-       ],
-       "contactPoint": {
-         "@type": "ContactPoint",
-         "telephone": "+91 84069 07980",
-         "contactType": "Customer Service"
-       },
-       "address": {
-         "@type": "PostalAddress",
-         "streetAddress": " Sivani clinic, Beside HP Petrol bunk Ashok Nagar,Kakinada ",
-         "addressLocality": "Kakinada",
-         "addressRegion": "Andhra Pradesh",
-         "postalCode": "533001",
-         "addressCountry": "IN"
-       },
-       "sameAs": "https://www.askoncologist.com"
-     }
-   </script>
+   
+   <meta name="google-site-verification" content="TNukof2gIxf81Bbiwqnjhj9-2jdli6VZ69NreoaN9bA" />
+   <?php 
+$schemaData = [
+  "@context" => "https://schema.org",
+  "@type" => "MedicalOrganization",
+  "name" => "Ask Oncologist",
+  "url" => "https://www.askoncologist.com/",
+  "logo" => "https://www.askoncologist.com/logo.png",
+  "description" => "Ask Oncologist is a trusted platform providing expert cancer care insights, consultations, and awareness.",
+  "sameAs" => [
+    "https://www.facebook.com/AskOncologist",
+    "https://www.instagram.com/AskOncologist",
+    "https://www.linkedin.com/company/AskOncologist"
+  ],
+  "address" => [
+    "@type" => "PostalAddress",
+    "streetAddress" => "Sivani Clinic, Near HP Petrol Bunk, Ashok Nagar",
+    "addressLocality" => "Kakinada",
+    "addressRegion" => "Andhra Pradesh",
+    "postalCode" => "533003",
+    "addressCountry" => "IN"
+  ],
+  "contactPoint" => [
+    "@type" => "ContactPoint",
+    "telephone" => "+91-8406907980",
+    "contactType" => "customer service",
+    "areaServed" => "IN",
+    "availableLanguage" => ["English", "Telugu"]
+  ],
+  "medicalSpecialty" => "Oncology",
+  "founder" => [
+    "@type" => "Person",
+    "name" => "Dr. K. Pradeep Bhasker",
+    "jobTitle" => "Oncologist",
+    "worksFor" => [
+      "@type" => "MedicalOrganization",
+      "name" => "Medi Cover Hospital, Kakinada"
+    ]
+  ],
+  "hasOfferCatalog" => [
+    "@type" => "OfferCatalog",
+    "name" => "Cancer Treatment Services",
+    "itemListElement" => [
+      [
+        "@type" => "Offer",
+        "itemOffered" => [
+          "@type" => "MedicalProcedure",
+          "name" => "Chemotherapy",
+          "bodyLocation" => "Whole body",
+          "procedureType" => "Therapeutic"
+        ]
+      ],
+      [
+        "@type" => "Offer",
+        "itemOffered" => [
+          "@type" => "MedicalProcedure",
+          "name" => "Radiation Therapy",
+          "bodyLocation" => "Targeted cancer sites",
+          "procedureType" => "Therapeutic"
+        ]
+      ],
+      [
+        "@type" => "Offer",
+        "itemOffered" => [
+          "@type" => "MedicalProcedure",
+          "name" => "Surgical Oncology",
+          "procedureType" => "Surgical"
+        ]
+      ]
+    ]
+  ]
+];
+?>
+<script type="application/ld+json">
+    <?= json_encode($schemaData, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
+</script>
 
-
-
-
-<meta name="google-site-verification" content="TNukof2gIxf81Bbiwqnjhj9-2jdli6VZ69NreoaN9bA" />
  </head>
 
  <style>
