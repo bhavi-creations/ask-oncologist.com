@@ -78,6 +78,10 @@ $result = $stmt->get_result();
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
 
+<!-- canonical  -->
+    <link rel="canonical" href="https://www.askoncologist.com<?php echo $_SERVER['REQUEST_URI']; ?>" />
+
+
     <!-- Bootstrap CSS -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
@@ -196,12 +200,12 @@ $result = $stmt->get_result();
                                     <div class='grid-item col-sm-12 col-md-6 col-lg-4 mb-5 shadow_box'>
                                         <div class='post-box card_bg_div_box'>
                                             <figure>
-                                                <a href='fullblogs.php?id={$row['id']}'>
+                                                <a href='fullblog.php?id={$row['id']}'>
                                                     <img src='{$image_path}' alt='Blog Image' class='img-fluid blog_box_image'>
                                                 </a>
                                             </figure>
                                             <div class='box-content'>
-                                                <h5 class='box-title'><a  class='box-title' href='fullblogs.php?id={$row['id']}'>" . htmlspecialchars($row['title']) . "</a></h5>
+                                                <h5 class='box-title'><a  class='box-title' href='fullblog.php?id={$row['id']}'>" . htmlspecialchars($row['title']) . "</a></h5>
                                                 <p class='post-desc  mt-5' style='text-align: justify;'>" . substr(strip_tags($row['main_content']), 0, 90) . "...</p>
                                                 <a href='fullblog.php?id={$row['id']}'><button class='blog_main_btn'>Read More..</button></a>
                                             </div>
