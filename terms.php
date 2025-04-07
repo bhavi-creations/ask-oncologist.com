@@ -1,708 +1,321 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<?php include 'navbar.php';  ?>
 
-    <title>Ask-Oncologist</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
 
-    <!-- Favicons -->
-    <link href="assets/img/oncoligist//Oncology logo.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+  <!-- End Header -->
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
+  <main id="main">
+    <div class="container my-5" style="margin-top: 150px !important">
+      <div>
+        <h2><strong>Terms and Conditions</strong></h2>
 
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+        <p>Welcome to AskOncologist!</p>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+        <p>
+          These terms and conditions outline the rules and regulations for the
+          use of AskOncologist's Website, located at
+          https://askoncologist.com/.
+        </p>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  </head>
+        <p>
+          By accessing this website we assume you accept these terms and
+          conditions. Do not continue to use AskOncologist if you do not agree
+          to take all of the terms and conditions stated on this page.
+        </p>
 
-  <body>
-    <!-- ======= Header ======= -->
-    <header id="header" class="main_images">
-      <div class="container d-flex align-items-center">
-        <div
-          class="logo-text-container d-flex align-items-center"
-          style="z-index: 999"
-        >
-          <a href="index.php" class="logo" style="margin-right: 10px">
-            <img src="assets/img/oncoligist/Oncology logo.png" alt="" />
-          </a>
-          <div class="logo-text side_logo_text">
-            <p class="img_icon_logo">Dr. K Pradeep Bhaskar</p>
-            <p class="degrees_logo_txt">MBBS,DNB(Rad Onc)</p>
-            <p class="degrees_logo_txt">
-              FIGRS(Fellowship in Stereotactic Radiosurgery)
-            </p>
-            <p class="degrees_logo_txt">consultant Radiation Oncologist</p>
-          </div>
-        </div>
+        <p>
+          The following terminology applies to these Terms and Conditions,
+          Privacy Statement and Disclaimer Notice and all Agreements:
+          "Client", "You" and "Your" refers to you, the person log on this
+          website and compliant to the Company's terms and conditions. "The
+          Company", "Ourselves", "We", "Our" and "Us", refers to our Company.
+          "Party", "Parties", or "Us", refers to both the Client and
+          ourselves. All terms refer to the offer, acceptance and
+          consideration of payment necessary to undertake the process of our
+          assistance to the Client in the most appropriate manner for the
+          express purpose of meeting the Client's needs in respect of
+          provision of the Company's stated services, in accordance with and
+          subject to, prevailing law of in. Any use of the above terminology
+          or other words in the singular, plural, capitalization and/or he/she
+          or they, are taken as interchangeable and therefore as referring to
+          same.
+        </p>
 
-        <nav id="navbar" class="navbar order-lg-0">
-          <ul>
-            <li><a class="nav-link scrollto" href="index.php">Home</a></li>
-            <li>
-              <a class="nav-link scrollto" href="index.php#about">About</a>
-            </li>
-            <li>
-              <a class="nav-link scrollto" href="index.php#facilities"
-                >Facilities</a
-              >
-            </li>
-            <!-- <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li> -->
-            <li><a class="nav-link" href="blogs.php">Blogs</a></li>
-            <li>
-              <a class="nav-link scrollto" href="index.php#contact">Contact</a>
-            </li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-        <!-- .navbar -->
+        <h3><strong>Cookies</strong></h3>
 
-        <a
-          href="index.php#appointment"
-          class="appointment-btn scrollto"
-          style="z-index: 999"
-        >
-          <span class="d-none d-md-inline">Ask</span> Oncologist
-        </a>
-      </div>
-    </header>
+        <p>
+          We employ the use of cookies. By accessing AskOncologist, you agreed
+          to use cookies in agreement with the AskOncologist's Privacy Policy.
+        </p>
 
-    <!-- End Header -->
+        <p>
+          Most interactive websites use cookies to let us retrieve the user's
+          details for each visit. Cookies are used by our website to enable
+          the functionality of certain areas to make it easier for people
+          visiting our website. Some of our affiliate/advertising partners may
+          also use cookies.
+        </p>
 
-    <main id="main">
-      <div class="container my-5" style="margin-top: 150px !important">
-        <div>
-          <h2><strong>Terms and Conditions</strong></h2>
+        <h3><strong>License</strong></h3>
 
-          <p>Welcome to AskOncologist!</p>
+        <p>
+          Unless otherwise stated, AskOncologist and/or its licensors own the
+          intellectual property rights for all material on AskOncologist. All
+          intellectual property rights are reserved. You may access this from
+          AskOncologist for your own personal use subjected to restrictions
+          set in these terms and conditions.
+        </p>
 
-          <p>
-            These terms and conditions outline the rules and regulations for the
-            use of AskOncologist's Website, located at
-            https://askoncologist.com/.
-          </p>
+        <p>You must not:</p>
+        <ul>
+          <li>Republish material from AskOncologist</li>
+          <li>Sell, rent or sub-license material from AskOncologist</li>
+          <li>Reproduce, duplicate or copy material from AskOncologist</li>
+          <li>Redistribute content from AskOncologist</li>
+        </ul>
 
-          <p>
-            By accessing this website we assume you accept these terms and
-            conditions. Do not continue to use AskOncologist if you do not agree
-            to take all of the terms and conditions stated on this page.
-          </p>
+        <p>
+          This Agreement shall begin on the date hereof. Our Terms and
+          Conditions were created with the help of the
+          <a href="https://www.termsandconditionsgenerator.com/">Free Terms and Conditions Generator</a>.
+        </p>
 
-          <p>
-            The following terminology applies to these Terms and Conditions,
-            Privacy Statement and Disclaimer Notice and all Agreements:
-            "Client", "You" and "Your" refers to you, the person log on this
-            website and compliant to the Company's terms and conditions. "The
-            Company", "Ourselves", "We", "Our" and "Us", refers to our Company.
-            "Party", "Parties", or "Us", refers to both the Client and
-            ourselves. All terms refer to the offer, acceptance and
-            consideration of payment necessary to undertake the process of our
-            assistance to the Client in the most appropriate manner for the
-            express purpose of meeting the Client's needs in respect of
-            provision of the Company's stated services, in accordance with and
-            subject to, prevailing law of in. Any use of the above terminology
-            or other words in the singular, plural, capitalization and/or he/she
-            or they, are taken as interchangeable and therefore as referring to
-            same.
-          </p>
+        <p>
+          Parts of this website offer an opportunity for users to post and
+          exchange opinions and information in certain areas of the website.
+          AskOncologist does not filter, edit, publish or review Comments
+          prior to their presence on the website. Comments do not reflect the
+          views and opinions of AskOncologist,its agents and/or affiliates.
+          Comments reflect the views and opinions of the person who post their
+          views and opinions. To the extent permitted by applicable laws,
+          AskOncologist shall not be liable for the Comments or for any
+          liability, damages or expenses caused and/or suffered as a result of
+          any use of and/or posting of and/or appearance of the Comments on
+          this website.
+        </p>
 
-          <h3><strong>Cookies</strong></h3>
+        <p>
+          AskOncologist reserves the right to monitor all Comments and to
+          remove any Comments which can be considered inappropriate, offensive
+          or causes breach of these Terms and Conditions.
+        </p>
 
-          <p>
-            We employ the use of cookies. By accessing AskOncologist, you agreed
-            to use cookies in agreement with the AskOncologist's Privacy Policy.
-          </p>
+        <p>You warrant and represent that:</p>
 
-          <p>
-            Most interactive websites use cookies to let us retrieve the user's
-            details for each visit. Cookies are used by our website to enable
-            the functionality of certain areas to make it easier for people
-            visiting our website. Some of our affiliate/advertising partners may
-            also use cookies.
-          </p>
+        <ul>
+          <li>
+            You are entitled to post the Comments on our website and have all
+            necessary licenses and consents to do so;
+          </li>
+          <li>
+            The Comments do not invade any intellectual property right,
+            including without limitation copyright, patent or trademark of any
+            third party;
+          </li>
+          <li>
+            The Comments do not contain any defamatory, libelous, offensive,
+            indecent or otherwise unlawful material which is an invasion of
+            privacy
+          </li>
+          <li>
+            The Comments will not be used to solicit or promote business or
+            custom or present commercial activities or unlawful activity.
+          </li>
+        </ul>
 
-          <h3><strong>License</strong></h3>
+        <p>
+          You hereby grant AskOncologist a non-exclusive license to use,
+          reproduce, edit and authorize others to use, reproduce and edit any
+          of your Comments in any and all forms, formats or media.
+        </p>
 
-          <p>
-            Unless otherwise stated, AskOncologist and/or its licensors own the
-            intellectual property rights for all material on AskOncologist. All
-            intellectual property rights are reserved. You may access this from
-            AskOncologist for your own personal use subjected to restrictions
-            set in these terms and conditions.
-          </p>
+        <h3><strong>Hyperlinking to our Content</strong></h3>
 
-          <p>You must not:</p>
-          <ul>
-            <li>Republish material from AskOncologist</li>
-            <li>Sell, rent or sub-license material from AskOncologist</li>
-            <li>Reproduce, duplicate or copy material from AskOncologist</li>
-            <li>Redistribute content from AskOncologist</li>
-          </ul>
+        <p>
+          The following organizations may link to our Website without prior
+          written approval:
+        </p>
 
-          <p>
-            This Agreement shall begin on the date hereof. Our Terms and
-            Conditions were created with the help of the
-            <a href="https://www.termsandconditionsgenerator.com/"
-              >Free Terms and Conditions Generator</a
-            >.
-          </p>
+        <ul>
+          <li>Government agencies;</li>
+          <li>Search engines;</li>
+          <li>News organizations;</li>
+          <li>
+            Online directory distributors may link to our Website in the same
+            manner as they hyperlink to the Websites of other listed
+            businesses; and
+          </li>
+          <li>
+            System wide Accredited Businesses except soliciting non-profit
+            organizations, charity shopping malls, and charity fundraising
+            groups which may not hyperlink to our Web site.
+          </li>
+        </ul>
 
-          <p>
-            Parts of this website offer an opportunity for users to post and
-            exchange opinions and information in certain areas of the website.
-            AskOncologist does not filter, edit, publish or review Comments
-            prior to their presence on the website. Comments do not reflect the
-            views and opinions of AskOncologist,its agents and/or affiliates.
-            Comments reflect the views and opinions of the person who post their
-            views and opinions. To the extent permitted by applicable laws,
-            AskOncologist shall not be liable for the Comments or for any
-            liability, damages or expenses caused and/or suffered as a result of
-            any use of and/or posting of and/or appearance of the Comments on
-            this website.
-          </p>
+        <p>
+          These organizations may link to our home page, to publications or to
+          other Website information so long as the link: (a) is not in any way
+          deceptive; (b) does not falsely imply sponsorship, endorsement or
+          approval of the linking party and its products and/or services; and
+          (c) fits within the context of the linking party's site.
+        </p>
 
-          <p>
-            AskOncologist reserves the right to monitor all Comments and to
-            remove any Comments which can be considered inappropriate, offensive
-            or causes breach of these Terms and Conditions.
-          </p>
+        <p>
+          We may consider and approve other link requests from the following
+          types of organizations:
+        </p>
 
-          <p>You warrant and represent that:</p>
+        <ul>
+          <li>
+            commonly-known consumer and/or business information sources;
+          </li>
+          <li>dot.com community sites;</li>
+          <li>associations or other groups representing charities;</li>
+          <li>online directory distributors;</li>
+          <li>internet portals;</li>
+          <li>accounting, law and consulting firms; and</li>
+          <li>educational institutions and trade associations.</li>
+        </ul>
 
-          <ul>
-            <li>
-              You are entitled to post the Comments on our website and have all
-              necessary licenses and consents to do so;
-            </li>
-            <li>
-              The Comments do not invade any intellectual property right,
-              including without limitation copyright, patent or trademark of any
-              third party;
-            </li>
-            <li>
-              The Comments do not contain any defamatory, libelous, offensive,
-              indecent or otherwise unlawful material which is an invasion of
-              privacy
-            </li>
-            <li>
-              The Comments will not be used to solicit or promote business or
-              custom or present commercial activities or unlawful activity.
-            </li>
-          </ul>
+        <p>
+          We will approve link requests from these organizations if we decide
+          that: (a) the link would not make us look unfavorably to ourselves
+          or to our accredited businesses; (b) the organization does not have
+          any negative records with us; (c) the benefit to us from the
+          visibility of the hyperlink compensates the absence of
+          AskOncologist; and (d) the link is in the context of general
+          resource information.
+        </p>
 
-          <p>
-            You hereby grant AskOncologist a non-exclusive license to use,
-            reproduce, edit and authorize others to use, reproduce and edit any
-            of your Comments in any and all forms, formats or media.
-          </p>
+        <p>
+          These organizations may link to our home page so long as the link:
+          (a) is not in any way deceptive; (b) does not falsely imply
+          sponsorship, endorsement or approval of the linking party and its
+          products or services; and (c) fits within the context of the linking
+          party's site.
+        </p>
 
-          <h3><strong>Hyperlinking to our Content</strong></h3>
+        <p>
+          If you are one of the organizations listed in paragraph 2 above and
+          are interested in linking to our website, you must inform us by
+          sending an e-mail to AskOncologist. Please include your name, your
+          organization name, contact information as well as the URL of your
+          site, a list of any URLs from which you intend to link to our
+          Website, and a list of the URLs on our site to which you would like
+          to link. Wait 2-3 weeks for a response.
+        </p>
 
-          <p>
-            The following organizations may link to our Website without prior
-            written approval:
-          </p>
+        <p>Approved organizations may hyperlink to our Website as follows:</p>
 
-          <ul>
-            <li>Government agencies;</li>
-            <li>Search engines;</li>
-            <li>News organizations;</li>
-            <li>
-              Online directory distributors may link to our Website in the same
-              manner as they hyperlink to the Websites of other listed
-              businesses; and
-            </li>
-            <li>
-              System wide Accredited Businesses except soliciting non-profit
-              organizations, charity shopping malls, and charity fundraising
-              groups which may not hyperlink to our Web site.
-            </li>
-          </ul>
+        <ul>
+          <li>By use of our corporate name; or</li>
+          <li>By use of the uniform resource locator being linked to; or</li>
+          <li>
+            By use of any other description of our Website being linked to
+            that makes sense within the context and format of content on the
+            linking party's site.
+          </li>
+        </ul>
 
-          <p>
-            These organizations may link to our home page, to publications or to
-            other Website information so long as the link: (a) is not in any way
-            deceptive; (b) does not falsely imply sponsorship, endorsement or
-            approval of the linking party and its products and/or services; and
-            (c) fits within the context of the linking party's site.
-          </p>
+        <p>
+          No use of AskOncologist's logo or other artwork will be allowed for
+          linking absent a trademark license agreement.
+        </p>
 
-          <p>
-            We may consider and approve other link requests from the following
-            types of organizations:
-          </p>
+        <h3><strong>iFrames</strong></h3>
 
-          <ul>
-            <li>
-              commonly-known consumer and/or business information sources;
-            </li>
-            <li>dot.com community sites;</li>
-            <li>associations or other groups representing charities;</li>
-            <li>online directory distributors;</li>
-            <li>internet portals;</li>
-            <li>accounting, law and consulting firms; and</li>
-            <li>educational institutions and trade associations.</li>
-          </ul>
+        <p>
+          Without prior approval and written permission, you may not create
+          frames around our Webpages that alter in any way the visual
+          presentation or appearance of our Website.
+        </p>
 
-          <p>
-            We will approve link requests from these organizations if we decide
-            that: (a) the link would not make us look unfavorably to ourselves
-            or to our accredited businesses; (b) the organization does not have
-            any negative records with us; (c) the benefit to us from the
-            visibility of the hyperlink compensates the absence of
-            AskOncologist; and (d) the link is in the context of general
-            resource information.
-          </p>
+        <h3><strong>Content Liability</strong></h3>
 
-          <p>
-            These organizations may link to our home page so long as the link:
-            (a) is not in any way deceptive; (b) does not falsely imply
-            sponsorship, endorsement or approval of the linking party and its
-            products or services; and (c) fits within the context of the linking
-            party's site.
-          </p>
+        <p>
+          We shall not be hold responsible for any content that appears on
+          your Website. You agree to protect and defend us against all claims
+          that is rising on your Website. No link(s) should appear on any
+          Website that may be interpreted as libelous, obscene or criminal, or
+          which infringes, otherwise violates, or advocates the infringement
+          or other violation of, any third party rights.
+        </p>
 
-          <p>
-            If you are one of the organizations listed in paragraph 2 above and
-            are interested in linking to our website, you must inform us by
-            sending an e-mail to AskOncologist. Please include your name, your
-            organization name, contact information as well as the URL of your
-            site, a list of any URLs from which you intend to link to our
-            Website, and a list of the URLs on our site to which you would like
-            to link. Wait 2-3 weeks for a response.
-          </p>
+        <h3><strong>Reservation of Rights</strong></h3>
 
-          <p>Approved organizations may hyperlink to our Website as follows:</p>
+        <p>
+          We reserve the right to request that you remove all links or any
+          particular link to our Website. You approve to immediately remove
+          all links to our Website upon request. We also reserve the right to
+          amen these terms and conditions and it's linking policy at any time.
+          By continuously linking to our Website, you agree to be bound to and
+          follow these linking terms and conditions.
+        </p>
 
-          <ul>
-            <li>By use of our corporate name; or</li>
-            <li>By use of the uniform resource locator being linked to; or</li>
-            <li>
-              By use of any other description of our Website being linked to
-              that makes sense within the context and format of content on the
-              linking party's site.
-            </li>
-          </ul>
+        <h3><strong>Removal of links from our website</strong></h3>
 
-          <p>
-            No use of AskOncologist's logo or other artwork will be allowed for
-            linking absent a trademark license agreement.
-          </p>
+        <p>
+          If you find any link on our Website that is offensive for any
+          reason, you are free to contact and inform us any moment. We will
+          consider requests to remove links but we are not obligated to or so
+          or to respond to you directly.
+        </p>
 
-          <h3><strong>iFrames</strong></h3>
+        <p>
+          We do not ensure that the information on this website is correct, we
+          do not warrant its completeness or accuracy; nor do we promise to
+          ensure that the website remains available or that the material on
+          the website is kept up to date.
+        </p>
 
-          <p>
-            Without prior approval and written permission, you may not create
-            frames around our Webpages that alter in any way the visual
-            presentation or appearance of our Website.
-          </p>
+        <h3><strong>Disclaimer</strong></h3>
 
-          <h3><strong>Content Liability</strong></h3>
+        <p>
+          To the maximum extent permitted by applicable law, we exclude all
+          representations, warranties and conditions relating to our website
+          and the use of this website. Nothing in this disclaimer will:
+        </p>
 
-          <p>
-            We shall not be hold responsible for any content that appears on
-            your Website. You agree to protect and defend us against all claims
-            that is rising on your Website. No link(s) should appear on any
-            Website that may be interpreted as libelous, obscene or criminal, or
-            which infringes, otherwise violates, or advocates the infringement
-            or other violation of, any third party rights.
-          </p>
+        <ul>
+          <li>
+            limit or exclude our or your liability for death or personal
+            injury;
+          </li>
+          <li>
+            limit or exclude our or your liability for fraud or fraudulent
+            misrepresentation;
+          </li>
+          <li>
+            limit any of our or your liabilities in any way that is not
+            permitted under applicable law; or
+          </li>
+          <li>
+            exclude any of our or your liabilities that may not be excluded
+            under applicable law.
+          </li>
+        </ul>
 
-          <h3><strong>Reservation of Rights</strong></h3>
+        <p>
+          The limitations and prohibitions of liability set in this Section
+          and elsewhere in this disclaimer: (a) are subject to the preceding
+          paragraph; and (b) govern all liabilities arising under the
+          disclaimer, including liabilities arising in contract, in tort and
+          for breach of statutory duty.
+        </p>
 
-          <p>
-            We reserve the right to request that you remove all links or any
-            particular link to our Website. You approve to immediately remove
-            all links to our Website upon request. We also reserve the right to
-            amen these terms and conditions and it's linking policy at any time.
-            By continuously linking to our Website, you agree to be bound to and
-            follow these linking terms and conditions.
-          </p>
-
-          <h3><strong>Removal of links from our website</strong></h3>
-
-          <p>
-            If you find any link on our Website that is offensive for any
-            reason, you are free to contact and inform us any moment. We will
-            consider requests to remove links but we are not obligated to or so
-            or to respond to you directly.
-          </p>
-
-          <p>
-            We do not ensure that the information on this website is correct, we
-            do not warrant its completeness or accuracy; nor do we promise to
-            ensure that the website remains available or that the material on
-            the website is kept up to date.
-          </p>
-
-          <h3><strong>Disclaimer</strong></h3>
-
-          <p>
-            To the maximum extent permitted by applicable law, we exclude all
-            representations, warranties and conditions relating to our website
-            and the use of this website. Nothing in this disclaimer will:
-          </p>
-
-          <ul>
-            <li>
-              limit or exclude our or your liability for death or personal
-              injury;
-            </li>
-            <li>
-              limit or exclude our or your liability for fraud or fraudulent
-              misrepresentation;
-            </li>
-            <li>
-              limit any of our or your liabilities in any way that is not
-              permitted under applicable law; or
-            </li>
-            <li>
-              exclude any of our or your liabilities that may not be excluded
-              under applicable law.
-            </li>
-          </ul>
-
-          <p>
-            The limitations and prohibitions of liability set in this Section
-            and elsewhere in this disclaimer: (a) are subject to the preceding
-            paragraph; and (b) govern all liabilities arising under the
-            disclaimer, including liabilities arising in contract, in tort and
-            for breach of statutory duty.
-          </p>
-
-          <p>
-            As long as the website and the information and services on the
-            website are provided free of charge, we will not be liable for any
-            loss or damage of any nature.
-          </p>
-        </div>
-      </div>
-    </main>
-    <!-- End #main -->
-
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 d-flex flex-row justify-content-center">
-              <div class="footer-info">
-                <!-- <a href="index.php" class="logo me-auto "><img src="assets/img/oncoligist/Oncology logo.png" style="height:350px;" alt=""></a> -->
-                <a href="index.php" class="img-fluid">
-                  <img
-                    src="assets/img/oncoligist/Oncology logo.png"
-                    style="height: 350px"
-                    alt=""
-                /></a>
-              </div>
-              <!-- <div class="footer-info d-block d-xl-none">
-              <a href="index.php" class="logo me-auto "><img src="assets/img/oncoligist/Oncology logo.png" class="img-fluid" alt=""></a>
-
-            </div> -->
-            </div>
-
-            <div class="col-md-4 d-flex flex-row justify-content-center">
-              <div class="footer-info d-none d-lg-block">
-                <a href="index.php" class="img-fluid">
-                  <img
-                    src="assets/img/oncoligist/ask_text.png"
-                    style="height: 350px"
-                    alt=""
-                    class="txt_ask"
-                /></a>
-              </div>
-              <div class="footer-info d-none d-md-block d-lg-none">
-                <a href="index.php" class="img-fluid">
-                  <img
-                    src="assets/img/oncoligist/ask_text.png"
-                    style="height: 250px; margin-top: 50px"
-                    alt=""
-                /></a>
-              </div>
-              <div class="footer-info d-md-none">
-                <a href="index.php" class="img-fluid">
-                  <img
-                    src="assets/img/oncoligist/ask_text.png"
-                    style="
-                      height: 250px;
-                      margin-top: -190px;
-                      margin-bottom: -100px;
-                    "
-                    alt=""
-                /></a>
-              </div>
-            </div>
-
-            <div class="col-md-4 footer-newsletter onl_top">
-              <p class="mt-2">
-                <span class="phone_email">
-                  <strong
-                    ><i class="fa-solid fa-phone colr_purple">
-                      &nbsp;</i
-                    ></strong
-                  ></span
-                >
-                <span class="mini_text"> +91 84069 07980 </span>
-                <br />
-                <span class="phone_email">
-                  <strong
-                    ><i class="fa-solid fa-envelope colr_purple"></i>
-                    &nbsp;</strong
-                  ></span
-                >
-                <span class="mini_text"> prabhaleo2003@gmail.com</span> <br />
-              </p>
-              <p class="mt-4 mini_text last_padding_text">
-                Get the latest updates on cancer treatments, research, and
-                patient care. Our blog helps patients and families navigate
-                cancer diagnosis and treatment.
-              </p>
-              <div class="social-links mt-3">
-                <a
-                  href="https://www.facebook.com/askoncologist"
-                  target="_blank"
-                  class="facebook"
-                  ><i class="bx bxl-facebook"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/ask_oncologist/"
-                  target="_blank"
-                  class="instagram"
-                  ><i class="bx bxl-instagram"></i
-                ></a>
-                <a
-                  href="https://in.pinterest.com/askoncologist/"
-                  target="_blank"
-                  class="pinterest"
-                  ><i class="bx bxl-pinterest"></i
-                ></a>
-                <a
-                  href="https://www.youtube.com/@askoncologist"
-                  target="_blank"
-                  class="twitter"
-                  ><i class="bx bxl-youtube"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-      class="footer-area-bottom theme-bg"
-      style="background-color: #000a2d">
-      <div class="container">
-        <div class="row pt-4">
-
-          <div class="  col-md-6 col-12">
-            <div class="footer-widget__copyright-info info-direction">
-              <p class="  last_text">
-                <a
-                  href="terms.php"
-                  style="text-decoration: none; color: #ffffff">Terms & conditions
-                </a>
-                <a
-                  href="privacy.php"
-                  style="text-decoration: none; color: #ffffff">
-                  Privacy & policy</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-12 second_divv_end_brand">
-            <div class="footer-widget__copyright-info info-direction d-flex flex-row justify-content-end align-items-center">
-              <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none; color: #ffffff; display: flex; align-items: center;">
-                <p class="mini_text last_text mb-0">
-                  Branding By @
-                </p>
-                <img src="assets/img/bhavi_logo/Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt="">
-              </a>
-            </div>
-          </div>
-
-        </div>
+        <p>
+          As long as the website and the information and services on the
+          website are provided free of charge, we will not be liable for any
+          loss or damage of any nature.
+        </p>
       </div>
     </div>
+  </main>
+ 
+  
 
-    <style>
-      @media (min-width: 1200px) {
-        .second_divv_end_brand {
-          padding-left: 35%;
-          margin-top: -10px;
-        }
 
-        .brand_image {
-          width: 23%;
-          margin-top: 0%;
-          margin-left: 5px;
-        }
-      }
 
-      @media (min-width: 992px) and (max-width: 1200px) {
-        .second_divv_end_brand {
-          padding-left: 32%;
-          margin-top: -10px;
-        }
 
-        .brand_image {
-          width: 23%;
-          margin-top: 0%;
-          margin-left: 5px;
-        }
-      }
 
-      @media (max-width: 768px) {
-        .second_divv_end_brand {
-          padding-left: 4%;
-          margin-top: 0px;
-        }
 
-        .brand_image {
-          width: 12%;
-          margin-top: 0%;
-          margin-left: 5px;
-        }
-      }
-
-      @media (min-width: 768px) and (max-width: 992px) {
-        .second_divv_end_brand {
-          padding-left: 23%;
-          margin-top: -10px;
-        }
-
-        .brand_image {
-          width: 23%;
-          margin-top: 0%;
-          margin-left: 5px;
-        }
-      }
-    </style>
-
-    </footer>
-
-    <!-- End Footer -->
-
-    <!-- WhatsApp link -->
-
-    <!-- Scroll Up Button  -->
-    <button id="scrollBtn" onclick="scrollToTop()">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
-
-    <script>
-      // Function to scroll to the top of the page
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth", // Optional, smooth scrolling animation
-        });
-      }
-
-      // Show scroll button when scrolling down
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          document.getElementById("scrollBtn").style.display = "block";
-        } else {
-          document.getElementById("scrollBtn").style.display = "none";
-        }
-      }
-    </script>
-
-    <style>
-      #scrollBtn {
-        display: none;
-        /* Initially hide the button */
-        position: fixed;
-        /* Fix the position of the button */
-        bottom: 20px;
-        /* Adjust the bottom distance */
-        right: 20px;
-        /* Adjust the right distance */
-        z-index: 999;
-        /* Set a high z-index to ensure the button is on top */
-        padding: 10px 15px;
-        background-color: #01539d;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-      }
-    </style>
-
-    <a
-      href="https://api.whatsapp.com/send?phone=918406907980"
-      style="color: #fff"
-      class="whatsapp-link"
-      target="_blank"
-    >
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <div id="preloader"></div>
-    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-  </body>
-</html>
+  <?php include 'footer.php'; ?>
