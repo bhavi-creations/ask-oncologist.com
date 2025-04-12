@@ -57,6 +57,21 @@
    <!-- Bootstrap CSS -->
    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
+
+<!-- canonical tags  -->
+ 
+<link rel="canonical" href="https://www.askoncologist.com/fullblog.php?id=58" />
+  <link rel="canonical" href="https://www.askoncologist.com/blogs.php" />
+  <link rel="canonical" href="https://www.askoncologist.com/fullblog.php?id=60" />
+  <link rel="canonical" href="https://www.askoncologist.com/fullblog.php?id=61" />
+  <link rel="canonical" href="https://www.askoncologist.com/blogs.php" />
+  <?php
+  $id = isset($_GET['id']) ? htmlspecialchars($_GET['id'], ENT_QUOTES, 'UTF-8') : '';
+  $canonicalUrl = "https://www.askoncologist.com/fullblog.php?id=$id";
+  ?>
+  <link rel="canonical" href="<?php echo $canonicalUrl; ?>" />
+
+
    <!-- Bootstrap JS and dependencies -->
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
