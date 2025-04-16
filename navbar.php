@@ -156,6 +156,13 @@
         <?= json_encode($schemaData, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
     </script>
 
+    <?php
+$blog_id = $_GET['id'];
+$canonical_url = "https://www.askoncologist.com/fullblog.php?id=" . $blog_id;
+echo '<link rel="canonical" href="' . htmlspecialchars($canonical_url).'"/>';
+?>
+
+
  </head>
 
  <style>
