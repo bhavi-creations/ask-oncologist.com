@@ -2218,7 +2218,7 @@ section {
   letter-spacing: -0.02em;
   text-align: center;
   color: #9A9A9A;
-  margin-bottom:  220px !important;
+  /* margin-bottom:  220px !important; */
 
 }
 @media (min-width:1200px) {
