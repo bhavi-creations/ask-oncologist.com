@@ -675,7 +675,7 @@
 
 
 
-        <p class="mb-5  text-center service_text">General and cosmetic dentistry can give you a smile you’re proud to show off. Modern cosmetic dentistry techniques make it easier than ever to achieve a bright, even smile. Visit Srinivasa Dental Clinic in Kakinada.
+        <p class="mb-5  text-center service_text_blog">General and cosmetic dentistry can give you a smile you’re proud to show off. Modern cosmetic dentistry techniques make it easier than ever to achieve a bright, even smile. Visit Srinivasa Dental Clinic in Kakinada.
 
         </p>
       </div>
