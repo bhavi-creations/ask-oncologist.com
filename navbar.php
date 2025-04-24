@@ -65,10 +65,7 @@
   <link rel="canonical" href="https://www.askoncologist.com/fullblog.php?id=60" />
   <link rel="canonical" href="https://www.askoncologist.com/fullblog.php?id=61" />
   <link rel="canonical" href="https://www.askoncologist.com/blogs.php" />
-  <?php
-  $id = isset($_GET['id']) ? htmlspecialchars($_GET['id'], ENT_QUOTES, 'UTF-8') : '';
-  $canonicalUrl = "https://www.askoncologist.com/fullblog.php?id=$id";
-  ?>
+   
   <link rel="canonical" href="<?php echo $canonicalUrl; ?>" />
 
 
@@ -80,22 +77,8 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
-
-<!-- blogs auto generater  -->
-<?php
-$blog_id = $_GET['id'];
-$canonical_url = "https://www.askoncologist.com/fullblog.php?id=" . $blog_id;
-echo '<link rel="canonical" href="' . htmlspecialchars($canonical_url).'"/>';
-?>
-
-
-
-
-  <?php
-  $blog_id = $_GET['id'];
-  $canonical_url = "https://www.askoncologist.com/fullblog.php?id=" . $blog_id;
-  echo '<link rel="canonical" href="' . htmlspecialchars($canonical_url) . '"/>';
-  ?>
+ 
+ 
 
   <meta name="google-site-verification" content="TNukof2gIxf81Bbiwqnjhj9-2jdli6VZ69NreoaN9bA" />
   <?php
@@ -209,17 +192,17 @@ echo '<link rel="canonical" href="' . htmlspecialchars($canonical_url).'"/>';
 
       <nav id="navbar" class="navbar order-lg-0 ">
         <ul>
-          <li><a class="nav-link scrollto" href="#bb">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#facilities">Facilities</a></li>
+          <li><a class="nav-link scrollto" href="index.php#bb">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.php#facilities">Facilities</a></li>
           <!-- <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li> -->
           <li><a class="nav-link" href="blogs.php">Blogs</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#appointment" class="appointment-btn scrollto" style="z-index: 999;">
+      <a href="index.php#appointment" class="appointment-btn scrollto" style="z-index: 999;">
         <span class="d-none d-md-inline">Ask</span> Oncologist
 
       </a>
