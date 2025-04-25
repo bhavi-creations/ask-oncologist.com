@@ -453,10 +453,9 @@
           <hr class="border_line_solid">
           <h2 class="dr_welcome_text">Dr. K Pradeep Bhaskar</h2>
           <p class="poetsen_font">
-            Dr. K Pradeep Bhaskar is a highly respected consultant radiation oncologist with an impressive academic and professional background.
+          Dr. K Pradeep Bhaskar is a highly respected consultant radiation oncologist with an impressive academic and professional background.
             <br><br>
-            Holding an MBBS degree, a DNB in Radiation Oncology, and a FIGRS (Fellowship in Stereotactic Radiosurgery), Dr. Bhaskar is dedicated to advancing cancer treatment and improving patient outcomes. With over 8 years of experience in the field, he has developed extensive expertise and a deep commitment to patient care.
-          </p>
+            Oncology, and a Fellowship in Stereotactic Radiosurgery (FIGRS). Dr. Pradeep is deeply committed to delivering advanced, personalized radiation treatments and guiding patients with expert advice and compassionate care throughout their cancer journey.</p>
 
           <div class="d-flex flex-row justify-content-start">
             <p class="get_in_touch" style="color: #474FA0; cursor: pointer;" onclick="toggleReadMore()">Read More <i class="fa-solid fa-arrow-right"></i></p>
