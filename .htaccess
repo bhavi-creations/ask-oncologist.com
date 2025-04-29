@@ -1,3 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^askoncologist\.com [NC]
+RewriteRule ^(.*)$ https://www.askoncologist.com/$1 [L,R=301]
 Redirect 301 /fullblogs.php?id=65 https://www.askoncologist.com/fullblog.php?id=65
 Redirect 301 /fullblogs.php?id=64 https://www.askoncologist.com/fullblog.php?id=64
 Redirect 301 /fullblogs.php?id=63 https://www.askoncologist.com/fullblog.php?id=63

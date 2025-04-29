@@ -58,13 +58,8 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
 
-  <!-- canonical tags  -->
 
-  <link rel="canonical" href="https://www.askoncologist.com/fullblog.php?id=58" />
-  <link rel="canonical" href="https://www.askoncologist.com/blogs.php" />
-  <link rel="canonical" href="https://www.askoncologist.com/fullblog.php?id=60" />
-  <link rel="canonical" href="https://www.askoncologist.com/fullblog.php?id=61" />
-  <link rel="canonical" href="https://www.askoncologist.com/blogs.php" />
+
    
   <link rel="canonical" href="<?php echo $canonicalUrl; ?>" />
 
