@@ -99,6 +99,10 @@ $conn->close();
                                                 <option value="Multiple Cancer" <?php echo ($service == 'Multiple Cancer') ? 'selected' : ''; ?>>Multiple Cancer</option>
                                                 <option value="Honors Cancer" <?php echo ($service == 'Honors Cancer') ? 'selected' : ''; ?>>Honors Cancer</option>
 
+
+
+                                                <option value="Other" <?php echo ($service == 'Other') ? 'selected' : ''; ?>>Other Services</option>
+
 +
                                             </select>
                                         </div>
