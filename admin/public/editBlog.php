@@ -101,7 +101,7 @@ $conn->close();
 
 
 
-                                                <option value="Other" <?php echo ($service == 'Other') ? 'selected' : ''; ?>>Other Services</option>
+                                                <option value="Other" <?php echo ($service == 'Other') ? 'selected' : ''; ?>>Other Blog</option>
 
 +
                                             </select>

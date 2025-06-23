@@ -67,7 +67,7 @@ $result = $stmt->get_result();
 
 
 
-        <a href="blogs.php?service=Other"><button class="redirect_blog_srivice">Other Services</button></a>
+        <a href="blogs.php?service=Other"><button class="redirect_blog_srivice">Other Blog</button></a>
 
 
 
