@@ -2551,3 +2551,9 @@ margin-top: 190px !important;
   /* adjust as needed */
   padding: 15px 20px;
 }
+
+.faq_heading_section{
+  font-size: 20px !important;
+  color: #A256B0;
+  font-weight: 600;
+}

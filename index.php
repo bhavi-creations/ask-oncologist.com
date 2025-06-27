@@ -977,8 +977,8 @@
             <!-- Accordion 1 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>What is cancer and how does it develop?</span>
-                <span class="accordion-icon">+</span>
+                <h2  class="faq_heading_section" >What is cancer and how does it develop?</h2>
+                <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
                 <p>
@@ -990,9 +990,9 @@
             <div class="faq_section">
 
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>What are the early warning signs of cancer?
-                </span>
-                <span class="accordion-icon">+</span>
+                <h2 class="faq_heading_section">What are the early warning signs of cancer?
+                </h2>
+                <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
                 <p>
@@ -1006,8 +1006,8 @@
             <!-- Accordion 3 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Is cancer hereditary?</span>
-                <span class="accordion-icon">+</span>
+                <h2 class="faq_heading_section" >Is cancer hereditary?</h2>
+                <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
                 <p>
@@ -1019,9 +1019,9 @@
             <!-- Accordion 4 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>What are the major risk factors for cancer?
-                </span>
-                <span class="accordion-icon">+</span>
+                <h2   class="faq_heading_section" >What are the major risk factors for cancer?
+                </h2>
+                <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
                 <p>
@@ -1047,9 +1047,9 @@
             <!-- Accordion 5 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Can cancer be prevented?
-                </span>
-                <span class="accordion-icon">+</span>
+                <h2  class="faq_heading_section" >Can cancer be prevented?
+                </h2>
+                <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
                 <p>
@@ -1068,9 +1068,9 @@
             <!-- Accordion 1 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>What types of cancers do you treat at Ask Oncologist?
-                </span>
-                <span class="accordion-icon">+</span>
+                <h2   class="faq_heading_section" >What types of cancers do you treat at Ask Oncologist?
+                </h2>
+                <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
                 <p>
@@ -1082,9 +1082,9 @@
             <div class="faq_section">
 
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Do I need a referral to consult a cancer specialist?
-                </span>
-                <span class="accordion-icon">+</span>
+                <h2  class="faq_heading_section" >Do I need a referral to consult a cancer specialist?
+                </h2>
+                <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
                 <p>
@@ -1098,9 +1098,9 @@
             <!-- Accordion 3 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span> Where is your clinic located and what are your consultation timings?
-                </span>
-                <span class="accordion-icon">+</span>
+                <h2  class="faq_heading_section" > Where is your clinic located and what are your consultation timings?
+                </h2>
+                <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
                 <p>
@@ -1111,8 +1111,8 @@
             <!-- Accordion 4 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>What should I expect during my first visit to an oncologist?</span>
-                <span class="accordion-icon">+</span>
+                <h2  class="faq_heading_section" >What should I expect during my first visit to an oncologist?</h2>
+                <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
                 <p>
@@ -1123,9 +1123,9 @@
             <!-- Accordion 5 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span> Can cancer be cured if detected early?
-                </span>
-                <span class="accordion-icon">+</span>
+                <h2 class="faq_heading_section"> Can cancer be cured if detected early?
+                </h2>
+                <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
                 <p>
