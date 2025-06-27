@@ -453,9 +453,10 @@
           <hr class="border_line_solid">
           <h2 class="dr_welcome_text">Dr. K Pradeep Bhaskar</h2>
           <p class="poetsen_font">
-          Dr. K Pradeep Bhaskar is a highly respected consultant radiation oncologist with an impressive academic and professional background.
+            Dr. K Pradeep Bhaskar is a highly respected consultant radiation oncologist with an impressive academic and professional background.
             <br><br>
-            Oncology, and a Fellowship in Stereotactic Radiosurgery (FIGRS). Dr. Pradeep is deeply committed to delivering advanced, personalized radiation treatments and guiding patients with expert advice and compassionate care throughout their cancer journey.</p>
+            Oncology, and a Fellowship in Stereotactic Radiosurgery (FIGRS). Dr. Pradeep is deeply committed to delivering advanced, personalized radiation treatments and guiding patients with expert advice and compassionate care throughout their cancer journey.
+          </p>
 
           <div class="d-flex flex-row justify-content-start">
             <p class="get_in_touch" style="color: #474FA0; cursor: pointer;" onclick="toggleReadMore()">Read More <i class="fa-solid fa-arrow-right"></i></p>
@@ -960,6 +961,201 @@
 
     </div>
   </section>
+
+
+
+
+
+
+  <section>
+    <div class="container">
+
+      <h1 class="text-center">Frequently Ask Question (FAQ)</h1>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="accordion">
+            <!-- Accordion 1 -->
+            <div class="faq_section">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>What is cancer and how does it develop?</span>
+                <span class="accordion-icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Cancer is a disease in which abnormal cells grow uncontrollably and may spread to other parts of the body. It begins when the body’s normal cell cycle is disrupted, leading to the formation of tumors or abnormal blood cells
+                </p>
+              </div>
+            </div>
+            <!-- Accordion 2 -->
+            <div class="faq_section">
+
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>What are the early warning signs of cancer?
+                </span>
+                <span class="accordion-icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Some common early signs include unexplained weight loss, persistent fatigue, lumps or swellings, changes in the skin or moles, long-lasting cough, abnormal bleeding, and changes in bowel or bladder habits. However, symptoms vary by cancer type
+                </p>
+              </div>
+            </div>
+
+
+
+            <!-- Accordion 3 -->
+            <div class="faq_section">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Is cancer hereditary?</span>
+                <span class="accordion-icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Some cancers can be hereditary. If a close family member has had certain types of cancer (like breast, colon, or ovarian), your risk may be higher. Genetic testing can help assess your personal risk
+                </p>
+              </div>
+            </div>
+
+            <!-- Accordion 4 -->
+            <div class="faq_section">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>What are the major risk factors for cancer?
+                </span>
+                <span class="accordion-icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Key risk factors include:
+
+                  Tobacco use
+
+                  Excessive alcohol consumption
+
+                  Obesity and poor diet
+
+                  Lack of physical activity
+
+                  Prolonged sun exposure
+
+                  Environmental toxins
+
+                  Certain infections (e.g., HPV, hepatitis B/C)
+
+                </p>
+              </div>
+            </div>
+            <!-- Accordion 5 -->
+            <div class="faq_section">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Can cancer be prevented?
+                </span>
+                <span class="accordion-icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Not all cancers are preventable, but up to 30-50% of cases can be avoided through healthy lifestyle choices, regular screenings, vaccinations (like HPV), and avoiding carcinogens such as tobacco and processed foods
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6">
+
+
+          <div class="accordion">
+            <!-- Accordion 1 -->
+            <div class="faq_section">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>What types of cancers do you treat at Ask Oncologist?
+                </span>
+                <span class="accordion-icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  We treat a wide range of cancers, including breast cancer, lung cancer, colon cancer, prostate cancer, cervical cancer, oral cancer, and blood cancers such as leukemia and lymphoma. Our services cover diagnosis, staging, chemotherapy, and follow-up care under expert oncologist supervision
+                </p>
+              </div>
+            </div>
+            <!-- Accordion 2 -->
+            <div class="faq_section">
+
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Do I need a referral to consult a cancer specialist?
+                </span>
+                <span class="accordion-icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  No referral is required. You can book a consultation directly through our website or by calling us. If you've had tests done already, bring the reports for a faster diagnosis
+                </p>
+              </div>
+            </div>
+
+
+
+            <!-- Accordion 3 -->
+            <div class="faq_section">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span> Where is your clinic located and what are your consultation timings?
+                </span>
+                <span class="accordion-icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Dr. Pradeep Bhasker is available from 10 am to 5 pm at MediCover Hospital, Kakinada, and from 6 pm to 8 pm at Sivani Clinic. We recommend booking an appointment in advance to avoid wait times
+                </p>
+              </div>
+            </div>
+            <!-- Accordion 4 -->
+            <div class="faq_section">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>What should I expect during my first visit to an oncologist?</span>
+                <span class="accordion-icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  During your first visit, we’ll review your medical history, analyze any existing reports or scans, and may recommend further diagnostic tests if needed. A personalized treatment plan will be discussed based on your condition
+                </p>
+              </div>
+            </div>
+            <!-- Accordion 5 -->
+            <div class="faq_section">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span> Can cancer be cured if detected early?
+                </span>
+                <span class="accordion-icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, many types of cancer can be effectively treated or even cured if detected at an early stage. Regular screenings, awareness of symptoms, and early intervention improve survival rates significantly
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <script>
+    function toggleAccordion(header) {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector(".accordion-icon");
+
+      content.classList.toggle("open");
+      icon.classList.toggle("rotate");
+
+      icon.textContent = content.classList.contains("open") ? "−" : "+";
+    }
+  </script>
 
   <!-- End Contact Section -->
 
