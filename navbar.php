@@ -155,7 +155,8 @@
 
 
 
-    <script script script type = "application/ld+json" > {
+  <script script script type="application/ld+json">
+    {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [{
@@ -242,7 +243,93 @@
     }
   </script>
 
-
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "Ask Oncologist",
+      "url": "https://www.askoncologist.com/",
+      "logo": "https://www.askoncologist.com/logo.png",
+      "image": "https://www.askoncologist.com/home-banner.jpg",
+      "description": "Ask Oncologist is a trusted platform providing expert cancer care insights, consultations, and awareness.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sivani Clinic, Near HP Petrol Bunk, Ashok Nagar",
+        "addressLocality": "Kakinada",
+        "addressRegion": "Andhra Pradesh",
+        "postalCode": "533003",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 16.9752,
+        "longitude": 82.2406108
+      },
+      "hasMap": "https://maps.google.com/?q=16.9752,82.2406108",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-8406907980",
+        "contactType": "Customer Service",
+        "areaServed": "IN",
+        "availableLanguage": [
+          "English",
+          "Telugu"
+        ]
+      },
+      "medicalSpecialty": "Oncology",
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. K. Pradeep Bhasker",
+        "jobTitle": "Oncologist",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "Medi Cover Hospital, Kakinada"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Cancer Treatment Services",
+        "itemListElement": [{
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Chemotherapy",
+              "bodyLocation": "Whole body",
+              "procedureType": "Therapeutic"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Radiation Therapy",
+              "bodyLocation": "Targeted cancer sites",
+              "procedureType": "Therapeutic"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Surgical Oncology",
+              "procedureType": "Surgical"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.facebook.com/AskOncologist",
+        "https://www.instagram.com/AskOncologist",
+        "https://www.linkedin.com/company/AskOncologist",
+        "https://g.co/kgs/f3kJ2ua"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "125"
+      }
+    }
+  </script>
 
 
 </head>
