@@ -368,8 +368,9 @@
           <li><a class="nav-link scrollto" href="index.php#bb">Home</a></li>
           <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
           <li><a class="nav-link scrollto" href="index.php#facilities">Facilities</a></li>
+          <li><a class="nav-link scrollto" href="blogs.php">Blogs</a></li>
           <!-- <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li> -->
-          <li><a class="nav-link" href="blogs.php">Blogs</a></li>
+          <!-- <li><a class="nav-link" href="blogs.php">Blogs</a></li> -->
           <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
