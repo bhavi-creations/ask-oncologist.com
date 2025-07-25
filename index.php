@@ -218,7 +218,7 @@
           <div class="col-8 contaner_inner only_padding_on_right ">
             <div class="tab-content">
 
-              <div class="tab-pane active show" id="Brain-Cancer">
+              <div class="tab-pane  show active" id="Brain-Cancer">
                 <img src="assets/img/services/brainnew.jpg" alt="CT Scanner Image" class="img-fluid service_img_radius">
 
                 <h3>About the Brain Cancer</h3>
@@ -667,7 +667,9 @@
       });
     });
   </script>
-  <section>
+
+
+  <section id="blogs_section">
     <div class="container">
       <div class="section-title text-center">
         <p class="our_blogs my-2">Our Blogs</p>
@@ -1142,10 +1144,10 @@
 
 
   <!-- Include these scripts at bottom -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
 
-<script>
+<!-- <script>
   document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize Swiper
     const swiper = new Swiper('.mySwiper', {
@@ -1181,7 +1183,7 @@
       });
     });
   });
-</script>
+</script> -->
 
 
 
