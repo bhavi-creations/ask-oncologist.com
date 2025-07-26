@@ -70,84 +70,97 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
-
-
-
   <meta name="google-site-verification" content="TNukof2gIxf81Bbiwqnjhj9-2jdli6VZ69NreoaN9bA" />
-  <?php
-  $schemaData = [
-    "@context" => "https://schema.org",
-    "@type" => "MedicalOrganization",
-    "name" => "Ask Oncologist",
-    "url" => "https://www.askoncologist.com/",
-    "logo" => "https://www.askoncologist.com/logo.png",
-    "description" => "Ask Oncologist is a trusted platform providing expert cancer care insights, consultations, and awareness.",
-    "sameAs" => [
-      "https://www.facebook.com/AskOncologist",
-      "https://www.instagram.com/AskOncologist",
-      "https://www.linkedin.com/company/AskOncologist"
-    ],
-    "address" => [
-      "@type" => "PostalAddress",
-      "streetAddress" => "Sivani Clinic, Near HP Petrol Bunk, Ashok Nagar",
-      "addressLocality" => "Kakinada",
-      "addressRegion" => "Andhra Pradesh",
-      "postalCode" => "533003",
-      "addressCountry" => "IN"
-    ],
-    "contactPoint" => [
-      "@type" => "ContactPoint",
-      "telephone" => "+91-8406907980",
-      "contactType" => "customer service",
-      "areaServed" => "IN",
-      "availableLanguage" => ["English", "Telugu"]
-    ],
-    "medicalSpecialty" => "Oncology",
-    "founder" => [
-      "@type" => "Person",
-      "name" => "Dr. K. Pradeep Bhasker",
-      "jobTitle" => "Oncologist",
-      "worksFor" => [
-        "@type" => "MedicalOrganization",
-        "name" => "Medi Cover Hospital, Kakinada"
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+          "@type": "Question",
+          "name": "What is cancer and how does it develop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cancer is a disease in which abnormal cells grow uncontrollably and may spread to other parts of the body. It begins when the body’s normal cell cycle is disrupted, leading to the formation of tumors or abnormal blood cells."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the early warning signs of cancer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some common early signs include unexplained weight loss, persistent fatigue, lumps or swellings, changes in the skin or moles, long-lasting cough, abnormal bleeding, and changes in bowel or bladder habits. However, symptoms vary by cancer type."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is cancer hereditary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some cancers can be hereditary. If a close family member has had certain types of cancer (like breast, colon, or ovarian), your risk may be higher. Genetic testing can help assess your personal risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the major risk factors for cancer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Key risk factors include tobacco use, excessive alcohol consumption, obesity and poor diet, lack of physical activity, prolonged sun exposure, environmental toxins, and certain infections (e.g., HPV, hepatitis B/C)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can cancer be prevented?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not all cancers are preventable, but up to 30-50% of cases can be avoided through healthy lifestyle choices, regular screenings, vaccinations (like HPV), and avoiding carcinogens such as tobacco and processed foods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of cancers do you treat at Ask Oncologist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We treat a wide range of cancers, including breast cancer, lung cancer, colon cancer, prostate cancer, cervical cancer, oral cancer, and blood cancers such as leukemia and lymphoma. Our services cover diagnosis, staging, chemotherapy, and follow-up care under expert oncologist supervision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a referral to consult a cancer specialist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No referral is required. You can book a consultation directly through our website or by calling us. If you've had tests done already, bring the reports for a faster diagnosis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is your clinic located and what are your consultation timings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dr. Pradeep Bhasker is available from 10 am to 5 pm at MediCover Hospital, Kakinada, and from 6 pm to 8 pm at Sivani Clinic. We recommend booking an appointment in advance to avoid wait times."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I expect during my first visit to an oncologist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "During your first visit, we’ll review your medical history, analyze any existing reports or scans, and may recommend further diagnostic tests if needed. A personalized treatment plan will be discussed based on your condition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can cancer be cured if detected early?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, many types of cancer can be effectively treated or even cured if detected at an early stage. Regular screenings, awareness of symptoms, and early intervention improve survival rates significantly."
+          }
+        }
       ]
-    ],
-    "hasOfferCatalog" => [
-      "@type" => "OfferCatalog",
-      "name" => "Cancer Treatment Services",
-      "itemListElement" => [
-        [
-          "@type" => "Offer",
-          "itemOffered" => [
-            "@type" => "MedicalProcedure",
-            "name" => "Chemotherapy",
-            "bodyLocation" => "Whole body",
-            "procedureType" => "Therapeutic"
-          ]
-        ],
-        [
-          "@type" => "Offer",
-          "itemOffered" => [
-            "@type" => "MedicalProcedure",
-            "name" => "Radiation Therapy",
-            "bodyLocation" => "Targeted cancer sites",
-            "procedureType" => "Therapeutic"
-          ]
-        ],
-        [
-          "@type" => "Offer",
-          "itemOffered" => [
-            "@type" => "MedicalProcedure",
-            "name" => "Surgical Oncology",
-            "procedureType" => "Surgical"
-          ]
-        ]
-      ]
-    ]
-  ];
-  ?>
+    }
+  </script>
+
   <!-- <script type="application/ld+json">
     <?= json_encode($schemaData, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
   </script> -->
@@ -228,10 +241,6 @@
   </script>
 
 
-
-
-
-
 </head>
 
 <style>
@@ -244,7 +253,6 @@
 </style>
 
 <body>
-
   <!-- ======= Header ======= -->
   <header id="header" class="main_images">
     <div class="container d-flex align-items-center">
