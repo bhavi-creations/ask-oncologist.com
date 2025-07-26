@@ -152,95 +152,80 @@
     <?= json_encode($schemaData, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
   </script> -->
 
-
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalOrganization",
-      "name": "Ask Oncologist",
+      "@type": "Person",
+      "name": "Dr. K. Pradeep Bhasker",
+      "jobTitle": "Consultant Radiation Oncologist",
+      "honorificSuffix": "MBBS, DNB (Rad Onc), FIGRS",
+      "description": "Dr. K. Pradeep Bhasker is a Consultant Radiation Oncologist from Kakinada with qualifications including MBBS, DNB (Radiation Oncology), and a Fellowship in Stereotactic Radiosurgery (FIGRS). He provides cancer care services at Medicover Hospital and Sivani Clinic.",
+      "image": "https://www.askoncologist.com/logo.png",
       "url": "https://www.askoncologist.com/",
-      "logo": "https://www.askoncologist.com/logo.png",
-      "image": "https://www.askoncologist.com/home-banner.jpg",
-      "description": "Ask Oncologist is a trusted platform providing expert cancer care insights, consultations, and awareness.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Sivani Clinic, Near HP Petrol Bunk, Ashok Nagar",
-        "addressLocality": "Kakinada",
-        "addressRegion": "Andhra Pradesh",
-        "postalCode": "533003",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 16.9752,
-        "longitude": 82.2406108
-      },
-      "hasMap": "https://maps.google.com/?q=16.9752,82.2406108",
+      "sameAs": [
+        "https://www.facebook.com/AskOncologist",
+        "https://www.instagram.com/AskOncologist",
+        "https://www.linkedin.com/company/AskOncologist"
+      ],
+      "worksFor": [{
+          "@type": "MedicalOrganization",
+          "name": "Medicover Hospital",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kakinada",
+            "addressRegion": "Andhra Pradesh",
+            "addressCountry": "IN"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "10:00",
+            "closes": "17:00"
+          }
+        },
+        {
+          "@type": "MedicalOrganization",
+          "name": "Sivani Clinic",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Near HP Petrol Bunk, Ashok Nagar",
+            "addressLocality": "Kakinada",
+            "addressRegion": "Andhra Pradesh",
+            "postalCode": "533003",
+            "addressCountry": "IN"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "18:00",
+            "closes": "20:00"
+          }
+        }
+      ],
+      "medicalSpecialty": "Radiation Oncology",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+91-8406907980",
         "contactType": "Customer Service",
-        "areaServed": "IN",
-        "availableLanguage": [
-          "English",
-          "Telugu"
-        ]
-      },
-      "medicalSpecialty": "Oncology",
-      "founder": {
-        "@type": "Person",
-        "name": "Dr. K. Pradeep Bhasker",
-        "jobTitle": "Oncologist",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "Medi Cover Hospital, Kakinada"
-        }
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Cancer Treatment Services",
-        "itemListElement": [{
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "MedicalProcedure",
-              "name": "Chemotherapy",
-              "bodyLocation": "Whole body",
-              "procedureType": "Therapeutic"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "MedicalProcedure",
-              "name": "Radiation Therapy",
-              "bodyLocation": "Targeted cancer sites",
-              "procedureType": "Therapeutic"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "MedicalProcedure",
-              "name": "Surgical Oncology",
-              "procedureType": "Surgical"
-            }
-          }
-        ]
-      },
-      "sameAs": [
-        "https://www.facebook.com/AskOncologist",
-        "https://www.instagram.com/AskOncologist",
-        "https://www.linkedin.com/company/AskOncologist",
-        "https://g.co/kgs/f3kJ2ua"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "125"
+        "availableLanguage": ["English", "Telugu"],
+        "areaServed": "IN"
       }
     }
   </script>
-
 
 
 
@@ -281,12 +266,12 @@
         <ul>
           <li><a class="nav-link scrollto" href="index.php#bb">Home</a></li>
           <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
-       
+
           <li><a class="nav-link scrollto" href="index.php#facilities">Facilities</a></li>
           <li><a class="nav-link " href="blogs.php">Blogs</a></li>
-         
 
-       
+
+
           <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
