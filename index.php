@@ -894,36 +894,29 @@
         <div class="col-lg-6">
 
           <div class="row d-flex flex-row justify-content-center">
-            <!-- <div class="col-md-12">
-                 <div class="info-box">
-                   <i class="bx bx-map"></i>
-                   <h3>Our Address</h3>
-                   <p>
-                     2-56-5,
-                     SANTHI NAGAR,ROAD NO.1,<br>
-                     100 BUILDING CENTER,<br>
-                     HOUSING BOARD COLONY<br>
-                     OPP. CHRISTIAN COMMUNITY HALL<br>
-                     KAKINADA-533003 <br>
-                     Andhra Pradesh, India
-                     <br><br>
-                   </p>
-                 </div>
-               </div> -->
-            <div class="col-md-7">
+
+            <div class="col-md-6">
               <div class="info-box mt-4">
                 <i class="bx bx-envelope"></i>
                 <h3 style="font-family:Mulish;">Email Us</h3>
                 <p style="font-family:Mulish;"> prabhaleo2003@gmail.com </p>
               </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-6">
               <div class="info-box mt-4">
                 <i class="bx bx-phone-call"></i>
                 <h3 style="font-family:Mulish;">Call Us</h3>
                 <p style="font-family:Mulish;"> +91 84069 07980 </p>
               </div>
             </div>
+          </div>
+
+
+          <div class="row">
+            <iframe class="position-relative rounded w-100 h-100"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4028.5558397086684!2d82.22730101087679!3d17.025733313055134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f6cc6899e4b42cf%3A0xd47ecadc635164!2sDr.%20Pradeep%20Ask%20Oncologist!5e1!3m2!1sen!2sin!4v1753946898322!5m2!1sen!2sin"
+              frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
           </div>
 
         </div>
@@ -979,7 +972,7 @@
             <!-- Accordion 1 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2  class="faq_heading_section" >What is cancer and how does it develop?</h2>
+                <h2 class="faq_heading_section">What is cancer and how does it develop?</h2>
                 <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
@@ -1008,7 +1001,7 @@
             <!-- Accordion 3 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2 class="faq_heading_section" >Is cancer hereditary?</h2>
+                <h2 class="faq_heading_section">Is cancer hereditary?</h2>
                 <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
@@ -1021,7 +1014,7 @@
             <!-- Accordion 4 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2   class="faq_heading_section" >What are the major risk factors for cancer?
+                <h2 class="faq_heading_section">What are the major risk factors for cancer?
                 </h2>
                 <h2 class="accordion-icon">+</h2>
               </div>
@@ -1049,7 +1042,7 @@
             <!-- Accordion 5 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2  class="faq_heading_section" >Can cancer be prevented?
+                <h2 class="faq_heading_section">Can cancer be prevented?
                 </h2>
                 <h2 class="accordion-icon">+</h2>
               </div>
@@ -1070,7 +1063,7 @@
             <!-- Accordion 1 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2   class="faq_heading_section" >What types of cancers do you treat at Ask Oncologist?
+                <h2 class="faq_heading_section">What types of cancers do you treat at Ask Oncologist?
                 </h2>
                 <h2 class="accordion-icon">+</h2>
               </div>
@@ -1084,7 +1077,7 @@
             <div class="faq_section">
 
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2  class="faq_heading_section" >Do I need a referral to consult a cancer specialist?
+                <h2 class="faq_heading_section">Do I need a referral to consult a cancer specialist?
                 </h2>
                 <h2 class="accordion-icon">+</h2>
               </div>
@@ -1100,7 +1093,7 @@
             <!-- Accordion 3 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2  class="faq_heading_section" > Where is your clinic located and what are your consultation timings?
+                <h2 class="faq_heading_section"> Where is your clinic located and what are your consultation timings?
                 </h2>
                 <h2 class="accordion-icon">+</h2>
               </div>
@@ -1113,7 +1106,7 @@
             <!-- Accordion 4 -->
             <div class="faq_section">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2  class="faq_heading_section" >What should I expect during my first visit to an oncologist?</h2>
+                <h2 class="faq_heading_section">What should I expect during my first visit to an oncologist?</h2>
                 <h2 class="accordion-icon">+</h2>
               </div>
               <div class="accordion-content">
@@ -1144,10 +1137,10 @@
 
 
   <!-- Include these scripts at bottom -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
 
-<!-- <script>
+  <!-- <script>
   document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize Swiper
     const swiper = new Swiper('.mySwiper', {

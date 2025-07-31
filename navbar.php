@@ -272,15 +272,15 @@
 
       <nav id="navbar" class="navbar order-lg-0 ">
         <ul>
-          <li><a class="nav-link scrollto" href="index.php#bb">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#bb">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
 
-          <li><a class="nav-link scrollto" href="index.php#facilities">Facilities</a></li>
+          <li><a class="nav-link scrollto" href="#facilities">Facilities</a></li>
           <li><a class="nav-link " href="blogs.php">Blogs</a></li>
 
 
 
-          <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
