@@ -272,7 +272,7 @@
 
       <nav id="navbar" class="navbar order-lg-0 ">
         <ul>
-          <li><a class="nav-link scrollto" href="#bb">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
 
           <li><a class="nav-link scrollto" href="#facilities">Facilities</a></li>
