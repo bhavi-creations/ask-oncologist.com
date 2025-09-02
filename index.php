@@ -1137,46 +1137,46 @@
 
 
   <!-- Include these scripts at bottom -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-  <!-- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // 1. Initialize Swiper
-    const swiper = new Swiper('.mySwiper', {
-      slidesPerView: 1,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Initialize Swiper
+      const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
 
-    // 2. Get all tab links
-    const tabLinks = document.querySelectorAll('.nav-link');
+      // 2. Get all tab links
+      const tabLinks = document.querySelectorAll('.nav-link');
 
-    // 3. Attach click events
-    tabLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
+      // 3. Attach click events
+      tabLinks.forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
 
-        // Remove 'active' from all nav-links
-        tabLinks.forEach(l => l.classList.remove('active'));
+          // Remove 'active' from all nav-links
+          tabLinks.forEach(l => l.classList.remove('active'));
 
-        // Add 'active' to the clicked one
-        link.classList.add('active');
+          // Add 'active' to the clicked one
+          link.classList.add('active');
 
-        // Hide all tab-panes
-        document.querySelectorAll('.tab-pane').forEach(pane => {
-          pane.classList.remove('active', 'show');
+          // Hide all tab-panes
+          document.querySelectorAll('.tab-pane').forEach(pane => {
+            pane.classList.remove('active', 'show');
+          });
+
+          // Show the pane matching this tab
+          const target = link.getAttribute('data-bs-target');
+          document.querySelector(target).classList.add('active', 'show');
         });
-
-        // Show the pane matching this tab
-        const target = link.getAttribute('data-bs-target');
-        document.querySelector(target).classList.add('active', 'show');
       });
     });
-  });
-</script> -->
+  </script>
 
 
 

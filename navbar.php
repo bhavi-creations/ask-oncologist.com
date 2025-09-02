@@ -276,7 +276,7 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
 
           <li><a class="nav-link scrollto" href="#facilities">Facilities</a></li>
-          <li><a class="nav-link " href="blogs.php">Blogs</a></li>
+          <li><a class="nav-link scrollto " href="#blogs_section">Blogs</a></li>
 
 
 
