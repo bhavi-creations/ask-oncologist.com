@@ -361,7 +361,7 @@ if ($blog_id > 0) {
 
 
                                                     <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a>
-                                
+
                             <!-- <h3 class="mani" style="color:#333; font-weight:600; margin-bottom:10px;">
                                 Contact Us
                             </h3> -->
@@ -414,7 +414,7 @@ if ($blog_id > 0) {
 
                                 <!-- Main Content -->
                                 <?php if (!empty($blog['main_content'])): ?>
-                                    <div class="ul-service-details-descr">
+                                    <div class="ul-service-details-descr" style="font-size: 18px;">
                                         <?php
                                         // Allow basic formatting tags: p, br, ul, ol, li, b, i, strong, em
                                         echo strip_tags($blog['main_content'], '<p><br><ul><ol><li><b><i><strong><em>');
@@ -480,7 +480,7 @@ if ($blog_id > 0) {
 
                                 <!-- Full Content -->
                                 <?php if (!empty($blog['full_content'])): ?>
-                                    <div class="ul-service-details-full-content mt-3">
+                                    <div class="ul-service-details-full-content mt-3" style="font-size: 18px;">
                                         <?php
                                         // Allow basic formatting tags: p, br, ul, ol, li, b, i, strong, em
                                         echo strip_tags($blog['full_content'], '<p><br><ul><ol><li><b><i><strong><em>');
@@ -952,7 +952,7 @@ if ($blog_id > 0) {
 
                                 <!-- Main Content -->
                                 <?php if (!empty($blog['main_content'])): ?>
-                                    <div class="ul-service-details-descr">
+                                    <div class="ul-service-details-descr" style="font-size: 18px;">
                                         <?php
                                         // Allow basic formatting tags: p, br, ul, ol, li, b, i, strong, em
                                         echo strip_tags($blog['main_content'], '<p><br><ul><ol><li><b><i><strong><em>');
@@ -1020,7 +1020,7 @@ if ($blog_id > 0) {
 
                                 <!-- Full Content -->
                                 <?php if (!empty($blog['full_content'])): ?>
-                                    <div class="ul-service-details-full-content mt-3">
+                                    <div class="ul-service-details-full-content mt-3" style="font-size: 18px;">
                                         <?php
                                         // Allow basic formatting tags: p, br, ul, ol, li, b, i, strong, em
                                         echo strip_tags($blog['full_content'], '<p><br><ul><ol><li><b><i><strong><em>');
