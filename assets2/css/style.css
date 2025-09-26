@@ -4868,7 +4868,8 @@ button {
 }
 
 .ul-service-details-sidebar-widget {
-  background-color: #c4e3f9;
+  /* background-color: #c4e3f9; */
+  background-color: #A256B0 !important;
   /* background-color: #fffdee; */
   padding: clamp(16px, 1.68vw, 32px);
   border-radius: 16px;
@@ -6760,7 +6761,10 @@ button {
   padding: 10px;
   border-radius: 8px;
   scrollbar-width: thin;
-  scrollbar-color: #007bff #e9ecef;
+  scrollbar-color:  #A256B0   #A256B0;
+  /* scrollbar-color: #007bff #e9ecef; */
+ 
+  
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05) !important;
 }
 
@@ -6823,6 +6827,7 @@ button {
 .latest_blog_section {
   font-weight: 700 !important;
   font-family: "poppins", sans-serif;
+  color: white;
 }
 
 
