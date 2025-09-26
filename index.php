@@ -727,7 +727,7 @@
             echo "<p class='card-text'>" . substr($main_content, 0, 90) . "...</p>";
 
             // Link to full blog post
-            echo "<a href='fullblog.php?id={$blog_id}' class='btn btn-primary'>Read more</a>";
+            echo "<a href='service_detsils.php?id={$blog_id}' class='btn btn-primary'>Read more</a>";
 
             echo "</div>"; // End card body
             echo "</div>"; // End card

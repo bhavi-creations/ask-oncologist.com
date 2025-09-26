@@ -1,0 +1,25 @@
+[17-Sep-2025 11:14:42 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'visiondentalguntur'@'localhost' (using password: YES) in C:\xampp\htdocs\ask-oncologist.com\save_comment.php:14
+Stack trace:
+#0 C:\xampp\htdocs\ask-oncologist.com\save_comment.php(14): mysqli->__construct('localhost', 'visiondentalgun...', Object(SensitiveParameterValue), 'visiondentalgun...')
+#1 {main}
+  thrown in C:\xampp\htdocs\ask-oncologist.com\save_comment.php on line 14
+[17-Sep-2025 11:15:41 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'askoncologist'@'localhost' (using password: YES) in C:\xampp\htdocs\ask-oncologist.com\save_comment.php:14
+Stack trace:
+#0 C:\xampp\htdocs\ask-oncologist.com\save_comment.php(14): mysqli->__construct('localhost', 'askoncologist', Object(SensitiveParameterValue), 'askoncologist')
+#1 {main}
+  thrown in C:\xampp\htdocs\ask-oncologist.com\save_comment.php on line 14
+[17-Sep-2025 11:15:45 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'askoncologist'@'localhost' (using password: YES) in C:\xampp\htdocs\ask-oncologist.com\save_comment.php:14
+Stack trace:
+#0 C:\xampp\htdocs\ask-oncologist.com\save_comment.php(14): mysqli->__construct('localhost', 'askoncologist', Object(SensitiveParameterValue), 'askoncologist')
+#1 {main}
+  thrown in C:\xampp\htdocs\ask-oncologist.com\save_comment.php on line 14
+[17-Sep-2025 11:22:38 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'askoncologist'@'localhost' (using password: YES) in C:\xampp\htdocs\ask-oncologist.com\save_comment.php:14
+Stack trace:
+#0 C:\xampp\htdocs\ask-oncologist.com\save_comment.php(14): mysqli->__construct('localhost', 'askoncologist', Object(SensitiveParameterValue), 'askoncologist')
+#1 {main}
+  thrown in C:\xampp\htdocs\ask-oncologist.com\save_comment.php on line 14
+[17-Sep-2025 11:27:28 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'askoncologist'@'localhost' (using password: YES) in C:\xampp\htdocs\ask-oncologist.com\save_comment.php:14
+Stack trace:
+#0 C:\xampp\htdocs\ask-oncologist.com\save_comment.php(14): mysqli->__construct('localhost', 'askoncologist', Object(SensitiveParameterValue), 'askoncologist')
+#1 {main}
+  thrown in C:\xampp\htdocs\ask-oncologist.com\save_comment.php on line 14
