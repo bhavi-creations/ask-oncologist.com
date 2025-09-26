@@ -644,7 +644,7 @@ if ($blog_id > 0) {
                                     $db = "oncologist";
                                 } else {
                                     $user = "askoncologist";
-                                    $pass = "pv2K2pIHvLuj4mq";
+                                    $pass = "DEWzGnaO8rMVX3p";
                                     $db = "askoncologist";
                                 }
 
@@ -1183,7 +1183,7 @@ if ($blog_id > 0) {
                                     $db = "oncologist";
                                 } else {
                                     $user = "askoncologist";
-                                    $pass = "pv2K2pIHvLuj4mq";
+                                    $pass = "DEWzGnaO8rMVX3p";
                                     $db = "askoncologist";
                                 }
 
