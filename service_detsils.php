@@ -182,7 +182,7 @@ if ($blog_id > 0) {
                             $redirect_link = !empty($blog['logo_link']) ? htmlspecialchars($blog['logo_link']) : '#';
                             ?>
 
-                            <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/Oncology logo.png" alt="" class="img-fluid" style="width: 100px ;"></a>
+                            <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a>
 
 
                             <!-- Title -->
@@ -248,7 +248,7 @@ if ($blog_id > 0) {
 
                             <!-- Logo -->
 
-                            <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/Oncology logo.png" alt="" class="img-fluid" style="width: 200px ;"></a>
+                            <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a>
 
 
 
@@ -359,6 +359,9 @@ if ($blog_id > 0) {
 
                         <div class="card aligner-card" style="display:flex; justify-content:center; align-items:center; flex-direction:column; padding:8px 5px 5px 0px; border-radius:12px; background:linear-gradient(135deg, #f1f5ff, #ffffff); box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
 
+
+                                                    <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a>
+                                
                             <!-- <h3 class="mani" style="color:#333; font-weight:600; margin-bottom:10px;">
                                 Contact Us
                             </h3> -->
@@ -367,9 +370,9 @@ if ($blog_id > 0) {
                                 Clear Aligners
                             </p> -->
 
-                            <p style="font-size:20px; font-weight:600; color:#28a745; margin:8px 0;">
+                            <!-- <p style="font-size:20px; font-weight:600; color:#28a745; margin:8px 0;">
                                 Ask <span style="color:#e63946;">Oncologist</span>
-                            </p>
+                            </p> -->
 
                             <!-- <strong>
                                 <a href="tel:+919290019948"
@@ -897,15 +900,16 @@ if ($blog_id > 0) {
 
                         <div class="card aligner-card" style="display:flex; justify-content:center; align-items:center; flex-direction:column; padding:8px 5px 5px 0px; border-radius:12px; background:linear-gradient(135deg, #f1f5ff, #ffffff); box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
 
+                            <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a>
 
 
                             <!-- <p style="font-size:18px; margin:5px 0; color:#444;">
                                 Vision
                             </p> -->
 
-                            <p style="font-size:20px; font-weight:600; color:#28a745; margin:8px 0;">
+                            <!-- <p style="font-size:20px; font-weight:600; color:#28a745; margin:8px 0;">
                                 Ask <span style="color:#e63946;">Oncologist</span>
-                            </p>
+                            </p> -->
 
 
                         </div>
@@ -1433,16 +1437,20 @@ if ($blog_id > 0) {
 
                         <div class="card aligner-card" style="display:flex; justify-content:center; align-items:center; flex-direction:column; padding:8px 5px 5px 0px; border-radius:12px; background:linear-gradient(135deg, #f1f5ff, #ffffff); box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
 
-                            <!-- <h3 class="mani" style="color:#333; font-weight:600; margin-bottom:10px;">
+                                                        <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a>
+
+                        
+                        
+                        <!-- <h3 class="mani" style="color:#333; font-weight:600; margin-bottom:10px;">
                                     Contact Us
                                 </h3> -->
 
                             <!-- <p style="font-size:18px; margin:5px 0; color:#444;">
                                     Clear Aligners
                                 </p> -->
-                            <p style="font-size:20px; font-weight:600; color:#28a745; margin:8px 0;">
+                            <!-- <p style="font-size:20px; font-weight:600; color:#28a745; margin:8px 0;">
                                 Ask <span style="color:#e63946;">Oncologist</span>
-                            </p>
+                            </p> -->
 
                             <!-- <strong>
                                     <a href="tel:+919290019948"
@@ -1470,14 +1478,15 @@ if ($blog_id > 0) {
                         <div class="card aligner-card" style="display:flex; justify-content:center; align-items:center; flex-direction:column; padding:8px 5px 5px 0px; border-radius:12px; background:linear-gradient(135deg, #f1f5ff, #ffffff); box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
 
 
+                            <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a>
 
                             <!-- <p style="font-size:18px; margin:5px 0; color:#444;">
                                 
                             </p> -->
 
-                            <p style="font-size:20px; font-weight:600; color:#28a745; margin:8px 0;">
+                            <!-- <p style="font-size:20px; font-weight:600; color:#28a745; margin:8px 0;">
                                 Ask <span style="color:#e63946;">Oncologist</span>
-                            </p>
+                            </p> -->
 
 
                         </div>
