@@ -350,9 +350,9 @@ if ($blog_id > 0) {
 
                     <div class="col-lg-2 col-md-2 blogs_side_branding  ">
 
-                        <img src="./assets/img/22.png" alt="" class="img-fluid "  >
+                        <img src="./assets/img/22.png" alt="" class="img-fluid ">
 
-                        
+
 
 
 
@@ -360,7 +360,17 @@ if ($blog_id > 0) {
                         <div class="card aligner-card" style="display:flex; justify-content:center; align-items:center; flex-direction:column; padding:8px 5px 5px 0px; border-radius:12px; background:linear-gradient(135deg, #f1f5ff, #ffffff); box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
 
 
-                                                    <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a>
+                            <!-- <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a> -->
+
+
+                            <a href="https://askoncologist.com/" class="shake-link">
+                                <img src="./assets/img/oncoligist/ASK-oncologist.png"
+                                    alt="Vision Dental"
+                                    class="img-fluid shake-img" style="width: 200px ;">
+                            </a>
+
+
+
 
                             <!-- <h3 class="mani" style="color:#333; font-weight:600; margin-bottom:10px;">
                                 Contact Us
@@ -895,14 +905,18 @@ if ($blog_id > 0) {
                     <div class="col-lg-2 col-md-2">
 
 
-                        <img src="./assets/img/11.png" alt="" class="img-fluid" >
+                        <img src="./assets/img/11.png" alt="" class="img-fluid">
 
 
                         <div class="card aligner-card" style="display:flex; justify-content:center; align-items:center; flex-direction:column; padding:8px 5px 5px 0px; border-radius:12px; background:linear-gradient(135deg, #f1f5ff, #ffffff); box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
 
-                            <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a>
+                            <!-- <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a> -->
 
-
+                            <a href="https://askoncologist.com/" class="shake-link">
+                                <img src="./assets/img/oncoligist/ASK-oncologist.png"
+                                    alt="Vision Dental"
+                                    class="img-fluid shake-img" style="width: 200px ;">
+                            </a>
                             <!-- <p style="font-size:18px; margin:5px 0; color:#444;">
                                 Vision
                             </p> -->
@@ -1437,11 +1451,17 @@ if ($blog_id > 0) {
 
                         <div class="card aligner-card" style="display:flex; justify-content:center; align-items:center; flex-direction:column; padding:8px 5px 5px 0px; border-radius:12px; background:linear-gradient(135deg, #f1f5ff, #ffffff); box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
 
-                                                        <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a>
+                            <!-- <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a> -->
 
-                        
-                        
-                        <!-- <h3 class="mani" style="color:#333; font-weight:600; margin-bottom:10px;">
+
+                            <a href="https://askoncologist.com/" class="shake-link">
+                                <img src="./assets/img/oncoligist/ASK-oncologist.png"
+                                    alt="Vision Dental"
+                                    class="img-fluid shake-img" style="width: 200px ;">
+                            </a>
+
+
+                            <!-- <h3 class="mani" style="color:#333; font-weight:600; margin-bottom:10px;">
                                     Contact Us
                                 </h3> -->
 
@@ -1478,8 +1498,14 @@ if ($blog_id > 0) {
                         <div class="card aligner-card" style="display:flex; justify-content:center; align-items:center; flex-direction:column; padding:8px 5px 5px 0px; border-radius:12px; background:linear-gradient(135deg, #f1f5ff, #ffffff); box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
 
 
-                            <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a>
+                            <!-- <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a> -->
 
+
+                            <a href="https://askoncologist.com/" class="shake-link">
+                                <img src="./assets/img/oncoligist/ASK-oncologist.png"
+                                    alt="Vision Dental"
+                                    class="img-fluid shake-img" style="width: 200px ;">
+                            </a>
                             <!-- <p style="font-size:18px; margin:5px 0; color:#444;">
                                 
                             </p> -->

@@ -73,7 +73,8 @@ html {
 
 body {
   /* font-family: var(--font-primary); */
-  font-family: "Mulish", sans-serif;
+  font-family: "poppins", sans-serif !important;
+  /* font-family: "Mulish", sans-serif; */
   margin: auto;
   font-size: clamp(13px, 0.84vw, 16px);
   position: fixed;
@@ -6796,7 +6797,7 @@ button {
 
 /* Hover effect */
 .blog-item:hover {
-  background: #007bff;
+  /* background: #007bff; */
   /* Blue highlight */
   transform: translateX(5px);
   /* animate slide */
@@ -6804,7 +6805,7 @@ button {
 }
 
 .blog-item:hover .blog-title {
-  color: #fff;
+  /* color: #fff; */
 }
 
 .blog-item:hover .blog-thumb {
@@ -6917,7 +6918,8 @@ button {
 
 
 
-< !-- Styling -->.show-comment-btn {
+/* < !-- Styling --> */
+.show-comment-btn {
   background: #007bff;
   color: white;
   padding: 10px 18px;
@@ -7008,5 +7010,30 @@ margin-top: 100px !important;
 .ul-service-details-title,
 .ul-service-details-full-content,
 .ul-service-details-descr{
-  font-family: "Roboto", sans-serif !important;
+  /* font-family: "Roboto", sans-serif !important; */
+  /* font-family: "Inter", sans-serif !important; */
+}
+
+
+
+/* img shake   */
+.shake-img {
+  width: 200px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Shake animation */
+@keyframes shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-3px, 0) rotate(-2deg); }
+  40% { transform: translate(3px, 0) rotate(2deg); }
+  60% { transform: translate(-3px, 0) rotate(-2deg); }
+  80% { transform: translate(3px, 0) rotate(2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Hover effect */
+.shake-link:hover .shake-img {
+  animation: shake 0.5s;
 }
