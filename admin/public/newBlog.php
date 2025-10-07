@@ -175,7 +175,7 @@
                                     </form>
 
                                     <!-- Include Quill -->
-                                    <!-- <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+                                    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
                                     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
                                     <script>
@@ -206,12 +206,12 @@
                                                 document.querySelector('#sectionContent' + i).value = sections[i].root.innerHTML;
                                             }
                                         }
-                                    </script> -->
+                                    </script>
 
 
 
 
-                                    <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+                                    <!-- <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
                                     <script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
 
                                     <script>
@@ -297,7 +297,7 @@
                                                 document.querySelector('#sectionContent' + i).value = sections[i].root.innerHTML;
                                             }
                                         };
-                                    </script>
+                                    </script> -->
 
 
                                 </div>
