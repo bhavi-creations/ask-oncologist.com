@@ -1,23 +1,37 @@
 <?php
-// Database connection (replace with your actual database connection details)
+// Database connection
 include '../../db.connection/db_connection.php';
 
 // Get blog ID from URL
 $blog_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
+// Initialize variables
+$title = $service = $main_content = $full_content = '';
+$main_image = $video = '';
+$section_contents = [1 => '', 2 => '', 3 => ''];
+$section_images = [1 => '', 2 => '', 3 => ''];
+
 if ($blog_id > 0) {
-    // Fetch blog data
-    $stmt = $conn->prepare("SELECT title, main_content, full_content, service FROM blogs WHERE id = ?");
-    $stmt->bind_param("i", $blog_id);
-    $stmt->execute();
-    $stmt->bind_result($title, $main_content, $full_content, $service);
-    $stmt->fetch();
-    $stmt->close();
+    $result = $conn->query("SELECT * FROM blogs WHERE id=$blog_id");
+    if ($result && $result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $title = $row['title'];
+        $service = $row['service'];
+        $main_content = $row['main_content'];
+        $full_content = $row['full_content'];
+        $main_image = $row['main_image'];
+        $video = $row['video'];
+        $section_contents[1] = $row['section1_content'];
+        $section_contents[2] = $row['section2_content'];
+        $section_contents[3] = $row['section3_content'];
+        $section_images[1] = $row['section1_image'];
+        $section_images[2] = $row['section2_image'];
+        $section_images[3] = $row['section3_image'];
+    }
 } else {
     echo "Invalid blog ID.";
     exit;
 }
-
 $conn->close();
 ?>
 
@@ -28,28 +42,18 @@ $conn->close();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <title>Ask Oncologist - Dashboard</title>
-    <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <!-- Include Quill CSS -->
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
     <div id="wrapper">
-        <!-- Sidebar -->
         <?php include 'sidebar.php'; ?>
-        <!-- End of Sidebar -->
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                <!-- Topbar -->
                 <?php include 'navbar.php'; ?>
-                <!-- End of Topbar -->
                 <div class="container-fluid">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Edit BLOG</h1>
@@ -57,221 +61,150 @@ $conn->close();
                     <div class="row">
                         <div class="col-xl-11">
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-success">EDIT CONTENT</h6>
                                 </div>
                                 <div class="card-body">
-                                    <form style='color:black;' id="editblogform" action="addBlog.php" method="POST" enctype="multipart/form-data">
-                                        <!-- Title Input -->
+
+                                    <form id="editblogform" action="addBlog.php" method="POST" enctype="multipart/form-data" style="color:black;">
+                                        <input type="hidden" name="id" value="<?php echo $blog_id; ?>">
+
+                                        <!-- Title -->
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label text-primary">ENTER TITLE</label>
-                                            <input type="text" class="form-control text-grey-900" name='title' id="exampleFormControlInput1" value="<?php echo htmlspecialchars($title); ?>" placeholder="Title" required>
+                                            <label class="form-label text-primary">ENTER TITLE</label>
+                                            <input type="text" class="form-control" name='title' value="<?php echo htmlspecialchars($title); ?>" required>
                                         </div>
 
-                                        <!-- Service Input -->
                                         <!-- Service Dropdown -->
-                                        <div class="filter-section mb-3">
-                                            <label for="service" class="form-label text-primary">Select Service:</label>
-                                            <select id="service" name="service" class="form-control" required>
+                                        <div class="mb-3">
+                                            <label class="form-label text-primary">Select Service:</label>
+                                            <select name="service" class="form-control" required>
                                                 <option value="">Select a Service</option>
-                                                <option value="Bladder Cancer" <?php echo ($service == 'Bladder Cancer') ? 'selected' : ''; ?>>Bladder Cancer</option>
-                                                <option value="Brain Cancer" <?php echo ($service == 'Brain Cancer') ? 'selected' : ''; ?>>Brain Cancer</option>
-                                                <option value="Cervical Cancer" <?php echo ($service == 'Cervical Cancer') ? 'selected' : ''; ?>>Cervical Cancer</option>
-                                                <option value="Childhood Cancer" <?php echo ($service == 'Childhood Cancer') ? 'selected' : ''; ?>>Childhood Cancer</option>
-                                                <option value="Colon Cancer" <?php echo ($service == 'Colon Cancer') ? 'selected' : ''; ?>>Colon Cancer</option>
-                                                <option value="Esophageal Cancer" <?php echo ($service == 'Esophageal Cancer') ? 'selected' : ''; ?>>Esophageal Cancer</option>
-                                                <option value="Kidney Cancer" <?php echo ($service == 'Kidney Cancer') ? 'selected' : ''; ?>>Kidney Cancer</option>
-                                                <option value="Leiomyosarcoma Cancer" <?php echo ($service == 'Leiomyosarcoma Cancer') ? 'selected' : ''; ?>>Leiomyosarcoma Cancer</option>
-                                                <option value="Leukemia Cancer" <?php echo ($service == 'Leukemia Cancer') ? 'selected' : ''; ?>>Leukemia Cancer</option>
-                                                <option value="Liver Cancer" <?php echo ($service == 'Liver Cancer') ? 'selected' : ''; ?>>Liver Cancer</option>
-                                                <option value="Lung Cancer" <?php echo ($service == 'Lung Cancer') ? 'selected' : ''; ?>>Lung Cancer</option>
-                                                <option value="Lymphoma Cancer" <?php echo ($service == 'Lymphoma Cancer') ? 'selected' : ''; ?>>Lymphoma Cancer</option>
-                                                <option value="Melanoma Cancer" <?php echo ($service == 'Melanoma Cancer') ? 'selected' : ''; ?>>Melanoma Cancer</option>
-                                                <option value="Ovarian Cancer" <?php echo ($service == 'Ovarian Cancer') ? 'selected' : ''; ?>>Ovarian Cancer</option>
-                                                <option value="Pancreatic Cancer" <?php echo ($service == 'Pancreatic Cancer') ? 'selected' : ''; ?>>Pancreatic Cancer</option>
-                                                <option value="Prostate Cancer" <?php echo ($service == 'Prostate Cancer') ? 'selected' : ''; ?>>Prostate Cancer</option>
-                                                <option value="Sarcoma/Bone Cancer" <?php echo ($service == 'Sarcoma/Bone Cancer') ? 'selected' : ''; ?>>Sarcoma/Bone Cancer</option>
-                                                <option value="Stomach Cancer" <?php echo ($service == 'Stomach Cancerr') ? 'selected' : ''; ?>>Stomach Cancer</option>
-                                                <option value="Testicular Cancer" <?php echo ($service == 'Testicular Cancer') ? 'selected' : ''; ?>>Testicular Cancer</option>
-                                                <option value="Uterine Cancer" <?php echo ($service == 'Uterine Cancer') ? 'selected' : ''; ?>>Uterine Cancer</option>
-                                                <option value="Head  Neck Cancer" <?php echo ($service == 'Head Neck Cancer') ? 'selected' : ''; ?>>Head & Neck Cancer</option>
-                                                <option value="Breast Cancer" <?php echo ($service == 'Breast Cancer') ? 'selected' : ''; ?>>Breast Cancer</option>
-                                                <option value="Multiple Cancer" <?php echo ($service == 'Multiple Cancer') ? 'selected' : ''; ?>>Multiple Cancer</option>
-                                                <option value="Honors Cancer" <?php echo ($service == 'Honors Cancer') ? 'selected' : ''; ?>>Honors Cancer</option>
-
-
-
-                                                <option value="Other" <?php echo ($service == 'Other') ? 'selected' : ''; ?>>Other Blog</option>
-
-+
+                                                <?php
+                                                $services = [
+                                                    "Bladder Cancer", "Brain Cancer", "Cervical Cancer", "Childhood Cancer", "Colon Cancer",
+                                                    "Esophageal Cancer", "Kidney Cancer", "Leiomyosarcoma Cancer", "Leukemia Cancer", "Liver Cancer",
+                                                    "Lung Cancer", "Lymphoma Cancer", "Melanoma Cancer", "Ovarian Cancer", "Pancreatic Cancer",
+                                                    "Prostate Cancer", "Sarcoma/Bone Cancer", "Stomach Cancer", "Testicular Cancer", "Uterine Cancer",
+                                                    "Head Neck Cancer", "Breast Cancer", "Multiple Cancer", "Honors Cancer", "Other"
+                                                ];
+                                                foreach ($services as $s) {
+                                                    $selected = ($service == $s) ? 'selected' : '';
+                                                    echo "<option value=\"$s\" $selected>$s</option>";
+                                                }
+                                                ?>
                                             </select>
                                         </div>
 
-
-                                        <!-- Quill Editor for Main Content -->
+                                        <!-- Main Content -->
                                         <div class="mb-3">
-                                            <label for="mainEditor" class="form-label text-primary">ENTER MAIN CONTENT</label>
-                                            <div id="mainEditor" style="height: 200px;"></div>
-                                            <input name="main_content" id="mainContentData" style="display: none">
+                                            <label class="form-label text-primary">ENTER MAIN CONTENT</label>
+                                            <div id="mainEditor" style="height:200px;"></div>
+                                            <input type="hidden" name="main_content" id="mainContentData">
                                         </div>
 
-                                        <!-- Main Image Upload -->
+                                        <!-- Main Image -->
                                         <div class="mb-3">
-                                            <label for="formFileMainImage" class="form-label text-primary my-2">Choose Main Image</label>
-                                            <input class="form-control" name="main_image" type="file" id="formFileMainImage" required>
+                                            <label class="form-label text-primary">Choose Main Image</label>
+                                            <input type="file" name="main_image" class="form-control">
+                                            <?php if (!empty($main_image)) { ?>
+                                                <img src="uploads/blogs/<?php echo $main_image; ?>" style="max-width:200px;" class="img-thumbnail mt-2">
+                                            <?php } ?>
                                         </div>
 
+                                        <!-- Video -->
                                         <div class="mb-3">
-                                            <label for="formFileVideo" class="form-label text-primary">Choose Video</label>
-                                            <input class="form-control" name="video" type="file" id="formFileVideo" required>
+                                            <label class="form-label text-primary">Choose Video</label>
+                                            <input type="file" name="video" class="form-control">
+                                            <?php if (!empty($video)) { ?>
+                                                <video width="300" controls class="mt-2">
+                                                    <source src="uploads/blogs/<?php echo $video; ?>" type="video/mp4">
+                                                </video>
+                                            <?php } ?>
                                         </div>
 
-                                        <!-- Quill Editor for Full Content -->
-                                        <label for="editor" class="form-label text-primary">ENTER FULL CONTENT</label>
-                                        <div id="editor" style='height:400px;'></div>
-                                        <input name="full_content" id="formcontentdata" style="display: none">
+                                        <!-- Full Content -->
+                                        <div class="mb-3">
+                                            <label class="form-label text-primary">ENTER FULL CONTENT</label>
+                                            <div id="editor" style="height:400px;"></div>
+                                            <input type="hidden" name="full_content" id="formcontentdata">
+                                        </div>
 
-                                        <!-- Hidden Input for Blog ID -->
-                                        <input type="hidden" name="id" value="<?php echo $blog_id; ?>">
+                                        <!-- Sections -->
+                                        <?php for ($i = 1; $i <= 3; $i++): ?>
+                                            <div class="mb-3">
+                                                <label class="form-label text-primary">Section <?php echo $i; ?> Content</label>
+                                                <div id="editor<?php echo $i; ?>" style="height:200px;"></div>
+                                                <input type="hidden" name="section<?php echo $i; ?>_content" id="sectionContent<?php echo $i; ?>">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label text-primary">Section <?php echo $i; ?> Image</label>
+                                                <input type="file" name="section<?php echo $i; ?>_image" class="form-control">
+                                                <?php if (!empty($section_images[$i])) { ?>
+                                                    <img src="uploads/blogs/<?php echo $section_images[$i]; ?>" style="max-width:200px;" class="img-thumbnail mt-2">
+                                                <?php } ?>
+                                            </div>
+                                        <?php endfor; ?>
 
-                                        <!-- Form Buttons -->
+                                        <!-- Buttons -->
                                         <div class='row p-3'>
-                                            <div class='col-xl-7 col-sm-2'></div>
+                                            <div class='col-xl-7'></div>
                                             <button type='reset' class='btn btn-danger mx-1 my-2 col-xl-2'>Clear</button>
                                             <button type='submit' class='btn btn-success mx-1 my-2 col-xl-2'>Update</button>
                                         </div>
                                     </form>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Footer -->
-            <!-- End of Footer -->
         </div>
     </div>
 
-    <!-- Include Quill JS -->
-    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
-
-    <!-- Initialize Quill Editors and Load Existing Data -->
+    <!-- Quill JS -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script>
-        // Initialize Quill editors with color options in the toolbar
-        const quillMain = new Quill('#mainEditor', {
-            theme: 'snow',
-            modules: {
-                toolbar: [
-                    [{
-                        'header': '1'
-                    }, {
-                        'header': '2'
-                    }, {
-                        'font': []
-                    }],
-                    [{
-                        'size': []
-                    }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{
-                        'color': []
-                    }, {
-                        'background': []
-                    }], // Color and background color options
-                    ['link', 'blockquote'],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    [{
-                        'script': 'sub'
-                    }, {
-                        'script': 'super'
-                    }],
-                    [{
-                        'indent': '-1'
-                    }, {
-                        'indent': '+1'
-                    }],
-                    [{
-                        'direction': 'rtl'
-                    }],
-                    [{
-                        'align': []
-                    }],
-                    ['clean'] // Remove formatting button
-                ]
-            },
-            placeholder: 'Enter main content...',
-        });
+        const toolbarOptions = [
+            [{'header': '1'}, {'header': '2'}, {'font': []}],
+            [{'size': []}],
+            ['bold', 'italic', 'underline', 'strike'],
+            [{'color': []}, {'background': []}],
+            ['link', 'blockquote'],
+            [{'list': 'ordered'}, {'list': 'bullet'}],
+            [{'indent': '-1'}, {'indent': '+1'}],
+            [{'direction': 'rtl'}],
+            [{'align': []}],
+            ['clean']
+        ];
 
-        const quillFull = new Quill('#editor', {
-            theme: 'snow',
-            modules: {
-                toolbar: [
-                    [{
-                        'header': '1'
-                    }, {
-                        'header': '2'
-                    }, {
-                        'font': []
-                    }],
-                    [{
-                        'size': []
-                    }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{
-                        'color': []
-                    }, {
-                        'background': []
-                    }], // Color and background color options
-                    ['link', 'blockquote'],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    [{
-                        'script': 'sub'
-                    }, {
-                        'script': 'super'
-                    }],
-                    [{
-                        'indent': '-1'
-                    }, {
-                        'indent': '+1'
-                    }],
-                    [{
-                        'direction': 'rtl'
-                    }],
-                    [{
-                        'align': []
-                    }],
-                    ['clean'] // Remove formatting button
-                ]
-            },
-            placeholder: 'Compose full content...',
-        });
+        const quillMain = new Quill('#mainEditor', { theme: 'snow', modules: { toolbar: toolbarOptions } });
+        const quillFull = new Quill('#editor', { theme: 'snow', modules: { toolbar: toolbarOptions } });
+        const quill1 = new Quill('#editor1', { theme: 'snow', modules: { toolbar: toolbarOptions } });
+        const quill2 = new Quill('#editor2', { theme: 'snow', modules: { toolbar: toolbarOptions } });
+        const quill3 = new Quill('#editor3', { theme: 'snow', modules: { toolbar: toolbarOptions } });
 
-        // Load existing data into Quill editors
+        // Load existing content
         quillMain.root.innerHTML = <?php echo json_encode($main_content); ?>;
         quillFull.root.innerHTML = <?php echo json_encode($full_content); ?>;
+        quill1.root.innerHTML = <?php echo json_encode($section_contents[1]); ?>;
+        quill2.root.innerHTML = <?php echo json_encode($section_contents[2]); ?>;
+        quill3.root.innerHTML = <?php echo json_encode($section_contents[3]); ?>;
 
-        // On form submission, set Quill content into hidden input fields
+        // On submit
         document.querySelector('#editblogform').onsubmit = function() {
             document.querySelector('#mainContentData').value = quillMain.root.innerHTML;
             document.querySelector('#formcontentdata').value = quillFull.root.innerHTML;
+            document.querySelector('#sectionContent1').value = quill1.root.innerHTML;
+            document.querySelector('#sectionContent2').value = quill2.root.innerHTML;
+            document.querySelector('#sectionContent3').value = quill3.root.innerHTML;
         };
     </script>
 
-    <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 </body>
-
 </html>
