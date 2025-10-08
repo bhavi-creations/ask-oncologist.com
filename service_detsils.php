@@ -87,6 +87,10 @@ function displaySectionImage($imagePath, $alt = 'Section Image')
 
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -2499,3 +2503,14 @@ function displaySectionImage($imagePath, $alt = 'Section Image')
     <script src="assets2/js/progressbar.js"></script>
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
