@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit Comment</title>
+    <title>Ask Oncologist Comment</title>
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 </head>
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="container-fluid">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h2 class="h3 mb-0 text-info">Edit Comment </h2>
+                    <h2 class="h3 mb-0 text-info">Ask Oncologist Comment </h2>
                     <a href="blog_commets.php?blog_id=<?= $comment['blog_id']; ?>" class="btn btn-sm btn-primary shadow-sm">
                         <i class="fas fa-arrow-left fa-sm text-white-50"></i> Back to Comments
                     </a>
