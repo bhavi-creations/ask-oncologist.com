@@ -2,9 +2,7 @@
 // Database connection
 include './db.connection/db_connection.php';
 
-// =====================
 // 1️⃣ Fetch ALL blogs (latest first)
-// =====================
 $sql = "SELECT id, title, service, main_content, full_content, main_image, video
         FROM blogs ORDER BY created_at DESC";
 $result = $conn->query($sql);
@@ -19,7 +17,7 @@ if ($result && $result->num_rows > 0) {
 // Count total blogs
 $total_blogs = count($blogs);
 
-// Split equally (left/right sidebar if needed)
+// Split equally (left/right sidebar)
 $left_count = ceil($total_blogs / 2);
 $right_count = $total_blogs - $left_count;
 
@@ -30,17 +28,12 @@ function get_words($text, $limit)
     return implode(" ", array_slice($words, 0, $limit));
 }
 
-// =====================
 // 2️⃣ Fetch single blog for service_details.php
-// =====================
 $blog_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 $blog = null;
 if ($blog_id > 0) {
-    $stmt = $conn->prepare("SELECT id, title, service, main_content, full_content, main_image, video,
-                                   section1_content, section1_image,
-                                   section2_content, section2_image,
-                                   section3_content, section3_image
+    $stmt = $conn->prepare("SELECT id, title, service, main_content, full_content, main_image, video
                             FROM blogs WHERE id = ?");
     $stmt->bind_param("i", $blog_id);
     $stmt->execute();
@@ -48,38 +41,7 @@ if ($blog_id > 0) {
     $blog = $result->fetch_assoc();
     $stmt->close();
 }
-
-// =====================
-// 3️⃣ Uploads directory
-// =====================
-$uploadsDir = __DIR__ . "/uploads/blogs/";
-
-// =====================
-// 4️⃣ Optional: Display Section Images (responsive for mobile)
-// =====================
-function displaySectionImage($imagePath, $alt = 'Section Image')
-{
-    if (!empty($imagePath) && file_exists($imagePath)) {
-        echo '<div style="
-            display:flex; 
-            justify-content:center; 
-            align-items:center; 
-            width:100%; 
-            max-width:500px; 
-            height:auto; 
-            margin:auto; 
-            overflow:hidden; 
-            border:1px solid #ddd; 
-            border-radius:8px;">
-            <img src="' . htmlspecialchars($imagePath) . '" alt="' . htmlspecialchars($alt) . '" 
-                 style="width:100%; height:auto; object-fit:cover;">
-        </div>';
-    }
-}
-
 ?>
-
-
 
 
 
