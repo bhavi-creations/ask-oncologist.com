@@ -23,3 +23,8 @@ Stack trace:
 #0 C:\xampp\htdocs\ask-oncologist.com\save_comment.php(14): mysqli->__construct('localhost', 'askoncologist', Object(SensitiveParameterValue), 'askoncologist')
 #1 {main}
   thrown in C:\xampp\htdocs\ask-oncologist.com\save_comment.php on line 14
+[11-Oct-2025 12:47:09 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'askoncologist'@'localhost' (using password: YES) in C:\xampp\htdocs\ask-oncologist.com\save_comment.php:14
+Stack trace:
+#0 C:\xampp\htdocs\ask-oncologist.com\save_comment.php(14): mysqli->__construct('localhost', 'askoncologist', Object(SensitiveParameterValue), 'askoncologist')
+#1 {main}
+  thrown in C:\xampp\htdocs\ask-oncologist.com\save_comment.php on line 14
