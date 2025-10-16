@@ -3,8 +3,11 @@
 include './db.connection/db_connection.php';
 
 // 1️⃣ Fetch ALL blogs (latest first)
-$sql = "SELECT id, title, service, main_content, full_content, main_image, video
+$sql = "SELECT id, title, service, main_content, full_content, main_image, video,
+               section1_image, section2_image, section3_image,
+               section1_content, section2_content, section3_content
         FROM blogs ORDER BY created_at DESC";
+
 $result = $conn->query($sql);
 
 $blogs = [];
@@ -33,7 +36,9 @@ $blog_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 $blog = null;
 if ($blog_id > 0) {
-    $stmt = $conn->prepare("SELECT id, title, service, main_content, full_content, main_image, video
+    $stmt = $conn->prepare("SELECT id, title, service, main_content, full_content, main_image, video,
+                                   section1_image, section2_image, section3_image,
+                                   section1_content, section2_content, section3_content
                             FROM blogs WHERE id = ?");
     $stmt->bind_param("i", $blog_id);
     $stmt->execute();
@@ -42,6 +47,7 @@ if ($blog_id > 0) {
     $stmt->close();
 }
 ?>
+
 
 
 
@@ -69,7 +75,17 @@ if ($blog_id > 0) {
 
 <body>
     <div class="preloader" id="preloader">
-        <div class="loader"></div>
+        <!-- <div class="loader"></div> -->
+        <!-- <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" > -->
+        <img
+                 src="assets/img/oncoligist/Oncology logo.png"
+                
+                 alt="" />
+                 <img
+                 src="assets/img/oncoligist/ask_text.png"
+                 
+                 alt=""
+                 class="txt_ask" />
     </div>
 
     <!-- SIDEBAR SECTION START -->
@@ -397,89 +413,12 @@ if ($blog_id > 0) {
 
 
 
-                    <!-- Left Sidebar (First Half Blogs) -->
-                    <div class="col-lg-3 col-md-6 ">
-                        <div class="ul-service-details-sidebar fixed-sidebar">
-                            <!-- Show only 2 blogs at a time, scroll for rest -->
-                            <div class="ul-service-details-sidebar-widget blog-sidebar-list" style="max-height:200px; overflow-y:auto;">
-                                <h4 class="text-center mb-3 latest_blog_section">Latest Blogs</h4>
-                                <?php
-                                if (!empty($blogs)) {
-                                    foreach (array_slice($blogs, 0, $left_count) as $row) {
-                                        $image_path = !empty($row['main_image'])
-                                            ? "./admin/uploads/photos/{$row['main_image']}"
-                                            : "https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png";
-                                        echo "
-              <a href='service_detsils.php?id={$row['id']}' class='blog-item d-flex align-items-center mb-3 text-decoration-none'>
-                  <img src='{$image_path}' class='me-2 blog-thumb' alt='Blog Image'>
-                  <h6 class='mb-0 blog-title'>" . get_words($row['title'], 6) . "...</h6>
-              </a>
-              ";
-                                    }
-                                } else {
-                                    echo "<p>No blogs found.</p>";
-                                }
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-lg-2 col-md-2 blogs_side_branding  ">
-
-                        <img src="./assets/img/22.png" alt="" class="img-fluid ">
 
 
 
 
 
 
-                        <div class="card aligner-card" style="display:flex; justify-content:center; align-items:center; flex-direction:column; padding:8px 5px 5px 0px; border-radius:12px; background:linear-gradient(135deg, #f1f5ff, #ffffff); box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-
-
-                            <!-- <a href="https://askoncologist.com/"> <img src="./assets/img/oncoligist/ASK-oncologist.png" alt="" class="img-fluid" style="width: 200px ;"></a> -->
-
-
-                            <a href="https://askoncologist.com/" class="shake-link">
-                                <img src="./assets/img/oncoligist/ASK-oncologist.png"
-                                    alt="Vision Dental"
-                                    class="img-fluid shake-img" style="width: 200px ;">
-                            </a>
-
-
-
-
-                            <!-- <h3 class="mani" style="color:#333; font-weight:600; margin-bottom:10px;">
-                                    Contact Us
-                                </h3> -->
-
-                            <!-- <p style="font-size:18px; margin:5px 0; color:#444;">
-                                    Clear Aligners
-                                </p> -->
-
-                            <!-- <p style="font-size:20px; font-weight:600; color:#28a745; margin:8px 0;">
-                                    Ask <span style="color:#e63946;">Oncologist</span>
-                                </p> -->
-
-                            <!-- <strong>
-                                    <a href="tel:+919290019948"
-                                        style="text-decoration:none; color:#fff; background:#007bff; padding:10px 18px; border-radius:8px; font-size:16px; display:inline-block; margin-top:10px; transition:0.3s;">
-                                        📞 Call Now: +91 9290019948
-                                    </a>
-                                </strong> -->
-                        </div>
-
-
-
-
-
-
-
-
-
-                    </div>
 
 
 
@@ -1089,31 +1028,24 @@ if ($blog_id > 0) {
 
 
 
-
-
-
-
-
-
-
-                    <!-- Right Sidebar (Second Half Blogs) -->
-                    <div class="col-lg-3 col-md-6">
+                    <!-- Left Sidebar (First Half Blogs) -->
+                    <div class="col-lg-3 col-md-6 ">
                         <div class="ul-service-details-sidebar fixed-sidebar">
+                            <!-- Show only 2 blogs at a time, scroll for rest -->
                             <div class="ul-service-details-sidebar-widget blog-sidebar-list" style="max-height:200px; overflow-y:auto;">
-                                <h4 class="text-center mb-3 latest_blog_section">More Blogs</h4>
-
+                                <h4 class="text-center mb-3 latest_blog_section">Latest Blogs</h4>
                                 <?php
                                 if (!empty($blogs)) {
-                                    foreach (array_slice($blogs, $left_count, $right_count) as $row) {
+                                    foreach (array_slice($blogs, 0, $left_count) as $row) {
                                         $image_path = !empty($row['main_image'])
                                             ? "./admin/uploads/photos/{$row['main_image']}"
                                             : "https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png";
                                         echo "
-                        <a href='service_detsils.php?id={$row['id']}' class='more-blog-link blog-item d-flex align-items-center w-100 mb-3 text-decoration-none'>
-                            <img src='{$image_path}' class='me-2 blog-thumb' style='width:30px; height:30px; object-fit:cover; border-radius:5px;' alt='Blog Image'>
-                            <h6 class='mb-0 blog-title'>" . get_words($row['title'], 6) . "...</h6>
-                        </a>
-                    ";
+              <a href='service_detsils.php?id={$row['id']}' class='blog-item d-flex align-items-center mb-3 text-decoration-none'>
+                  <img src='{$image_path}' class='me-2 blog-thumb' alt='Blog Image'>
+                  <h6 class='mb-0 blog-title'>" . get_words($row['title'], 6) . "...</h6>
+              </a>
+              ";
                                     }
                                 } else {
                                     echo "<p>No blogs found.</p>";
@@ -1122,6 +1054,13 @@ if ($blog_id > 0) {
                             </div>
                         </div>
                     </div>
+
+
+
+
+
+
+
 
 
                 </div>

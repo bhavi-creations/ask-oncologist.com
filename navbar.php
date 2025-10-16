@@ -253,6 +253,19 @@
 </style>
 
 <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- ======= Header ======= -->
   <header id="header" class="main_images">
     <div class="container d-flex align-items-center">
