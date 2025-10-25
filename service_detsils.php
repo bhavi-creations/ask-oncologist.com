@@ -69,6 +69,10 @@ if ($blog_id > 0) {
     <link rel="stylesheet" href="assets2/vendor/animate-wow/animate.min.css">
     <link rel="stylesheet" href="assets2/vendor/slim-select/slimselect.css">
 
+
+
+    <link href="assets/img/oncoligist//Oncology logo.png" rel="icon">
+
     <!-- custom CSS -->
     <link rel="stylesheet" href="assets2/css/style.css">
 </head>
@@ -80,12 +84,12 @@ if ($blog_id > 0) {
         <img
                  src="assets/img/oncoligist/Oncology logo.png"
                 
-                 alt="" />
+                 alt=""  class=" img-fluid" style="width: 100px;"/>
                  <img
                  src="assets/img/oncoligist/ask_text.png"
                  
                  alt=""
-                 class="txt_ask" />
+                 class="txt_ask  img-fluid" style="width: 200px;"/>
     </div>
 
     <!-- SIDEBAR SECTION START -->
