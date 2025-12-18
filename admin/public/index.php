@@ -33,7 +33,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
 
 </head>
 
-<body id="page-top">
+<body id="page-top"> 
 
     <!-- Page Wrapper -->
     <div id="wrapper">
