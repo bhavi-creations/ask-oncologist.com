@@ -1,3 +1,16 @@
+<?php
+// Ensure session is started
+if (session_status() === PHP_SESSION_NONE) {
+    // session_start();
+}
+
+// Safely get username
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +22,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Ask Oncologist - Dashboard</title>
+    <title>Ask Oncologist  - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
