@@ -63,7 +63,7 @@ if ($service_result && $service_result->num_rows > 0) {
 
 <head>
     <meta charset="utf-8">
-    <title>Ask oncologist</title>
+    <title>Edit Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -244,40 +244,4 @@ if ($service_result && $service_result->num_rows > 0) {
 
 
 
-<!-- <select name="service" class="form-control" required>
-                                        <option value="">Select a Service</option>
-                                        <?php
-                                        $services = [
-                                            "Bladder Cancer",
-                                            "Brain Cancer",
-                                            "Cervical Cancer",
-                                            "Childhood Cancer",
-                                            "Colon Cancer",
-                                            "Esophageal Cancer",
-                                            "Kidney Cancer",
-                                            "Leiomyosarcoma Cancer",
-                                            "Leukemia Cancer",
-                                            "Liver Cancer",
-                                            "Lung Cancer",
-                                            "Lymphoma Cancer",
-                                            "Melanoma Cancer",
-                                            "Ovarian Cancer",
-                                            "Pancreatic Cancer",
-                                            "Prostate Cancer",
-                                            "Sarcoma/Bone Cancer",
-                                            "Stomach Cancer",
-                                            "Testicular Cancer",
-                                            "Uterine Cancer",
-                                            "Head Neck Cancer",
-                                            "Breast Cancer",
-                                            "Multiple Cancer",
-                                            "Honors Cancer",
-                                            "Other"
-                                        ];
-                                        foreach ($services as $s) {
-                                            $selected = ($service == $s) ? 'selected' : '';
-                                            echo "<option value=\"$s\" $selected>$s</option>";
-                                        }
-                                        ?>
-                                    </select> -->
 $services = ["Root Canal", "Wisdom Tooth Removal", "Bad Breath Treatment", "Gum Treatment", "Teeth Cleaning", "Orthodontic Treatment", "Dental Crown & Bridge", "Invisible Aligners", "Dental Veneers", "Smile Makeover", "Teeth Whitening", "Dental Implants", "Dentures", "Smile Designing", "Full Mouth Rehabilitation Treatment"];

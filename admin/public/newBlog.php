@@ -9,7 +9,7 @@ $services_result = $conn->query("SELECT id, service_name FROM services ORDER BY 
 
 <head>
     <meta charset="utf-8">
-    <title>Krishna dental hospital - Dashboard</title>
+    <title>Srinivasa dental hospital - Dashboard</title>
 
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -152,6 +152,22 @@ $services_result = $conn->query("SELECT id, service_name FROM services ORDER BY 
 
 </html>
 
+<!-- <select name="service" class="form-control" required>
+                                                <option value="">Select a Service</option>
+                                                <option value="Root Canal">Root Canal</option>
+                                                <option value="Dental Braces">Dental Braces</option>
+                                                <option value="Clear Aligners">Clear Aligners</option>
+                                                <option value="Dental Implants">Dental Implants</option>
+                                                <option value="Crown Bridge">Crown & Bridge</option>
+                                                <option value="Teeth Filling">Teeth Filling</option>
+                                                <option value="Dentures">Dentures</option>
+                                                <option value="Teeth Scaling">Teeth Scaling</option>
+                                                <option value="Tooth Extraction">Tooth Extraction</option>
+                                                <option value="Teeth Cleaning">Teeth Cleaning</option>
+                                                <option value="Teeth Whitening">Teeth Whitening</option>
+                                                <option value="Smile Makeover">Smile Makeover</option>
+                                                <option value="Full Mouth Restoration">Full Mouth Restoration</option>
+                                            </select> -->
 
 
 
