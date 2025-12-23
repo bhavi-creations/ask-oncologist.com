@@ -63,7 +63,7 @@
                     <body>
 
 
-                    <h1>blogs for ask oncologist</h1>
+                   
                         <div class="container">
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h2 class="h2 mb-0 text-info mx-2"> Published Blogs</h2>
