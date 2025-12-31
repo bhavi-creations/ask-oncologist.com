@@ -257,7 +257,7 @@
 
 
 
-
+<?php include 'view_count.php' ; ?>
 
 
 
