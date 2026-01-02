@@ -7,29 +7,21 @@ $to   = $_GET['to'] ?? '';
 $isFiltered = (!empty($from) && !empty($to));
 
 /* =========================
-   DATE RANGE FIX (IMPORTANT)
-========================= */
-if ($isFiltered) {
-    $fromDate = $from . " 00:00:00";
-    $toDate   = date('Y-m-d 00:00:00', strtotime($to . ' +1 day'));
-}
-
-/* =========================
    TOTAL VISITORS
 ========================= */
 if ($isFiltered) {
     $stmt = $conn->prepare("
         SELECT COUNT(*) AS total
-        FROM visitor_logs
-        WHERE visited_at >= ? AND visited_at < ?
+        FROM visitors
+        WHERE DATE(visited_at) BETWEEN ? AND ?
     ");
-    $stmt->bind_param("ss", $fromDate, $toDate);
+    $stmt->bind_param("ss", $from, $to);
     $stmt->execute();
     $totalRes = $stmt->get_result();
 } else {
     $totalRes = $conn->query("
         SELECT COUNT(*) AS total
-        FROM visitor_logs
+        FROM visitors
     ");
 }
 
@@ -41,18 +33,18 @@ $totalCount = $totalRes->fetch_assoc()['total'] ?? 0;
 if ($isFiltered) {
     $stmt = $conn->prepare("
         SELECT page_name, COUNT(*) AS visit_count
-        FROM visitor_logs
-        WHERE visited_at >= ? AND visited_at < ?
+        FROM visitors
+        WHERE DATE(visited_at) BETWEEN ? AND ?
         GROUP BY page_name
         ORDER BY visit_count DESC
     ");
-    $stmt->bind_param("ss", $fromDate, $toDate);
+    $stmt->bind_param("ss", $from, $to);
     $stmt->execute();
     $pages = $stmt->get_result();
 } else {
     $pages = $conn->query("
         SELECT page_name, COUNT(*) AS visit_count
-        FROM visitor_logs
+        FROM visitors
         GROUP BY page_name
         ORDER BY visit_count DESC
     ");
@@ -77,13 +69,12 @@ if ($isFiltered) {
         .va-table th, .va-table td { padding: 10px; border: 1px solid #ddd; }
         .va-table th { background: #f2f2f2; }
         .va-no-data { text-align: center; color: red; font-weight: bold; padding: 20px; }
-        .date-info { color: #555; margin-top: 5px; }
     </style>
 </head>
 
 <body>
 
-<div class="va-container" style="margin-top: 200px;">
+<div class="va-container" style="margin-top:200px;">
 
     <h2 class="va-title">📊 Visitor Analytics</h2>
 
@@ -91,12 +82,8 @@ if ($isFiltered) {
     <div class="va-box">
         <h3>👥 Total Website Visitors</h3>
         <div class="va-total"><?php echo $totalCount; ?></div>
-
         <?php if ($isFiltered) { ?>
-            <div class="date-info">
-                From <b><?php echo htmlspecialchars($from); ?></b>
-                to <b><?php echo htmlspecialchars($to); ?></b>
-            </div>
+            <small><?php echo $from; ?> → <?php echo $to; ?></small>
         <?php } ?>
     </div>
 
@@ -107,7 +94,6 @@ if ($isFiltered) {
             <input type="date" name="from" value="<?php echo htmlspecialchars($from); ?>" required>
             <input type="date" name="to" value="<?php echo htmlspecialchars($to); ?>" required>
             <button type="submit">Show</button>
-
             <?php if ($isFiltered) { ?>
                 <a href="visitor-analytics.php">
                     <button type="button" class="va-reset-btn">Reset</button>
@@ -123,7 +109,7 @@ if ($isFiltered) {
         <table class="va-table">
             <tr>
                 <th>Page Name</th>
-                <th>Visitors</th>
+                <th>Total Visitors</th>
             </tr>
 
             <?php if ($pages && $pages->num_rows > 0) { ?>
@@ -136,7 +122,7 @@ if ($isFiltered) {
             <?php } else { ?>
                 <tr>
                     <td colspan="2" class="va-no-data">
-                        🚫 No one visited the website in this date range
+                        ❌ No visitors in this date range
                     </td>
                 </tr>
             <?php } ?>
