@@ -65,10 +65,21 @@ $conn->close();
     <div class="container blog-detailed" style="padding-top: 200px;">
 
         <!-- Language buttons -->
-        <div class="d-flex justify-content-center mb-3">
+        <!-- <div class="d-flex justify-content-center mb-3">
             <button id="english-btn" class="lang-btn btn btn-sm me-2 english-btn">English</button>
             <button id="telugu-btn" class="lang-btn btn btn-sm telugu-btn mx-4">తెలుగు</button>
+        </div> -->
+
+
+        <div class="d-flex justify-content-center mb-3">
+            <button id="english-btn" class="lang-btn english-btn active">
+                English
+            </button>
+            <button id="telugu-btn" class="lang-btn telugu-btn mx-4">
+                తెలుగు
+            </button>
         </div>
+
 
 
         <?php if (!empty($service)) { ?>
@@ -128,7 +139,7 @@ $conn->close();
 
         <!-- SERVICE BADGE -->
         <!-- SERVICE BADGE -->
-       
+
 
 
         <!-- Title -->
@@ -326,6 +337,24 @@ $conn->close();
                 slidesPerView: 3
             },
         },
+    });
+</script>
+
+
+
+
+
+<script>
+    const buttons = document.querySelectorAll('.lang-btn');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // remove active from all buttons
+            buttons.forEach(b => b.classList.remove('active'));
+
+            // add active only to clicked button
+            btn.classList.add('active');
+        });
     });
 </script>
 
