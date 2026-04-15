@@ -2802,4 +2802,10 @@ section {
 .lang-btn.active {
   background: linear-gradient(95deg, #095da6 -1.58%, #0e49c9 100%) !important;
   color: #fff !important;
+  
+}
+
+
+.blog_section_stylings{
+  margin-top: 200px !important;
 }
