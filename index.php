@@ -7,45 +7,77 @@
 <main id="main">
 
   <!-- ======= About Us Section ======= -->
-  <section id="about" class="about">
-    <div class="container" data-aos="fade-up">
+<section id="about" class="about about-gradient-bg">
+
+  <div class="container" data-aos="fade-up">
+
+    <div class="row align-items-center">
+
+      <!-- CONTENT -->
+      <div
+        class="col-md-6 content_padding"
+        data-aos="fade-left"
+      >
+
+        <h2 class="welcome_text">
+          WELCOME TO THE
+        </h2>
+
+        <h2 class="welcome_text_oncology">
+          Oncology Of Dr. K Pradeep Bhaskar
+        </h2>
+
+        <p class="poetsen_font">
+
+          Dr. K Pradeep Bhaskar is the best Oncologist in Kakinada,
+          esteemed consultant radiation oncologist, known for his
+          dedicated career in oncology.
+
+          He offers advanced cancer treatment with a focus on
+          personalized and compassionate care.
+
+          Explore our website to learn more about our services
+          and read informative blogs.
+
+        </p>
 
 
-      <div class="row">
+        <div class="d-flex flex-row justify-content-end">
 
-        <div class="col-md-6    content_padding" data-aos="fade-left">
+          <a href="#contact" class="about-contact-link">
 
+            <p class="get_in_touch">
+              Get In Touch
+              <i class="fa-solid fa-arrow-right"></i>
+            </p>
 
-
-          <h2 class="welcome_text">WELCOME TO THE </h2>
-          <h2 class="welcome_text_oncology">Oncology Of Dr. K Pradeep Bhaskar</h2>
-          <p class=poetsen_font>
-            <!-- Welcome to the official website of Dr. K Pradeep Bhaskar, an esteemed consultant radiation oncologist with specializations in various cancer treatments. With a dedicated career in oncology, Dr. Bhaskar offers comprehensive and Personalized care to all patients. <br><br> At our clinic, we are committed to providing the highest standard of care using the latest advancements in cancer treatment. Explore our website to learn more about our services, read informative blogs. -->
-
-            Dr. K Pradeep Bhaskar is the best Oncologist in Kakinada, esteemed consultant radiation oncologist, known for his dedicated career in oncology. He offers advanced cancer treatment with a focus on personalized and compassionate care.
-            Explore our website to learn more about our services and read informative blogs.
-          </p>
-
-
-          <div class="d-flex flex-row justify-content-end">
-            <a href="#contact">
-              <p class="get_in_touch">Get In Touch <i class="fa-solid fa-arrow-right"></i></p>
-            </a>
-          </div>
+          </a>
 
         </div>
 
-        <div class="col-md-6   " data-aos="fade-right" class="">
-          <img src="assets/img/oncoligist/Wheel boy.png" class="img-fluid img_padding" alt="">
-        </div>
       </div>
 
 
+      <!-- IMAGE -->
+      <div
+        class="col-md-6"
+        data-aos="fade-right"
+      >
 
+        <img
+          src="assets/img/oncoligist/Wheel boy.png"
+          class="img-fluid img_padding"
+          alt="Dr K Pradeep Bhaskar Oncology"
+        >
+
+      </div>
 
     </div>
-  </section>
-  <!-- End About Us Section -->
+
+  </div>
+
+</section>
+<!-- End About Us Section -->
 
 
   <section id="facilities" class="departments">
@@ -444,7 +476,7 @@
 
 
 
-  <section id="about" class="about">
+  <section id="doctor-about" class="about doctor-profile-gradient">
     <div class="container" data-aos="fade-up">
 
 
@@ -688,12 +720,22 @@
         <?php
         include './db.connection/db_connection.php';
 
-        // Fetch latest 3 blogs with video
-        $sql = "SELECT id, title, main_content, main_image, video FROM blogs ORDER BY created_at DESC LIMIT 3";
-        $result = $conn->query($sql);
+        $result = null;
 
-        if ($result->num_rows > 0) {
-          echo "<div class='row'>"; // Start row for card layout
+        // MySQL available unte matrame latest 3 blogs fetch cheyyi.
+        // Database down/unavailable ayina homepage fatal error tho stop avvadu.
+        if ($conn instanceof mysqli && !$conn->connect_errno) {
+
+          $sql = "SELECT id, title, main_content, main_image, video
+                  FROM blogs
+                  ORDER BY created_at DESC
+                  LIMIT 3";
+
+          $result = $conn->query($sql);
+        }
+
+        if ($result && $result->num_rows > 0) {
+          echo "<div class='row'>";
 
           while ($row = $result->fetch_assoc()) {
             $blog_id = $row['id'];
@@ -702,44 +744,39 @@
             $main_image = $row['main_image'];
             $video = $row['video'];
 
-            echo "<div class='col-md-4 mb-4'>"; // Create 3 equal-width columns for medium devices
-            echo "<div class='card h-100'>"; // Start card
-
-            // Display the blog title
+            echo "<div class='col-md-4 mb-4'>";
+            echo "<div class='card h-100'>";
             echo "<div class='card-body'>";
 
-
-            // Display video if available
             if (!empty($video)) {
               $video_path = "./admin/uploads/videos/{$video}";
               echo "<video class='main-video img-fluid' controls>
-                    <source src='{$video_path}' type='video/mp4'>
-                    Your browser does not support the video tag.
-                  </video>";
-            }
-            // If no video, display main image
-            elseif (!empty($main_image)) {
+                      <source src='{$video_path}' type='video/mp4'>
+                      Your browser does not support the video tag.
+                    </video>";
+            } elseif (!empty($main_image)) {
               $main_image_path = "./admin/uploads/photos/{$main_image}";
               echo "<img class='card-img-top img-fluid' src='{$main_image_path}' alt='Blog Image'>";
             }
-            echo "<h5 class='card-title my-3'>" . htmlspecialchars($title) . "</h5>";
-            // Display a short portion of the blog content
-            echo "<p class='card-text'>" . substr($main_content, 0, 90) . "...</p>";
 
-            // Link to full blog post
+            echo "<h5 class='card-title my-3'>" . htmlspecialchars($title) . "</h5>";
+            echo "<p class='card-text'>" . substr(strip_tags($main_content), 0, 90) . "...</p>";
             echo "<a href='fullblog.php?id={$blog_id}' class='btn btn-primary'>Read more</a>";
 
-            echo "</div>"; // End card body
-            echo "</div>"; // End card
-            echo "</div>"; // End column
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
           }
 
-          echo "</div>"; // End row
+          echo "</div>";
         } else {
-          echo "No blog posts found.";
+          // Database down/unavailable unte silent ga skip chestundi.
+          echo "<!-- Blogs temporarily unavailable -->";
         }
 
-        $conn->close();
+        if ($conn instanceof mysqli) {
+          $conn->close();
+        }
         ?>
 
 
@@ -961,179 +998,166 @@
 
 
 
+<!--FAQ Section newly Updated -->
 
-  <section>
-    <div class="container">
+  <section id="faq-section" class="faq-gradient-section">
+  <div class="container">
 
-      <h1 class="text-center">Frequently Ask Question (FAQ)</h1>
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <div class="accordion">
-            <!-- Accordion 1 -->
-            <div class="faq_section">
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2 class="faq_heading_section">What is cancer and how does it develop?</h2>
-                <h2 class="accordion-icon">+</h2>
-              </div>
-              <div class="accordion-content">
-                <p>
-                  Cancer is a disease in which abnormal cells grow uncontrollably and may spread to other parts of the body. It begins when the body’s normal cell cycle is disrupted, leading to the formation of tumors or abnormal blood cells
-                </p>
-              </div>
+    <h1 class="text-center">Frequently Ask Question (FAQ)</h1>
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="accordion">
+
+          <!-- Accordion 1 -->
+          <div class="faq_section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h2 class="faq_heading_section">What is cancer and how does it develop?</h2>
+              <h2 class="accordion-icon">+</h2>
             </div>
-            <!-- Accordion 2 -->
-            <div class="faq_section">
-
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2 class="faq_heading_section">What are the early warning signs of cancer?
-                </h2>
-                <h2 class="accordion-icon">+</h2>
-              </div>
-              <div class="accordion-content">
-                <p>
-                  Some common early signs include unexplained weight loss, persistent fatigue, lumps or swellings, changes in the skin or moles, long-lasting cough, abnormal bleeding, and changes in bowel or bladder habits. However, symptoms vary by cancer type
-                </p>
-              </div>
+            <div class="accordion-content">
+              <p>
+                Cancer is a disease in which abnormal cells grow uncontrollably and may spread to other parts of the body. It begins when the body’s normal cell cycle is disrupted, leading to the formation of tumors or abnormal blood cells
+              </p>
             </div>
+          </div>
 
-
-
-            <!-- Accordion 3 -->
-            <div class="faq_section">
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2 class="faq_heading_section">Is cancer hereditary?</h2>
-                <h2 class="accordion-icon">+</h2>
-              </div>
-              <div class="accordion-content">
-                <p>
-                  Some cancers can be hereditary. If a close family member has had certain types of cancer (like breast, colon, or ovarian), your risk may be higher. Genetic testing can help assess your personal risk
-                </p>
-              </div>
+          <!-- Accordion 2 -->
+          <div class="faq_section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h2 class="faq_heading_section">What are the early warning signs of cancer?</h2>
+              <h2 class="accordion-icon">+</h2>
             </div>
-
-            <!-- Accordion 4 -->
-            <div class="faq_section">
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2 class="faq_heading_section">What are the major risk factors for cancer?
-                </h2>
-                <h2 class="accordion-icon">+</h2>
-              </div>
-              <div class="accordion-content">
-                <p>
-                  Key risk factors include:
-
-                  Tobacco use
-
-                  Excessive alcohol consumption
-
-                  Obesity and poor diet
-
-                  Lack of physical activity
-
-                  Prolonged sun exposure
-
-                  Environmental toxins
-
-                  Certain infections (e.g., HPV, hepatitis B/C)
-
-                </p>
-              </div>
+            <div class="accordion-content">
+              <p>
+                Some common early signs include unexplained weight loss, persistent fatigue, lumps or swellings, changes in the skin or moles, long-lasting cough, abnormal bleeding, and changes in bowel or bladder habits. However, symptoms vary by cancer type
+              </p>
             </div>
-            <!-- Accordion 5 -->
-            <div class="faq_section">
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2 class="faq_heading_section">Can cancer be prevented?
-                </h2>
-                <h2 class="accordion-icon">+</h2>
-              </div>
-              <div class="accordion-content">
-                <p>
-                  Not all cancers are preventable, but up to 30-50% of cases can be avoided through healthy lifestyle choices, regular screenings, vaccinations (like HPV), and avoiding carcinogens such as tobacco and processed foods
-                </p>
-              </div>
-            </div>
+          </div>
 
+          <!-- Accordion 3 -->
+          <div class="faq_section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h2 class="faq_heading_section">Is cancer hereditary?</h2>
+              <h2 class="accordion-icon">+</h2>
+            </div>
+            <div class="accordion-content">
+              <p>
+                Some cancers can be hereditary. If a close family member has had certain types of cancer (like breast, colon, or ovarian), your risk may be higher. Genetic testing can help assess your personal risk
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 4 -->
+          <div class="faq_section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h2 class="faq_heading_section">What are the major risk factors for cancer?</h2>
+              <h2 class="accordion-icon">+</h2>
+            </div>
+            <div class="accordion-content">
+              <p>
+                Key risk factors include:<br><br>
+                Tobacco use<br>
+                Excessive alcohol consumption<br>
+                Obesity and poor diet<br>
+                Lack of physical activity<br>
+                Prolonged sun exposure<br>
+                Environmental toxins<br>
+                Certain infections (e.g., HPV, hepatitis B/C)
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 5 -->
+          <div class="faq_section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h2 class="faq_heading_section">Can cancer be prevented?</h2>
+              <h2 class="accordion-icon">+</h2>
+            </div>
+            <div class="accordion-content">
+              <p>
+                Not all cancers are preventable, but up to 30-50% of cases can be avoided through healthy lifestyle choices, regular screenings, vaccinations (like HPV), and avoiding carcinogens such as tobacco and processed foods
+              </p>
+            </div>
           </div>
 
         </div>
-        <div class="col-12 col-md-6">
+      </div>
 
+      <div class="col-12 col-md-6">
+        <div class="accordion">
 
-          <div class="accordion">
-            <!-- Accordion 1 -->
-            <div class="faq_section">
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2 class="faq_heading_section">What types of cancers do you treat at Ask Oncologist?
-                </h2>
-                <h2 class="accordion-icon">+</h2>
-              </div>
-              <div class="accordion-content">
-                <p>
-                  We treat a wide range of cancers, including breast cancer, lung cancer, colon cancer, prostate cancer, cervical cancer, oral cancer, and blood cancers such as leukemia and lymphoma. Our services cover diagnosis, staging, chemotherapy, and follow-up care under expert oncologist supervision
-                </p>
-              </div>
+          <!-- Accordion 1 -->
+          <div class="faq_section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h2 class="faq_heading_section">What types of cancers do you treat at Ask Oncologist?</h2>
+              <h2 class="accordion-icon">+</h2>
             </div>
-            <!-- Accordion 2 -->
-            <div class="faq_section">
-
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2 class="faq_heading_section">Do I need a referral to consult a cancer specialist?
-                </h2>
-                <h2 class="accordion-icon">+</h2>
-              </div>
-              <div class="accordion-content">
-                <p>
-                  No referral is required. You can book a consultation directly through our website or by calling us. If you've had tests done already, bring the reports for a faster diagnosis
-                </p>
-              </div>
+            <div class="accordion-content">
+              <p>
+                We treat a wide range of cancers, including breast cancer, lung cancer, colon cancer, prostate cancer, cervical cancer, oral cancer, and blood cancers such as leukemia and lymphoma. Our services cover diagnosis, staging, chemotherapy, and follow-up care under expert oncologist supervision
+              </p>
             </div>
-
-
-
-            <!-- Accordion 3 -->
-            <div class="faq_section">
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2 class="faq_heading_section"> Where is your clinic located and what are your consultation timings?
-                </h2>
-                <h2 class="accordion-icon">+</h2>
-              </div>
-              <div class="accordion-content">
-                <p>
-                  Dr. Pradeep Bhasker is available from 10 am to 5 pm at MediCover Hospital, Kakinada, and from 6 pm to 8 pm at Sivani Clinic. We recommend booking an appointment in advance to avoid wait times
-                </p>
-              </div>
-            </div>
-            <!-- Accordion 4 -->
-            <div class="faq_section">
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2 class="faq_heading_section">What should I expect during my first visit to an oncologist?</h2>
-                <h2 class="accordion-icon">+</h2>
-              </div>
-              <div class="accordion-content">
-                <p>
-                  During your first visit, we’ll review your medical history, analyze any existing reports or scans, and may recommend further diagnostic tests if needed. A personalized treatment plan will be discussed based on your condition
-                </p>
-              </div>
-            </div>
-            <!-- Accordion 5 -->
-            <div class="faq_section">
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <h2 class="faq_heading_section"> Can cancer be cured if detected early?
-                </h2>
-                <h2 class="accordion-icon">+</h2>
-              </div>
-              <div class="accordion-content">
-                <p>
-                  Yes, many types of cancer can be effectively treated or even cured if detected at an early stage. Regular screenings, awareness of symptoms, and early intervention improve survival rates significantly
-                </p>
-              </div>
-            </div>
-
           </div>
+
+          <!-- Accordion 2 -->
+          <div class="faq_section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h2 class="faq_heading_section">Do I need a referral to consult a cancer specialist?</h2>
+              <h2 class="accordion-icon">+</h2>
+            </div>
+            <div class="accordion-content">
+              <p>
+                No referral is required. You can book a consultation directly through our website or by calling us. If you've had tests done already, bring the reports for a faster diagnosis
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 3 -->
+          <div class="faq_section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h2 class="faq_heading_section">Where is your clinic located and what are your consultation timings?</h2>
+              <h2 class="accordion-icon">+</h2>
+            </div>
+            <div class="accordion-content">
+              <p>
+                Dr. Pradeep Bhasker is available from 10 am to 5 pm at MediCover Hospital, Kakinada, and from 6 pm to 8 pm at Sivani Clinic. We recommend booking an appointment in advance to avoid wait times
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 4 -->
+          <div class="faq_section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h2 class="faq_heading_section">What should I expect during my first visit to an oncologist?</h2>
+              <h2 class="accordion-icon">+</h2>
+            </div>
+            <div class="accordion-content">
+              <p>
+                During your first visit, we’ll review your medical history, analyze any existing reports or scans, and may recommend further diagnostic tests if needed. A personalized treatment plan will be discussed based on your condition
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 5 -->
+          <div class="faq_section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <h2 class="faq_heading_section">Can cancer be cured if detected early?</h2>
+              <h2 class="accordion-icon">+</h2>
+            </div>
+            <div class="accordion-content">
+              <p>
+                Yes, many types of cancer can be effectively treated or even cured if detected at an early stage. Regular screenings, awareness of symptoms, and early intervention improve survival rates significantly
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
 
   <!-- Include these scripts at bottom -->

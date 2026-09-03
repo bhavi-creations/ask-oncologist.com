@@ -2096,7 +2096,8 @@ section {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 16px;
-  color: #9A9A9A;
+  /* color: #9A9A9A; */
+  color:#100f0f;
 
 }
 
@@ -2530,61 +2531,7 @@ section {
 }
 
 
-/* faq stylings  */
-.accordion {
-  /* border: 1px solid #ddd; */
-  border-radius: 5px;
-  max-width: 500px;
-  margin: 20px auto;
-  font-family: Arial, sans-serif;
-}
 
-.accordion-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  cursor: pointer;
-  background-color: #f5f5f5;
-  font-size: 18px;
-
-}
-
-.faq_section {
-  margin-bottom: 20px !important;
-}
-
-
-
-
-.accordion-icon {
-  font-size: 22px;
-  transition: transform 0.3s ease;
-}
-
-.accordion-icon.rotate {
-  transform: rotate(45deg);
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  padding: 0 20px;
-  background-color: #E7F3FE80;
-}
-
-.accordion-content.open {
-  max-height: 500px;
-  /* adjust as needed */
-  padding: 15px 20px;
-}
-
-.faq_heading_section {
-  font-size: 20px !important;
-  color: #A256B0;
-  font-weight: 600;
-}
 
 
 
@@ -2808,4 +2755,140 @@ section {
 
 .blog_section_stylings{
   margin-top: 200px !important;
+}
+
+
+
+#about.about-gradient-bg {
+    background: linear-gradient(
+        180deg,
+        #C2C0E1 0%,
+        #B7B6DA 50%,
+        #ACABD2 100%
+    ) !important;
+}
+
+
+
+
+/* ==========================================
+   DOCTOR PROFILE SECTION BACKGROUND
+========================================== */
+
+#doctor-about.doctor-profile-gradient {
+    width: 100%;
+
+    background: linear-gradient(
+        180deg,
+        #C2C0E1 0%,
+        #B7B6DA 50%,
+        #ACABD2 100%
+    ) !important;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/* container white background block cheyakunda */
+#doctor-about.doctor-profile-gradient > .container {
+    background: transparent !important;
+}
+
+/* Read More open ayyaka content kuda same background meeda untundi */
+#doctor-about.doctor-profile-gradient .showthisdiv {
+    background: transparent !important;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    #doctor-about.doctor-profile-gradient {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+}
+
+
+
+
+/* FAQ SECTION BACKGROUND */
+#faq-section.faq-gradient-section {
+  width: 100%;
+  background: linear-gradient(180deg, #C2C0E1 0%, #B7B6DA 50%, #ACABD2 100%) !important;
+  padding: 70px 0;
+}
+
+#faq-section.faq-gradient-section > .container {
+  background: transparent !important;
+}
+
+/* faq stylings  */
+.accordion {
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.faq_section {
+  margin-bottom: 20px !important;
+}
+
+.accordion-icon {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.rotate {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 20px;
+  background-color: #E7F3FE80;
+  border-radius: 0 0 8px 8px;
+}
+
+.accordion-content.open {
+  max-height: 500px;
+  padding: 15px 20px;
+}
+
+.faq_heading_section {
+  font-size: 20px !important;
+  color: #A256B0;
+  font-weight: 600;
+}
+
+/* heading */
+#faq-section h1 {
+  margin-bottom: 30px;
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  #faq-section.faq-gradient-section {
+    padding: 45px 0;
+  }
+
+  .faq_heading_section {
+    font-size: 16px !important;
+  }
+
+  .accordion-header {
+    padding: 12px 15px;
+  }
 }
